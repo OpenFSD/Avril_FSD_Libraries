@@ -11,7 +11,7 @@ Version: 24H2
 
 ### Using Microsoft Visual Studio Professional 2019.
 
-Version xx.xx.xx
+Version 16.11.45.
  
 
 ## Copendencies.
@@ -43,4 +43,5 @@ Version: 2.0
 Version: .Net 8.0
 
 ## Development History.
+
 
