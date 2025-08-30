@@ -3,11 +3,11 @@
 
 namespace Avril_FSD
 {
-    class WriteEnable_Stack_Server_InputAction_Global
+    class WriteEnableStack_ServerOutputRecieve_Global
     {
     public:
-        WriteEnable_Stack_Server_InputAction_Global();
-        ~WriteEnable_Stack_Server_InputAction_Global();
+        WriteEnableStack_ServerOutputRecieve_Global();
+        ~WriteEnableStack_ServerOutputRecieve_Global();
         unsigned char Get_NumCores();
         bool GetConst_Write_IDLE(unsigned char index);
         bool GetConst_Write_WAIT(unsigned char index);

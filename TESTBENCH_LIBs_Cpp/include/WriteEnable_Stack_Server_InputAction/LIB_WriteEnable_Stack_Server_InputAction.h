@@ -18,12 +18,12 @@ namespace Avril_FSD
 	public:
 		WriteEnableStackServerInputAction();
 		// TODO: add your methods here.
-		static class Avril_FSD::WriteEnable_Stack_Server_InputAction_Framework* Initialise_WriteEnableStack_ServerInputAction();
+		static class Avril_FSD::WriteEnableStack_ServerInputAction_Framework* Initialise_WriteEnableStack();
 		static void Write_End(unsigned char coreId);
 		static void Write_Start(unsigned char coreId);
 
 	private:
-		static class Avril_FSD::WriteEnable_Stack_Server_InputAction_Framework* Get_writeEnable();
-		static void Set_writeEnable(class Avril_FSD::WriteEnable_Stack_Server_InputAction_Framework* writeEnable);
+		static class Avril_FSD::WriteEnableStack_ServerInputAction_Framework* Get_writeEnable();
+		static void Set_writeEnable(class Avril_FSD::WriteEnableStack_ServerInputAction_Framework* writeEnable);
 	};
 }

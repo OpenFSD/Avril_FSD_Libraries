@@ -5,25 +5,25 @@
 // LIBWRITEENABLESTACKCLIENTOUTPUTRECIEVE_API functions as being imported from a DLL, whereas this DLL sees symbols
 // defined with this macro as being exported.
 
-#ifdef LIBWRITEENABLESTACKCLIENTOUTPUTRECIEVE_EXPORTS
-#define LIBWRITEENABLESTACKCLIENTOUTPUTRECIEVE_API __declspec(dllexport)
+#ifdef LIBWRITEENABLESTACKSERVEROUTPUTRECIEVE_EXPORTS
+#define LIBWRITEENABLESTACKSERVEROUTPUTRECIEVE_API __declspec(dllexport)
 #else
-#define LIBWRITEENABLESTACKCLIENTOUTPUTRECIEVE_API __declspec(dllimport)
+#define LIBWRITEENABLESTACKSERVEROUTPUTRECIEVE_API __declspec(dllimport)
 #endif
 
 namespace Avril_FSD
 {
 	// This class is exported from the dll
-	class LIBWRITEENABLESTACKCLIENTOUTPUTRECIEVE_API WriteEnableStackClientOutputRecieve {
+	class LIBWRITEENABLESTACKSERVEROUTPUTRECIEVE_API WriteEnableStackServerOutputRecieve {
 	public:
-		WriteEnableStackClientOutputRecieve();
+		WriteEnableStackServerOutputRecieve();
 		// TODO: add your methods here.
-		static class Avril_FSD::WriteEnable_Stack_Server_InputAction_Framework* Initialise_Avril_FSD();
+		static class Avril_FSD::WriteEnableStack_ServerOutputRecieve_Framework* Initialise_WriteEnableStack();
 		static void Write_End(unsigned char coreId);
 		static void Write_Start(unsigned char coreId);
 
 	private:
-		static class Avril_FSD::WriteEnable_Stack_Server_InputAction_Framework* Get_writeEnable();
-		static void Set_writeEnable(class Avril_FSD::WriteEnable_Stack_Server_InputAction_Framework* writeEnable);
+		static class Avril_FSD::WriteEnableStack_ServerOutputRecieve_Framework* Get_writeEnable();
+		static void Set_writeEnable(class Avril_FSD::WriteEnableStack_ServerOutputRecieve_Framework* writeEnable);
 	};
 }

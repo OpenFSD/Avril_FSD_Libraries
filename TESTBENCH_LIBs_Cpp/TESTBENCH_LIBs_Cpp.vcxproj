@@ -153,37 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="include\Server_Assembly\Algorithms.cpp" />
-    <ClCompile Include="include\Server_Assembly\Concurrent.cpp" />
-    <ClCompile Include="include\Server_Assembly\Concurrent_Control.cpp" />
-    <ClCompile Include="include\Server_Assembly\Data.cpp" />
-    <ClCompile Include="include\Server_Assembly\Data_Control.cpp" />
-    <ClCompile Include="include\Server_Assembly\dllmain.cpp" />
-    <ClCompile Include="include\Server_Assembly\Execute.cpp" />
-    <ClCompile Include="include\Server_Assembly\Execute_Control.cpp" />
-    <ClCompile Include="include\Server_Assembly\Framework_Server.cpp" />
-    <ClCompile Include="include\Server_Assembly\GameInstance.cpp" />
-    <ClCompile Include="include\Server_Assembly\Global.cpp" />
-    <ClCompile Include="include\Server_Assembly\Input.cpp" />
-    <ClCompile Include="include\Server_Assembly\Input_Control.cpp" />
-    <ClCompile Include="include\Server_Assembly\LIB_Server_Assembly.cpp" />
-    <ClCompile Include="include\Server_Assembly\Output.cpp" />
-    <ClCompile Include="include\Server_Assembly\Output_Control.cpp" />
-    <ClCompile Include="include\Server_Assembly\pch.cpp" />
-    <ClCompile Include="include\Server_Assembly\Player.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise0_Algorithm.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise0_Input.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise0_Output.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise1_Algorithm.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise1_Input.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise1_Output.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise2_Algorithm.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise2_Input.cpp" />
-    <ClCompile Include="include\Server_Assembly\Praise2_Output.cpp" />
-    <ClCompile Include="include\Server_Assembly\Server.cpp" />
-    <ClCompile Include="include\Server_Assembly\User_Alg.cpp" />
-    <ClCompile Include="include\Server_Assembly\User_I.cpp" />
-    <ClCompile Include="include\Server_Assembly\User_O.cpp" />
+    <ClCompile Include="SIMULATION.cpp" />
     <ClCompile Include="TESTBENCH_LIBs_Cpp.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +213,7 @@
     <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Control.h" />
     <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Framework.h" />
     <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Global.h" />
+    <ClInclude Include="SIMULATION.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Server_Assembly\cpp.hint" />

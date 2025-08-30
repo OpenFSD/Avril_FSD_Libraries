@@ -1,0 +1,10 @@
+#include "SIMULATION.h"
+
+Avril_FSD::SIMULATION::SIMULATION()
+{
+
+}
+
+Avril_FSD::SIMULATION::~SIMULATION()
+{
+}

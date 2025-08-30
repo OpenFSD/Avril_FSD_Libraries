@@ -4,17 +4,17 @@
 
 namespace Avril_FSD
 {
-    class WriteEnable_Stack_Server_InputAction_Framework
+    class WriteEnableStack_ServerOutputRecieve_Framework
     {
     public:
-        WriteEnable_Stack_Server_InputAction_Framework();
-        virtual ~WriteEnable_Stack_Server_InputAction_Framework();
+        WriteEnableStack_ServerOutputRecieve_Framework();
+        virtual ~WriteEnableStack_ServerOutputRecieve_Framework();
 
         static void Write_End(unsigned char coreId);
         static void Write_Start(unsigned char coreId);
 
     private:
-        static class WriteEnable_Stack_Server_OutputRecieve* Get_writeEnable();
-        static void Set_writeEnable(class WriteEnable_Stack_Server_OutputRecieve* writeEnable);
+        static class WriteEnableStack_ServerOutputRecieve* Get_writeEnable();
+        static void Set_writeEnable(class WriteEnableStack_ServerOutputRecieve* writeEnable);
     };
 }

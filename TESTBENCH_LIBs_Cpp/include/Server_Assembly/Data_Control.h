@@ -12,9 +12,14 @@ namespace Avril_FSD
         void Pop_Stack_Output();
         void Push_Stack_InputPraises();
         void Push_Stack_Output(__int8 concurrentCoreId);
-
+        
         bool GetFlag_InputStackLoaded();
         bool GetFlag_OutputStackLoaded();
+        bool GetFlag_isNewInputDataReady();
+        bool GetFlag_isNewOutputDataReady();
+
+        void SetFlag_isNewInputDataReady(bool value);
+        void SetFlag_isNewOutputDataReady(bool value);
 
     protected:
 

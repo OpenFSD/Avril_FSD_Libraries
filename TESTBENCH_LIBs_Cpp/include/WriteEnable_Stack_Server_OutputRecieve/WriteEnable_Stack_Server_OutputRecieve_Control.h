@@ -2,27 +2,15 @@
 
 namespace Avril_FSD
 {
-    class WriteEnable_Stack_Server_InputAction_Control
+    class WriteEnableStack_ServerOutputRecieve_Control
     {
     public:
-        WriteEnable_Stack_Server_InputAction_Control(
-            class Avril_FSD::WriteEnable_Stack_Server_InputAction_Global* global
-        );
-        ~WriteEnable_Stack_Server_InputAction_Control();
-        void WriteEnable_Activate(
-            unsigned char coreId,
-            class Avril_FSD::WriteEnable_Stack_Server_InputAction_Global* global
-        );
-        void WriteEnable_SortQue(
-            class Avril_FSD::WriteEnable_Stack_Server_InputAction_Global* global
-        );
-        void WriteEnable_Request(
-            unsigned char coreId,
-            class Avril_FSD::WriteEnable_Stack_Server_InputAction_Global* global
-        );
-        void WriteQue_Update(
-            class Avril_FSD::WriteEnable_Stack_Server_InputAction_Global* global
-        );
+        WriteEnableStack_ServerOutputRecieve_Control(class Avril_FSD::WriteEnableStack_ServerOutputRecieve_Global* global);
+        ~WriteEnableStack_ServerOutputRecieve_Control();
+        void WriteEnable_Activate(unsigned char coreId, class Avril_FSD::WriteEnableStack_ServerOutputRecieve_Global* global);
+        void WriteEnable_SortQue(class Avril_FSD::WriteEnableStack_ServerOutputRecieve_Global* global);
+        void WriteEnable_Request(unsigned char coreId, class Avril_FSD::WriteEnableStack_ServerOutputRecieve_Global* global);
+        void WriteQue_Update(class Avril_FSD::WriteEnableStack_ServerOutputRecieve_Global* global);
 
         unsigned char Get_coreIdForWritePraiseIndex();
         int Get_count_WriteActive(unsigned char coreId);

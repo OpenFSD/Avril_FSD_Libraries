@@ -41,11 +41,13 @@ void Avril_FSD::ListenRespond::IO_ListenRespond()
 }
 void Avril_FSD::ListenRespond::ThreadForListen(Avril_FSD::Server* serverAssembly)
 {
-    serverAssembly->Get_Data()->Flip_Input_DoubleBuffer();
-    Avril_FSD::WriteEnableStackServerInputAction::Write_Start(Get_thisThreadCoreId());
-    serverAssembly->Get_Data()->Get_Data_Control()->Push_Stack_InputPraises();
-    switch(Avril_FSD::ConcurrentQue_Server::Get_State_LaunchBit())
+    if (serverAssembly->Get_Data()->Get_Data_Control()->GetFlag_isNewInputDataReady())
     {
+        Avril_FSD::WriteEnableStackServerInputAction::Write_Start(Get_thisThreadCoreId());
+        serverAssembly->Get_Data()->Get_Data_Control()->Push_Stack_InputPraises();
+        serverAssembly->Get_Data()->Get_Data_Control()->SetFlag_isNewInputDataReady(false);
+        switch (Avril_FSD::ConcurrentQue_Server::Get_State_LaunchBit())
+        {
         case true:
             //do nothing and try again next cycle.
             break;
@@ -53,18 +55,24 @@ void Avril_FSD::ListenRespond::ThreadForListen(Avril_FSD::Server* serverAssembly
         case false:
             Avril_FSD::ConcurrentQue_Server::Request_Wait_Launch(Get_thisThreadCoreId());
             break;
+        }
+        Avril_FSD::WriteEnableStackServerInputAction::Write_End(Get_thisThreadCoreId());
     }
-    Avril_FSD::WriteEnableStackServerInputAction::Write_End(Get_thisThreadCoreId());
 }
 void Avril_FSD::ListenRespond::ThreadForRespond(Avril_FSD::Server* serverAssembly)
 {
-    Avril_FSD::WriteEnableStackServerOutputRecieve::Write_Start(Get_thisThreadCoreId());
-    while (serverAssembly->Get_Data()->Get_Data_Control()->GetFlag_OutputStackLoaded())
+    if (serverAssembly->Get_Data()->Get_Data_Control()->GetFlag_isNewOutputDataReady())
     {
-        serverAssembly->Get_Data()->Get_Data_Control()->Pop_Stack_Output();
-        serverAssembly->Get_Data()->Flip_Output_DoubleBuffer();
+        Avril_FSD::WriteEnableStackServerOutputRecieve::Write_Start(Get_thisThreadCoreId());
+        while (serverAssembly->Get_Data()->Get_Data_Control()->GetFlag_OutputStackLoaded())
+        {
+            serverAssembly->Get_Data()->Get_Data_Control()->Pop_Stack_Output();
+            serverAssembly->Get_Data()->Flip_Output_DoubleBuffer();
+            serverAssembly->Get_Data()->Get_Data_Control()->SetFlag_isNewOutputDataReady(true);
+            //SIMULATION: gether output receieve
+        }
+        Avril_FSD::WriteEnableStackServerOutputRecieve::Write_End(Get_thisThreadCoreId());
     }
-    Avril_FSD::WriteEnableStackServerOutputRecieve::Write_End(Get_thisThreadCoreId());
 }
 __int8 Avril_FSD::ListenRespond::Get_thisThreadCoreId()
 {

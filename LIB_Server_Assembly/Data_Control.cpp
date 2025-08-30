@@ -2,11 +2,15 @@
 
 bool flag_isLoaded_Stack_InputPraise = false;
 bool flag_isLoaded_Stack_OutputPraise = false;
+bool flag_isNewInputDataReady = false;
+bool flag_isNewOutputDataReady = false;
 
 Avril_FSD::Data_Control::Data_Control()
 {
     flag_isLoaded_Stack_InputPraise = bool(false);
     flag_isLoaded_Stack_OutputPraise = bool(false);
+    flag_isNewInputDataReady = bool(false);
+    flag_isNewOutputDataReady = bool(false);
 }
 Avril_FSD::Data_Control::~Data_Control()
 {
@@ -84,6 +88,26 @@ bool Avril_FSD::Data_Control::GetFlag_InputStackLoaded()
 bool Avril_FSD::Data_Control::GetFlag_OutputStackLoaded()
 {
     return flag_isLoaded_Stack_OutputPraise;
+}
+
+bool Avril_FSD::Data_Control::GetFlag_isNewInputDataReady()
+{
+    return flag_isNewInputDataReady;
+}
+
+bool Avril_FSD::Data_Control::GetFlag_isNewOutputDataReady()
+{
+    return flag_isNewOutputDataReady;
+}
+
+void Avril_FSD::Data_Control::SetFlag_isNewInputDataReady(bool value)
+{
+    flag_isNewInputDataReady = value;
+}
+
+void Avril_FSD::Data_Control::SetFlag_isNewOutputDataReady(bool value)
+{
+    flag_isNewOutputDataReady = value;
 }
 
 

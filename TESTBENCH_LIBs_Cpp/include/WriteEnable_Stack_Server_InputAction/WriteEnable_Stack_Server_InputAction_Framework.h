@@ -4,11 +4,11 @@
 
 namespace Avril_FSD
 {
-    class WriteEnable_Stack_Server_InputAction_Framework
+    class WriteEnableStack_ServerInputAction_Framework
     {
     public:
-        WriteEnable_Stack_Server_InputAction_Framework();
-        virtual ~WriteEnable_Stack_Server_InputAction_Framework();
+        WriteEnableStack_ServerInputAction_Framework();
+        virtual ~WriteEnableStack_ServerInputAction_Framework();
 
         static void Write_End(unsigned char coreId);
         static void Write_Start(unsigned char coreId);

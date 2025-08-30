@@ -7,11 +7,11 @@ namespace Avril_FSD
 	public:
 		Praise1_Output();
 		virtual ~Praise1_Output();
-		std::vector<float> GetFowards();
-		std::vector<float> GetUp();
-		std::vector<float> GetRight();
-		void SetFowards(std::vector<float> fowards);
-		void SetUp(std::vector<float> up);
-		void SetRight(std::vector<float> right);
+		std::array<float, 3> GetFowards();
+		std::array<float, 3> GetUp();
+		std::array<float, 3> GetRight();
+		void SetFowards(std::array<float, 3> fowards);
+		void SetUp(std::array<float, 3> up);
+		void SetRight(std::array<float, 3> right);
 	};
 }
