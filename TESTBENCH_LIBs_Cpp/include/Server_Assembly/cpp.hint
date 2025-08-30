@@ -1,0 +1,2 @@
+#define LIBSERVERASSEMBLY_API __declspec(dllexport)
+#define LIBSERVERASSEMBLY_API __declspec(dllimport)

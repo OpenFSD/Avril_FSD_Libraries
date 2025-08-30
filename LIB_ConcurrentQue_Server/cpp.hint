@@ -1,0 +1,2 @@
+#define LIBCONCURRENTQUESERVER_API __declspec(dllexport)
+#define LIBCONCURRENTQUESERVER_API __declspec(dllimport)

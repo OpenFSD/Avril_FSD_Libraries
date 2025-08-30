@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d9346816-6a60-45d5-8fee-63cff6cff83d}</ProjectGuid>
+    <RootNamespace>LIBServerAssembly</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>LIBServerAssembly</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>LIBServerAssembly</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>LIBServerAssembly</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>LIBServerAssembly</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;LIBSERVERASSEMBLY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>\include\ConcurrentQue_Server;\include\WriteEnable_Stack_Server_InputAction;\include\WriteEnable_Stack_Server_OutputRecieve;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>LIBConcurrentQueServer.lib;LIBWriteEnableStackServerInputAction.lib;LIBWriteEnableStackServerOutputRecieve.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;LIBSERVERASSEMBLY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>\include\ConcurrentQue_Server;\include\WriteEnable_Stack_Server_InputAction;\include\WriteEnable_Stack_Server_OutputRecieve;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>LIBConcurrentQueServer.lib;LIBWriteEnableStackServerInputAction.lib;LIBWriteEnableStackServerOutputRecieve.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;LIBSERVERASSEMBLY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;LIBSERVERASSEMBLY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+    <None Include="lib\LIBConcurrentQueServer.dll" />
+    <None Include="lib\LIBWriteEnableStackServerInputAction.dll" />
+    <None Include="lib\LIBWriteEnableStackServerOutputRecieve.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Algorithms.h" />
+    <ClInclude Include="Concurrent.h" />
+    <ClInclude Include="Concurrent_Control.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="Data_Control.h" />
+    <ClInclude Include="Execute.h" />
+    <ClInclude Include="Execute_Control.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Framework_Server.h" />
+    <ClInclude Include="GameInstance.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_Framework.h" />
+    <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_Global.h" />
+    <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_LaunchConcurrency.h" />
+    <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_LaunchConcurrency_Control.h" />
+    <ClInclude Include="include\ConcurrentQue_Server\LIB_ConcurrentQue_Server.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\LIB_WriteEnable_Stack_Server_InputAction.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\WriteEnable_Stack_Server_InputAction.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\WriteEnable_Stack_Server_InputAction_Control.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\WriteEnable_Stack_Server_InputAction_Framework.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\WriteEnable_Stack_Server_InputAction_Global.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\LIB_WriteEnable_Stack_Server_OutputRecieve.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Control.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Framework.h" />
+    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Global.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="Input_Control.h" />
+    <ClInclude Include="LIB_Server_Assembly.h" />
+    <ClInclude Include="ListenRespond.h" />
+    <ClInclude Include="Output.h" />
+    <ClInclude Include="Output_Control.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Praise0_Algorithm.h" />
+    <ClInclude Include="Praise0_Input.h" />
+    <ClInclude Include="Praise0_Output.h" />
+    <ClInclude Include="Praise1_Algorithm.h" />
+    <ClInclude Include="Praise1_Input.h" />
+    <ClInclude Include="Praise1_Output.h" />
+    <ClInclude Include="Praise2_Algorithm.h" />
+    <ClInclude Include="Praise2_Input.h" />
+    <ClInclude Include="Praise2_Output.h" />
+    <ClInclude Include="Server.h" />
+    <ClInclude Include="User_Alg.h" />
+    <ClInclude Include="User_I.h" />
+    <ClInclude Include="User_O.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Algorithms.cpp" />
+    <ClCompile Include="Concurrent.cpp" />
+    <ClCompile Include="Concurrent_Control.cpp" />
+    <ClCompile Include="Data.cpp" />
+    <ClCompile Include="Data_Control.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Execute.cpp" />
+    <ClCompile Include="Execute_Control.cpp" />
+    <ClCompile Include="Framework_Server.cpp" />
+    <ClCompile Include="GameInstance.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Input_Control.cpp" />
+    <ClCompile Include="LIB_Server_Assembly.cpp" />
+    <ClCompile Include="ListenRespond.cpp" />
+    <ClCompile Include="Output.cpp" />
+    <ClCompile Include="Output_Control.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Praise0_Algorithm.cpp" />
+    <ClCompile Include="Praise0_Input.cpp" />
+    <ClCompile Include="Praise0_Output.cpp" />
+    <ClCompile Include="Praise1_Algorithm.cpp" />
+    <ClCompile Include="Praise1_Input.cpp" />
+    <ClCompile Include="Praise1_Output.cpp" />
+    <ClCompile Include="Praise2_Algorithm.cpp" />
+    <ClCompile Include="Praise2_Input.cpp" />
+    <ClCompile Include="Praise2_Output.cpp" />
+    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="User_Alg.cpp" />
+    <ClCompile Include="User_I.cpp" />
+    <ClCompile Include="User_O.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LIB_ConcurrentQue_Server\LIB_ConcurrentQue_Server.vcxproj">
+      <Project>{e240374e-087e-4680-8e9f-c5db2ce105cc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LIB_WriteEnable_Stack_Server_InputAction\LIB_WriteEnable_Stack_Server_InputAction.vcxproj">
+      <Project>{2fab19fc-6f41-497d-b898-2fb41c875859}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LIB_WriteEnable_Stack_Server_OutputRecieve\LIB_WriteEnable_Stack_Server_OutputRecieve.vcxproj">
+      <Project>{3025c87d-fc57-48d4-973e-9f13e290c8d1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\LIBConcurrentQueServer.lib" />
+    <Library Include="lib\LIBWriteEnableStackServerInputAction.lib" />
+    <Library Include="lib\LIBWriteEnableStackServerOutputRecieve.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
