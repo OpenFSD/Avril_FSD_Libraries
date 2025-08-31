@@ -10,7 +10,7 @@ Avril_FSD::WriteEnableStackServerOutputRecieve::WriteEnableStackServerOutputReci
 {
 
 }
-Avril_FSD::WriteEnable_Stack_Client_OutputRecieve_Framework* Avril_FSD::WriteEnableStackServerOutputRecieve::Initialise_Avril_FSD()
+Avril_FSD::WriteEnable_Stack_Client_OutputRecieve_Framework* Avril_FSD::WriteEnableStackServerOutputRecieve::Initialise_WriteEnable()
 {
     Set_writeEnable(new class Avril_FSD::WriteEnable_Stack_Client_OutputRecieve_Framework());
     while (Get_Framework_WriteEnable() == NULL) {}

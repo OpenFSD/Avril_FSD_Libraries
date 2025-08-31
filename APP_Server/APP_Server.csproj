@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6E2B9AF-0310-4E9B-8159-052F566A7589}</ProjectGuid>
+    <ProjectGuid>{52A6F9F7-57A8-4527-8C20-688CE3BEC5D6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>APP_Server</RootNamespace>
     <AssemblyName>APP_Server</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="OpenTK, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.2.0.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.9.0.3\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,11 +51,93 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="engine\Algorithms.cs" />
+    <Compile Include="engine\Data.cs" />
+    <Compile Include="engine\Data_Control.cs" />
+    <Compile Include="engine\Execute.cs" />
+    <Compile Include="engine\Execute_Control.cs" />
+    <Compile Include="engine\Framework.cs" />
+    <Compile Include="engine\Global.cs" />
+    <Compile Include="engine\Input.cs" />
+    <Compile Include="engine\Input_Control.cs" />
+    <Compile Include="engine\Input_Instance.cs" />
+    <Compile Include="engine\Input_Instance_Control.cs" />
+    <Compile Include="engine\IO_ListenRespond.cs" />
+    <Compile Include="engine\IO_ListenRespond_Control.cs" />
+    <Compile Include="engine\Output.cs" />
+    <Compile Include="engine\Output_Control.cs" />
+    <Compile Include="engine\Output_Instance.cs" />
+    <Compile Include="engine\Output_Instance_Control.cs" />
+    <Compile Include="engine\Server.cs" />
+    <Compile Include="engine\user_praise_files\Praise0_Algorithm.cs" />
+    <Compile Include="engine\user_praise_files\Praise0_Input.cs" />
+    <Compile Include="engine\user_praise_files\Praise0_Output.cs" />
+    <Compile Include="engine\user_praise_files\Praise1_Algorithm.cs" />
+    <Compile Include="engine\user_praise_files\Praise1_Input.cs" />
+    <Compile Include="engine\user_praise_files\Praise1_Output.cs" />
+    <Compile Include="engine\user_praise_files\User_Alg.cs" />
+    <Compile Include="engine\user_praise_files\User_I.cs" />
+    <Compile Include="engine\user_praise_files\User_O.cs" />
+    <Compile Include="Florence_Server.cs" />
+    <Compile Include="GameInstance\Arena.cs" />
+    <Compile Include="GameInstance\Game_Instance.cs" />
+    <Compile Include="GameInstance\Map_Default.cs" />
+    <Compile Include="GameInstance\Player.cs" />
+    <Compile Include="GameInstance\Settings.cs" />
+    <Compile Include="graphics\Cameras\FirstPersonCamera.cs" />
+    <Compile Include="graphics\Cameras\ICamera.cs" />
+    <Compile Include="graphics\Cameras\StaticCamera.cs" />
+    <Compile Include="graphics\Cameras\ThirdPersonCamera.cs" />
+    <Compile Include="graphics\GameObjectFactory.cs" />
+    <Compile Include="graphics\GameObjects\AGameObject.cs" />
+    <Compile Include="graphics\GameObjects\Asteroid.cs" />
+    <Compile Include="graphics\GameObjects\Bullet.cs" />
+    <Compile Include="graphics\GameObjects\GameOverCube.cs" />
+    <Compile Include="graphics\GameObjects\Spacecraft.cs" />
+    <Compile Include="graphics\GameObjects\TestObject.cs" />
+    <Compile Include="graphics\IcoSphereFactory.cs" />
+    <Compile Include="graphics\Renderables\ARenderable.cs" />
+    <Compile Include="graphics\Renderables\ColoredRenderObject.cs" />
+    <Compile Include="graphics\Renderables\ColoredVertex.cs" />
+    <Compile Include="graphics\Renderables\MipMapGeneratedRenderObject.cs" />
+    <Compile Include="graphics\Renderables\MipMapManualRenderObject.cs" />
+    <Compile Include="graphics\Renderables\TexturedRenderObject.cs" />
+    <Compile Include="graphics\Renderables\TexturedVertex.cs" />
+    <Compile Include="graphics\RenderObjectFactory.cs" />
+    <Compile Include="graphics\ShaderProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="graphics\Textures\asteroid texture one side mipmap levels 0 to 8.pdn" />
+    <None Include="graphics\Textures\gameover.pdn" />
+    <None Include="graphics\Textures\sixsided.pdn" />
+    <None Include="graphics\Textures\spacecraft.pdn" />
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="include\ServerAssembly\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="graphics\Shaders\1Vert\simplePipeTexVert.c" />
+    <Content Include="graphics\Shaders\1Vert\simplePipeVert.c" />
+    <Content Include="graphics\Shaders\5Frag\simplePipeFrag.c" />
+    <Content Include="graphics\Shaders\5Frag\simplePipeTexFrag.c" />
+    <Content Include="graphics\Textures\asteroid texture one side mipmap levels 0 to 8.bmp" />
+    <Content Include="graphics\Textures\asteroid texture one side.jpg" />
+    <Content Include="graphics\Textures\asteroid.bmp" />
+    <Content Include="graphics\Textures\dotted.png" />
+    <Content Include="graphics\Textures\dotted2.png" />
+    <Content Include="graphics\Textures\gameover.png" />
+    <Content Include="graphics\Textures\golden.bmp" />
+    <Content Include="graphics\Textures\moonmap1k.jpg" />
+    <Content Include="graphics\Textures\pinkframe.bmp" />
+    <Content Include="graphics\Textures\sixsided.png" />
+    <Content Include="graphics\Textures\spacecraft.png" />
+    <Content Include="graphics\Textures\wooden texture mipmap levels 0 to 8.jpg" />
+    <Content Include="graphics\Textures\wooden.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

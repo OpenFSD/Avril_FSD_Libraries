@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5C7F85C-F3B9-4D15-8654-32A1304AE473}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TESTBENCH_LIBs_Csharp</RootNamespace>
+    <AssemblyName>TESTBENCH_LIBs_Csharp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IMPORT_Avril_FSD_LIB_ConcurrentQue_Client.cs" />
+    <Compile Include="IMPORT_Avril_FSD_LIB_WriteEnable_Stack_Client_OutputRecieve.cs" />
+    <Compile Include="IMPORT_Avril_FSD_LIB_Server_Assembly.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="LIBConcurrentQueClient.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LIBServerAssembly.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LIBWriteEnableStackClientOutputRecieve.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Algorithms.h" />
+    <Content Include="Concurrent.h" />
+    <Content Include="ConcurrentQue_Client_Framework.h" />
+    <Content Include="ConcurrentQue_Client_Global.h" />
+    <Content Include="ConcurrentQue_Client_LaunchConcurrency.h" />
+    <Content Include="ConcurrentQue_Client_LaunchConcurrency_Control.h" />
+    <Content Include="Concurrent_Control.h" />
+    <Content Include="Data.h" />
+    <Content Include="Data_Control.h" />
+    <Content Include="Execute.h" />
+    <Content Include="Execute_Control.h" />
+    <Content Include="Framework_Server.h" />
+    <Content Include="GameInstance.h" />
+    <Content Include="Global.h" />
+    <Content Include="Input.h" />
+    <Content Include="Input_Control.h" />
+    <Content Include="LIBConcurrentQueClient.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIBServerAssembly.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIBWriteEnableStackClientOutputRecieve.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIB_ConcurrentQue_Client.h" />
+    <Content Include="LIB_Server_Assembly.h" />
+    <Content Include="ListenRespond.h" />
+    <Content Include="Output.h" />
+    <Content Include="Output_Control.h" />
+    <Content Include="Player.h" />
+    <Content Include="Praise0_Algorithm.h" />
+    <Content Include="Praise0_Input.h" />
+    <Content Include="Praise0_Output.h" />
+    <Content Include="Praise1_Algorithm.h" />
+    <Content Include="Praise1_Input.h" />
+    <Content Include="Praise1_Output.h" />
+    <Content Include="Praise2_Algorithm.h" />
+    <Content Include="Praise2_Input.h" />
+    <Content Include="Praise2_Output.h" />
+    <Content Include="Server.h" />
+    <Content Include="User_Alg.h" />
+    <Content Include="User_I.h" />
+    <Content Include="User_O.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LIB_ConcurrentQue_Client\LIB_ConcurrentQue_Client.vcxproj">
+      <Project>{88389858-fc2b-485e-a4c0-03e8c5a30a9d}</Project>
+      <Name>LIB_ConcurrentQue_Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LIB_Server_Assembly\LIB_Server_Assembly.vcxproj">
+      <Project>{d9346816-6a60-45d5-8fee-63cff6cff83d}</Project>
+      <Name>LIB_Server_Assembly</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LIB_WriteEnable_Stack_Client_OutputRecieve\LIB_WriteEnable_Stack_Client_OutputRecieve.vcxproj">
+      <Project>{ed90e0b5-31b6-43f0-b3ca-989f21050a2d}</Project>
+      <Name>LIB_WriteEnable_Stack_Client_OutputRecieve</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
