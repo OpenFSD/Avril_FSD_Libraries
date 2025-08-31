@@ -7,12 +7,17 @@ namespace Avril_FSD_ServerAssembly
 
         public Global()
         {
-            numberOfCores = 2;
+            Set_NumberOFCores(2);
         }
 
         public byte Get_NumCores()
         {
             return numberOfCores;
+        }
+
+        private void Set_NumberOFCores(byte value)
+        {
+            numberOfCores = value;
         }
     }
 }

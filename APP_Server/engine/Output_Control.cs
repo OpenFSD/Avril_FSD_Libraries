@@ -19,14 +19,14 @@ namespace Avril_FSD_ServerAssembly
             switch (praiseEventId)
             {
                 case 0:
-                    Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetOutput_Instnace().GetBuffer_BackOutputDouble().SetInputBufferSubSet(
-                        Framework.GetGameServer().GetData().GetUserI().GetPraise0_Input()
+                    Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_output_Instnace().GetBuffer_BackOutputDouble().SetInputBufferSubSet(
+                        Framework.GetGameServer().GetData().Get_user_I().GetPraise0_Input()
                     );
                     break;
 
                 case 1:
-                    Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetOutput_Instnace().GetBuffer_BackOutputDouble().SetInputBufferSubSet(
-                        Framework.GetGameServer().GetData().GetUserI().GetPraise1_Input()
+                    Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_output_Instnace().GetBuffer_BackOutputDouble().SetInputBufferSubSet(
+                        Framework.GetGameServer().GetData().Get_user_I().GetPraise1_Input()
                     );
                     break;
             }

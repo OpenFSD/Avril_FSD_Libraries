@@ -46,11 +46,11 @@ namespace Avril_FSD_ServerAssembly
 
         public Avril_FSD_ServerAssembly.Input GetBuffer_Front_InputDouble()
         {
-            return inputDoubleBuffer[BoolToInt16(Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetState_Buffer_InputPraise_SideToWrite())];
+            return inputDoubleBuffer[BoolToInt16(Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_state_Buffer_InputPraise_SideToWrite())];
         }
         public Avril_FSD_ServerAssembly.Input GetBuffer_Back_InputDouble()
         {
-            return inputDoubleBuffer[BoolToInt16(!Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetState_Buffer_InputPraise_SideToWrite())];
+            return inputDoubleBuffer[BoolToInt16(!Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_state_Buffer_InputPraise_SideToWrite())];
         }
 
         public Avril_FSD_ServerAssembly.Input GetEmptyInput()
@@ -70,7 +70,7 @@ namespace Avril_FSD_ServerAssembly
 
         public void SetBuffer_Input(Avril_FSD_ServerAssembly.Input value)
         {
-            inputDoubleBuffer[BoolToInt16(Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetState_Buffer_InputPraise_SideToWrite())] = value;
+            inputDoubleBuffer[BoolToInt16(Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_state_Buffer_InputPraise_SideToWrite())] = value;
         }
     }
 }

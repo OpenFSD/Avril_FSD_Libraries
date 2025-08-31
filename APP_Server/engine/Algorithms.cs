@@ -3,7 +3,7 @@ namespace Avril_FSD_ServerAssembly
 {
     public class Algorithms
     {
-        static private Avril_FSD_ServerAssembly.IO_ListenRespond io_ListenRespond;
+        static private Avril_FSD_ServerAssembly.IO_ListenRespond _io_ListenRespond = null;
 
         public Algorithms(byte numberOfCores)
         {
@@ -12,14 +12,18 @@ namespace Avril_FSD_ServerAssembly
 
         public void Initialise(byte numberOfCores)
         {
-            io_ListenRespond = new Avril_FSD_ServerAssembly.IO_ListenRespond();
-            while (io_ListenRespond == null) { /* wait untill class constructed */ }
-            io_ListenRespond.InitialiseControl();
+            SetIO_listenRespond(new Avril_FSD_ServerAssembly.IO_ListenRespond());
+            while (GetIO_ListenRespond() == null) { /* wait untill class constructed */ }
+            GetIO_ListenRespond().InitialiseControl();
         }
 
         public Avril_FSD_ServerAssembly.IO_ListenRespond GetIO_ListenRespond()
         {
-            return io_ListenRespond;
+            return _io_ListenRespond;
+        }
+        private void SetIO_listenRespond(Avril_FSD_ServerAssembly.IO_ListenRespond value)
+        {
+            _io_ListenRespond = value;
         }
     }
 }

@@ -158,7 +158,7 @@ namespace Avril_FSD_ServerAssembly
             Console.WriteLine("TESTBENCH => HandleMouse");
             MouseState mouseState = Mouse.GetCursorState();
             
-            if (Framework.GetGameServer().GetData().GetData_Control().GetFlag_IsPraiseEvent(1) == false)
+            if (Framework.GetGameServer().GetData().Get_data_Control().GetFlag_IsPraiseEvent(1) == false)
             {
                 if (_gameObjectFactory.Get_player().Get_IsFirstMouseMove()) // This bool variable is initially set to true.
                 {

@@ -2,10 +2,10 @@
 {
     public class Server
     {
-        Avril_FSD_ServerAssembly.Algorithms _algorithms;
-        Avril_FSD_ServerAssembly.Data _data;
-        Avril_FSD_ServerAssembly.Execute _execute;
-        Avril_FSD_ServerAssembly.Global _global;
+        static private Avril_FSD_ServerAssembly.Algorithms _algorithms = null;
+        static private Avril_FSD_ServerAssembly.Data _data = null;
+        static private Avril_FSD_ServerAssembly.Execute _execute = null;
+        static private Avril_FSD_ServerAssembly.Global _global = null;
 
         public Server()
         {

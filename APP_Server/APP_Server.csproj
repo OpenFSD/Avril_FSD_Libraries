@@ -15,7 +15,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,9 +23,10 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -78,7 +79,6 @@
     <Compile Include="engine\user_praise_files\User_Alg.cs" />
     <Compile Include="engine\user_praise_files\User_I.cs" />
     <Compile Include="engine\user_praise_files\User_O.cs" />
-    <Compile Include="Florence_Server.cs" />
     <Compile Include="GameInstance\Arena.cs" />
     <Compile Include="GameInstance\Game_Instance.cs" />
     <Compile Include="GameInstance\Map_Default.cs" />
@@ -105,6 +105,7 @@
     <Compile Include="graphics\Renderables\TexturedVertex.cs" />
     <Compile Include="graphics\RenderObjectFactory.cs" />
     <Compile Include="graphics\ShaderProgram.cs" />
+    <Compile Include="IMPORT_Avril_FSD_LIB_Server_Assembly.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -114,11 +115,17 @@
     <None Include="graphics\Textures\gameover.pdn" />
     <None Include="graphics\Textures\sixsided.pdn" />
     <None Include="graphics\Textures\spacecraft.pdn" />
+    <None Include="LIBServerAssembly.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="include\ServerAssembly\" />
+    <ProjectReference Include="..\LIB_Server_Assembly\LIB_Server_Assembly.vcxproj">
+      <Project>{d9346816-6a60-45d5-8fee-63cff6cff83d}</Project>
+      <Name>LIB_Server_Assembly</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="graphics\Shaders\1Vert\simplePipeTexVert.c" />
@@ -138,6 +145,39 @@
     <Content Include="graphics\Textures\spacecraft.png" />
     <Content Include="graphics\Textures\wooden texture mipmap levels 0 to 8.jpg" />
     <Content Include="graphics\Textures\wooden.png" />
+    <Content Include="include\ServerAssembly\Algorithms.h" />
+    <Content Include="include\ServerAssembly\Concurrent.h" />
+    <Content Include="include\ServerAssembly\Concurrent_Control.h" />
+    <Content Include="include\ServerAssembly\Data.h" />
+    <Content Include="include\ServerAssembly\Data_Control.h" />
+    <Content Include="include\ServerAssembly\Execute.h" />
+    <Content Include="include\ServerAssembly\Execute_Control.h" />
+    <Content Include="include\ServerAssembly\Framework_Server.h" />
+    <Content Include="include\ServerAssembly\GameInstance.h" />
+    <Content Include="include\ServerAssembly\Global.h" />
+    <Content Include="include\ServerAssembly\Input.h" />
+    <Content Include="include\ServerAssembly\Input_Control.h" />
+    <Content Include="include\ServerAssembly\LIB_Server_Assembly.h" />
+    <Content Include="include\ServerAssembly\ListenRespond.h" />
+    <Content Include="include\ServerAssembly\Output.h" />
+    <Content Include="include\ServerAssembly\Output_Control.h" />
+    <Content Include="include\ServerAssembly\Player.h" />
+    <Content Include="include\ServerAssembly\Praise0_Algorithm.h" />
+    <Content Include="include\ServerAssembly\Praise0_Input.h" />
+    <Content Include="include\ServerAssembly\Praise0_Output.h" />
+    <Content Include="include\ServerAssembly\Praise1_Algorithm.h" />
+    <Content Include="include\ServerAssembly\Praise1_Input.h" />
+    <Content Include="include\ServerAssembly\Praise1_Output.h" />
+    <Content Include="include\ServerAssembly\Praise2_Algorithm.h" />
+    <Content Include="include\ServerAssembly\Praise2_Input.h" />
+    <Content Include="include\ServerAssembly\Praise2_Output.h" />
+    <Content Include="include\ServerAssembly\Server.h" />
+    <Content Include="include\ServerAssembly\User_Alg.h" />
+    <Content Include="include\ServerAssembly\User_I.h" />
+    <Content Include="include\ServerAssembly\User_O.h" />
+    <Content Include="LIBServerAssembly.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

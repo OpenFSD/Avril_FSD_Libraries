@@ -1,24 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Concurrent;
-
+﻿
 namespace Avril_FSD_ServerAssembly
 {
     public class IO_ListenRespond
     {
-        byte listen_CoreId;
-        byte respond_CoreId;
-        Avril_FSD_ServerAssembly.IO_ListenRespond_Control io_Control;
+        byte _listen_CoreId;
+        byte _respond_CoreId;
+        Avril_FSD_ServerAssembly.IO_ListenRespond_Control _io_Control = null;
 
         public IO_ListenRespond()
         {
-            listen_CoreId = 255;
-            respond_CoreId = 255;
-            io_Control = null;
+            _listen_CoreId = 255;
+            _respond_CoreId = 255;
         }
         public void InitialiseControl()
         {
-            io_Control = new Avril_FSD_ServerAssembly.IO_ListenRespond_Control();
-            while (io_Control == null) { /* Wait while is created */ }
+            _io_Control = new Avril_FSD_ServerAssembly.IO_ListenRespond_Control();
+            while (_io_Control == null) { }
         }
 
         public void Thread_Input_Listen()
@@ -90,9 +87,9 @@ namespace Avril_FSD_ServerAssembly
             }
         */}
 
-        public Avril_FSD_ServerAssembly.IO_ListenRespond_Control GetIO_Control()
+        public Avril_FSD_ServerAssembly.IO_ListenRespond_Control Get_IO_Control()
         {
-            return io_Control;
+            return _io_Control;
         }
     }
 }

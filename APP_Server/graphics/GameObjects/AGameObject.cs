@@ -50,7 +50,7 @@ namespace Avril_FSD_ServerAssembly
 
         public void Update_Rotation(Vector3 value)
         {
-            float rot_X = Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetGame_Instance().Get_gameObjectFactory().Get_player().Get_Rotation().X + value.X;
+            float rot_X = Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_gameInstance().Get_gameObjectFactory().Get_player().Get_Rotation().X + value.X;
             if (rot_X > (float)(Math.PI / 180) * 180)
             {
                 rot_X = (rot_X - (float)(Math.PI * 2));
@@ -59,7 +59,7 @@ namespace Avril_FSD_ServerAssembly
             {
                 rot_X = (rot_X + (float)(Math.PI * 2));
             }
-            float rot_Y = Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetGame_Instance().Get_gameObjectFactory().Get_player().Get_Rotation().Y + value.Y;
+            float rot_Y = Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_gameInstance().Get_gameObjectFactory().Get_player().Get_Rotation().Y + value.Y;
             if (rot_Y > (float)(Math.PI / 180) * 180)
             {
                 rot_Y = (rot_Y - (float)(Math.PI * 2));
@@ -68,7 +68,7 @@ namespace Avril_FSD_ServerAssembly
             {
                 rot_Y = (rot_Y + (float)(Math.PI * 2));
             }
-            float rot_Z = Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetGame_Instance().Get_gameObjectFactory().Get_player().Get_Rotation().Z + value.Z;
+            float rot_Z = Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_gameInstance().Get_gameObjectFactory().Get_player().Get_Rotation().Z + value.Z;
             if (rot_Z > (float)(Math.PI / 180) * 180)
             {
                 rot_Z = (rot_Z - (float)(Math.PI * 2));
@@ -77,7 +77,7 @@ namespace Avril_FSD_ServerAssembly
             {
                 rot_Z = (rot_Z + (float)(Math.PI * 2));
             }
-            Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().GetGame_Instance().Get_gameObjectFactory().Get_player().Set_rotation(new Vector3(rot_X, rot_Y, rot_Z));
+            Avril_FSD_ServerAssembly.Framework.GetGameServer().GetData().Get_gameInstance().Get_gameObjectFactory().Get_player().Set_rotation(new Vector3(rot_X, rot_Y, rot_Z));
         }
 //get
         public Vector3 Get_Rotation()
