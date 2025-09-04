@@ -15,10 +15,13 @@ namespace Avril_FSD
         class ConcurrentQue_Client_LaunchConcurrency_Control* Get_Control_Of_LaunchConcurrency();
 
     private:
-        void Create_ConcurrentQue_Client_Global();
-        void Create_Control_Of_LaunchConcurrency();
+        static void Create_ConcurrentQue_Client_Global();
+        static void Create_Control_Of_LaunchConcurrency();
 
-        void Set_LaunchConcurrency_Global(ConcurrentQue_Client_Global* global);
-        void Set_Control_Of_LaunchConcurrency(class ConcurrentQue_Client_LaunchConcurrency_Control* control);
+        static class ConcurrentQue_Client_Global* Get_class_LaunchConcurrency_Global();
+        static class ConcurrentQue_Client_LaunchConcurrency_Control* Get_class_Control_Of_LaunchConcurrency();
+
+        static void Set_LaunchConcurrency_Global(ConcurrentQue_Client_Global* global);
+        static void Set_Control_Of_LaunchConcurrency(class ConcurrentQue_Client_LaunchConcurrency_Control* control);
     };
 }

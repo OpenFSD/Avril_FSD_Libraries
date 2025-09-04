@@ -16,9 +16,9 @@ namespace Avril_FSD
         public static extern IntPtr Initialise_WriteEnable();
 
         [DllImport("LIBWriteEnableStackClientOutputRecieve.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Write_End(byte coreId);
+        public static extern void Write_End(IntPtr obj, byte coreId);
 
         [DllImport("LIBWriteEnableStackClientOutputRecieve.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Write_Start(byte coreId);
+        public static extern void Write_Start(IntPtr obj, byte coreId);
     }
 }

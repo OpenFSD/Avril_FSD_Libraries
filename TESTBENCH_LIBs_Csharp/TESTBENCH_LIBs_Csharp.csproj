@@ -51,61 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="LIBConcurrentQueClient.lib">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="LIBServerAssembly.lib">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="LIBWriteEnableStackClientOutputRecieve.lib">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Algorithms.h" />
-    <Content Include="Concurrent.h" />
-    <Content Include="ConcurrentQue_Client_Framework.h" />
-    <Content Include="ConcurrentQue_Client_Global.h" />
-    <Content Include="ConcurrentQue_Client_LaunchConcurrency.h" />
-    <Content Include="ConcurrentQue_Client_LaunchConcurrency_Control.h" />
-    <Content Include="Concurrent_Control.h" />
-    <Content Include="Data.h" />
-    <Content Include="Data_Control.h" />
-    <Content Include="Execute.h" />
-    <Content Include="Execute_Control.h" />
-    <Content Include="Framework_Server.h" />
-    <Content Include="GameInstance.h" />
-    <Content Include="Global.h" />
-    <Content Include="Input.h" />
-    <Content Include="Input_Control.h" />
-    <Content Include="LIBConcurrentQueClient.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="LIBServerAssembly.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="LIBWriteEnableStackClientOutputRecieve.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="LIB_ConcurrentQue_Client.h" />
-    <Content Include="LIB_Server_Assembly.h" />
-    <Content Include="ListenRespond.h" />
-    <Content Include="Output.h" />
-    <Content Include="Output_Control.h" />
-    <Content Include="Player.h" />
-    <Content Include="Praise0_Algorithm.h" />
-    <Content Include="Praise0_Input.h" />
-    <Content Include="Praise0_Output.h" />
-    <Content Include="Praise1_Algorithm.h" />
-    <Content Include="Praise1_Input.h" />
-    <Content Include="Praise1_Output.h" />
-    <Content Include="Praise2_Algorithm.h" />
-    <Content Include="Praise2_Input.h" />
-    <Content Include="Praise2_Output.h" />
-    <Content Include="Server.h" />
-    <Content Include="User_Alg.h" />
-    <Content Include="User_I.h" />
-    <Content Include="User_O.h" />
+    <None Include="LIBConcurrentQueClient.lib" />
+    <None Include="LIBConcurrentQueServer.lib" />
+    <None Include="LIBWriteEnableStackClientOutputRecieve.lib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LIB_ConcurrentQue_Client\LIB_ConcurrentQue_Client.vcxproj">
@@ -120,6 +68,63 @@
       <Project>{ed90e0b5-31b6-43f0-b3ca-989f21050a2d}</Project>
       <Name>LIB_WriteEnable_Stack_Client_OutputRecieve</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_Framework.h" />
+    <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_Global.h" />
+    <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_LaunchConcurrency.h" />
+    <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_LaunchConcurrency_Control.h" />
+    <Content Include="include\ConcurrentQueClient\LIB_ConcurrentQue_Client.h" />
+    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\ConcurrentQue_END_Framework.h" />
+    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\ConcurrentQue_END_Global.h" />
+    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\ConcurrentQue_END_LaunchConcurrency.h" />
+    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\ConcurrentQue_END_LaunchConcurrency_Control.h" />
+    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\LaunchEnableForConcurrentThreadsAt_ENDS.h" />
+    <Content Include="include\ServerAssembly\Algorithms.h" />
+    <Content Include="include\ServerAssembly\Concurrent.h" />
+    <Content Include="include\ServerAssembly\Concurrent_Control.h" />
+    <Content Include="include\ServerAssembly\Data.h" />
+    <Content Include="include\ServerAssembly\Data_Control.h" />
+    <Content Include="include\ServerAssembly\Execute.h" />
+    <Content Include="include\ServerAssembly\Execute_Control.h" />
+    <Content Include="include\ServerAssembly\Framework_Server.h" />
+    <Content Include="include\ServerAssembly\GameInstance.h" />
+    <Content Include="include\ServerAssembly\Global.h" />
+    <Content Include="include\ServerAssembly\Input.h" />
+    <Content Include="include\ServerAssembly\Input_Control.h" />
+    <Content Include="include\ServerAssembly\LIB_Server_Assembly.h" />
+    <Content Include="include\ServerAssembly\ListenRespond.h" />
+    <Content Include="include\ServerAssembly\Output.h" />
+    <Content Include="include\ServerAssembly\Output_Control.h" />
+    <Content Include="include\ServerAssembly\Player.h" />
+    <Content Include="include\ServerAssembly\Praise0_Algorithm.h" />
+    <Content Include="include\ServerAssembly\Praise0_Input.h" />
+    <Content Include="include\ServerAssembly\Praise0_Output.h" />
+    <Content Include="include\ServerAssembly\Praise1_Algorithm.h" />
+    <Content Include="include\ServerAssembly\Praise1_Input.h" />
+    <Content Include="include\ServerAssembly\Praise1_Output.h" />
+    <Content Include="include\ServerAssembly\Praise2_Algorithm.h" />
+    <Content Include="include\ServerAssembly\Praise2_Input.h" />
+    <Content Include="include\ServerAssembly\Praise2_Output.h" />
+    <Content Include="include\ServerAssembly\Server.h" />
+    <Content Include="include\ServerAssembly\User_Alg.h" />
+    <Content Include="include\ServerAssembly\User_I.h" />
+    <Content Include="include\ServerAssembly\User_O.h" />
+    <Content Include="include\WriteEnableStackClientOutputRecieve\LIB_WriteEnable_Stack_Client_OutputRecieve.h" />
+    <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve.h" />
+    <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Control.h" />
+    <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Framework.h" />
+    <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Global.h" />
+    <Content Include="LIBConcurrentQueClient.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIBConcurrentQueServer.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIBWriteEnableStackClientOutputRecieve.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

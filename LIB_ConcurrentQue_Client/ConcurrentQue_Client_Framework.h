@@ -7,20 +7,12 @@ namespace Avril_FSD
     public:
         ConcurrentQue_Client_Framework();
         virtual ~ConcurrentQue_Client_Framework();
-        static void Request_Wait_Launch(unsigned char concurrent_CoreId);
-        static void Thread_End(unsigned char concurrent_CoreId);
-        
-        static unsigned char Get_coreId_To_Launch();
-        static bool Get_Flag_Active();
-        static bool Get_Flag_ConcurrentCoreState(unsigned char concurrent_CoreId);
-        static bool Get_Flag_Idle();
-        static bool Get_State_LaunchBit();
-
-        static void SetFlag_ConcurrentCoreState(unsigned char concurrent_CoreId, bool value);
+        void Request_Wait_Launch(unsigned char concurrent_CoreId);
+        void Thread_End(unsigned char concurrent_CoreId);
+        static class ConcurrentQue_Client_LaunchConcurrency* Get_ConcurrentQue();
 
     private:
         static void Create_ConcurrentQue();
-        static class ConcurrentQue_Client_LaunchConcurrency* Get_ConcurrentQue();
         static void Set_ConcurrentQue(class ConcurrentQue_Client_LaunchConcurrency* concurrentQue);
     };
 }

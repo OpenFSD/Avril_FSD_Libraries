@@ -10,34 +10,34 @@ namespace Avril_FSD
 	class LIBSERVERASSEMBLY_API LIB_ServerLibrary {
 	public:
 		LIB_ServerLibrary();
-		static class Framework_Server* Initialise_Server_Assembly();
-		static bool Get_Flag_isNewInputDataReady();
-		static bool Get_flag_isNewOutputDataReady();
-		static bool Get_Flag_IsStackLoaded_Server_InputAction();
-		static bool Get_Flag_IsStackLoaded_Server_OutputRecieve();
-		static bool Get_Flag_IsInitialised_Avril_FSD_ServerAssembly();
-		static void Pop_Stack_Output();
-		static void Push_Stack_InputPraises();
+		static void* Initialise_Server_Assembly();
+		static bool Get_Flag_isNewInputDataReady(class Avril_FSD::Framework_Server* obj);
+		static bool Get_flag_isNewOutputDataReady(class Avril_FSD::Framework_Server* obj);
+		static bool Get_Flag_IsStackLoaded_Server_InputAction(class Avril_FSD::Framework_Server* obj);
+		static bool Get_Flag_IsStackLoaded_Server_OutputRecieve(class Avril_FSD::Framework_Server* obj);
+		static bool Get_Flag_IsInitialised_Avril_FSD_ServerAssembly(class Avril_FSD::Framework_Server* obj);
+		static void Pop_Stack_Output(class Avril_FSD::Framework_Server* obj);
+		static void Push_Stack_InputPraises(class Avril_FSD::Framework_Server* obj);
 		//static void Set_Flag_isNewInputDataReady(bool value);
 // Praise Event Id
-		static __int8 Get_PraiseEventId();
-		static void Set_PraiseEventId(__int8 value);
+		static __int8 Get_PraiseEventId(class Avril_FSD::Framework_Server* obj);
+		static void Set_PraiseEventId(class Avril_FSD::Framework_Server* obj, __int8 value);
 // Praise 0 Data
-		static bool Get_Praise0_Input_IsPingActive();
-		static void Set_Praise0_Input_IsPingActive(bool value);
-		static bool Get_Praise0_Output_IsPingActive();
-		static void Set_Praise0_Output_IsPingActive(bool value);
+		static bool Get_Praise0_Input_IsPingActive(class Avril_FSD::Framework_Server* obj);
+		static void Set_Praise0_Input_IsPingActive(class Avril_FSD::Framework_Server* obj, bool value);
+		static bool Get_Praise0_Output_IsPingActive(class Avril_FSD::Framework_Server* obj);
+		static void Set_Praise0_Output_IsPingActive(class Avril_FSD::Framework_Server* obj, bool value);
 // Praise 1 Data
-		static float Get_Praise1_Input_mouseDelta_X();
-		static float Get_Praise1_Input_mouseDelta_Y();
-		static void Set_Praise1_Input_mouseDelta_X(float value);
-		static void Set_Praise1_Input_mouseDelta_Y(float value);
-		static std::array<float, 3> Get_Praise1_Output_Player_Fowards();
-		static std::array<float, 3> Get_Praise1_Output_Player_Up();
-		static std::array<float, 3> Get_Praise1_Output_Player_Right();
-		static void Set_Praise1_Output_Player_Fowards(std::array<float, 3> value);
-		static void Set_Praise1_Output_Player_Up(std::array<float, 3> value);
-		static void Set_Praise1_Output_Player_Right(std::array<float, 3> value);
+		static float Get_Praise1_Input_mouseDelta_X(class Avril_FSD::Framework_Server* obj);
+		static float Get_Praise1_Input_mouseDelta_Y(class Avril_FSD::Framework_Server* obj);
+		static void Set_Praise1_Input_mouseDelta_X(class Avril_FSD::Framework_Server* obj, float value);
+		static void Set_Praise1_Input_mouseDelta_Y(class Avril_FSD::Framework_Server* obj, float value);
+		static std::array<float, 3> Get_Praise1_Output_Player_Fowards(class Avril_FSD::Framework_Server* obj);
+		static std::array<float, 3> Get_Praise1_Output_Player_Up(class Avril_FSD::Framework_Server* obj);
+		static std::array<float, 3> Get_Praise1_Output_Player_Right(class Avril_FSD::Framework_Server* obj);
+		static void Set_Praise1_Output_Player_Fowards(class Avril_FSD::Framework_Server* obj, std::array<float, 3> value);
+		static void Set_Praise1_Output_Player_Up(class Avril_FSD::Framework_Server* obj, std::array<float, 3> value);
+		static void Set_Praise1_Output_Player_Right(class Avril_FSD::Framework_Server* obj, std::array<float, 3> value);
 // Praise 0 Data
 
 // TODO: add your methods here.

@@ -2,16 +2,15 @@
 
 #include <cstddef>
 
-bool flag_core_ACTIVE = NULL;
-bool flag_core_IDLE = NULL;
-unsigned char number_Implemented_Cores = NULL;
+bool _flag_core_ACTIVE = NULL;
+bool _flag_core_IDLE = NULL;
+unsigned char _number_Implemented_Cores = NULL;
 
 Avril_FSD::ConcurrentQue_Client_Global::ConcurrentQue_Client_Global()
 {
-    flag_core_ACTIVE = bool(true);
-    flag_core_IDLE = bool(false);
-
-    number_Implemented_Cores = unsigned char(4);//NUMBER OF CORES
+    Set_flag_core_ACTIVE(bool(true));
+    Set_flag_core_IDLE(bool(false));
+    Set_number_Implemented_Cores(unsigned char(4));//NUMBER OF CORES
 }
 
 Avril_FSD::ConcurrentQue_Client_Global::~ConcurrentQue_Client_Global()
@@ -19,15 +18,30 @@ Avril_FSD::ConcurrentQue_Client_Global::~ConcurrentQue_Client_Global()
 
 }
 
-bool Avril_FSD::ConcurrentQue_Client_Global::GetConst_Core_ACTIVE()
+bool Avril_FSD::ConcurrentQue_Client_Global::Get_flag_core_ACTIVE()
 {
-    return flag_core_ACTIVE;
+    return _flag_core_ACTIVE;
 }
-bool Avril_FSD::ConcurrentQue_Client_Global::GetConst_Core_IDLE()
+bool Avril_FSD::ConcurrentQue_Client_Global::Get_flag_core_IDLE()
 {
-    return flag_core_IDLE;
+    return _flag_core_IDLE;
 }
-unsigned char Avril_FSD::ConcurrentQue_Client_Global::Get_NumCores()
+unsigned char Avril_FSD::ConcurrentQue_Client_Global::Get_number_Implemented_Cores()
 {
-    return number_Implemented_Cores;
+    return _number_Implemented_Cores;
+}
+
+void Avril_FSD::ConcurrentQue_Client_Global::Set_flag_core_ACTIVE(bool flag_core_ACTIVE)
+{
+    _flag_core_ACTIVE = flag_core_ACTIVE;
+}
+
+void Avril_FSD::ConcurrentQue_Client_Global::Set_flag_core_IDLE(bool flag_core_IDLE)
+{
+    _flag_core_IDLE = flag_core_IDLE;
+}
+
+void Avril_FSD::ConcurrentQue_Client_Global::Set_number_Implemented_Cores(__int8 number_Implemented_Cores)
+{
+    _number_Implemented_Cores = number_Implemented_Cores;
 }

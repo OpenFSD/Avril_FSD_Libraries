@@ -126,9 +126,6 @@
     <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_LaunchConcurrency_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\ConcurrentQue_Server\LIB_ConcurrentQue_Server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\LIB_WriteEnable_Stack_Server_InputAction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -160,6 +157,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ListenRespond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ConcurrentQue_Server\LIB_ConcurrentQue_Server.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

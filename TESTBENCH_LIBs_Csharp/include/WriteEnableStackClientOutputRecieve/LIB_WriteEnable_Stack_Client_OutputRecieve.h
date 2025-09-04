@@ -17,7 +17,7 @@ namespace Avril_FSD
 	public:
 		WriteEnableStackServerOutputRecieve();
 		// TODO: add your methods here.
-		static class WriteEnable_Stack_Client_OutputRecieve_Framework* Initialise_Avril_FSD();
+		static class WriteEnable_Stack_Client_OutputRecieve_Framework* Initialise_WriteEnable();
 		static void Write_End(unsigned char coreId);
 		static void Write_Start(unsigned char coreId);
 

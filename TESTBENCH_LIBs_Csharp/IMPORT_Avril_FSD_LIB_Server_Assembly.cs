@@ -16,35 +16,35 @@ namespace Avril_FSD
         public static extern IntPtr Initialise_Server_Assembly();
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool Get_Flag_isNewInputDataReady();
+        public static extern bool Get_Flag_isNewInputDataReady(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool Get_flag_isNewOutputDataReady();
+        public static extern bool Get_flag_isNewOutputDataReady(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool Get_Flag_IsStackLoaded_Server_InputAction();
+        public static extern bool Get_Flag_IsStackLoaded_Server_InputAction(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool Get_Flag_IsStackLoaded_Server_OutputRecieve();
+        public static extern bool Get_Flag_IsStackLoaded_Server_OutputRecieve(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool GetFlag_Avril_FSD_Initialised();
+        public static extern bool GetFlag_Avril_FSD_Initialised(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Pop_Stack_Output();
+        public static extern void Pop_Stack_Output(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Push_Stack_InputPraises();
+        public static extern void Push_Stack_InputPraises(IntPtr obj);
 
         //[DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
         //public static extern void Set_Flag_isNewInputDataReady(bool value);
 
 // Praise Event Id
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern byte Get_PraiseEventId();
+        public static extern byte Get_PraiseEventId(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Set_PraiseEventId(sbyte value);
+        public static extern void Set_PraiseEventId(IntPtr obj, sbyte value);
     }
 
 // Praise 0 Data
@@ -52,16 +52,16 @@ namespace Avril_FSD
     internal static class Library_For_Praise_0_Events
     {
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern bool Get_Praise0_Input_IsPingActive();
+        public static extern bool Get_Praise0_Input_IsPingActive(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Set_Praise0_Input_IsPingActive(bool value);
+        public static extern void Set_Praise0_Input_IsPingActive(IntPtr obj, bool value);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Get_Praise0_Output_IsPingActive();
+        public static extern void Get_Praise0_Output_IsPingActive(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Set_Praise0_Output_IsPingActive(bool value);
+        public static extern void Set_Praise0_Output_IsPingActive(IntPtr obj, bool value);
     }
 // Praise 1 Data
     [SuppressUnmanagedCodeSecurity]
@@ -69,34 +69,34 @@ namespace Avril_FSD
     {
         // Praise 1 Data
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern float Get_Praise1_Input_mouseDelta_X();
+        public static extern float Get_Praise1_Input_mouseDelta_X(IntPtr obj);
         
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern float Get_Praise1_Input_mouseDelta_Y();
+        public static extern float Get_Praise1_Input_mouseDelta_Y(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Set_Praise1_Output_mouseDelta_X(float value);
+        public static extern void Set_Praise1_Output_mouseDelta_X(IntPtr obj, float value);
         
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Set_Praise1_Output_mouseDelta_Y(float value);
+        public static extern void Set_Praise1_Output_mouseDelta_Y(IntPtr obj, float value);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern float[] Get_Praise1_Output_Player_Fowards();
+        public static extern float[] Get_Praise1_Output_Player_Fowards(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern float[] Get_Praise1_Output_Player_Up();
+        public static extern float[] Get_Praise1_Output_Player_Up(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern float[] Get_Praise1_Output_Player_Right();
+        public static extern float[] Get_Praise1_Output_Player_Right(IntPtr obj);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Set_Praise1_Output_Player_Fowards(float[] value);
+        public static extern void Set_Praise1_Output_Player_Fowards(IntPtr obj, float[] value);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Set_Praise1_Output_Player_Up(float[] value);
+        public static extern void Set_Praise1_Output_Player_Up(IntPtr obj, float[] value);
 
         [DllImport("LIBServerAssembly.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static extern void Set_Praise1_Output_Player_Right(float[] value);
+        public static extern void Set_Praise1_Output_Player_Right(IntPtr obj, float[] value);
 
     }
     // Praise 2 Data

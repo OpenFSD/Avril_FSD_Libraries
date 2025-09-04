@@ -11,51 +11,51 @@ Avril_FSD::ConcurrentQue_Client::ConcurrentQue_Client()
 }
 
 // This is an example of an exported function.
-class Avril_FSD::ConcurrentQue_Client_Framework* Avril_FSD::ConcurrentQue_Client::Initialise_ConcurrentQue()
+void* Avril_FSD::ConcurrentQue_Client::Initialise_ConcurrentQue()
 {
     Set_ConcurrentQue_Client_Framework(new class Avril_FSD::ConcurrentQue_Client_Framework());
     while (Get_ConcurrentQue_Client_Framework() == NULL) {}
-    return Get_ConcurrentQue_Client_Framework();
+    return (void*)Get_ConcurrentQue_Client_Framework();
 }
 
-void Avril_FSD::ConcurrentQue_Client::Request_Wait_Launch(unsigned char concurrent_CoreId)
+void Avril_FSD::ConcurrentQue_Client::Request_Wait_Launch(Avril_FSD::ConcurrentQue_Client_Framework* obj, unsigned char concurrent_CoreId)
 {
-    Get_ConcurrentQue_Client_Framework()->Request_Wait_Launch(concurrent_CoreId);
+    obj->Request_Wait_Launch(concurrent_CoreId);
 }
 
-void Avril_FSD::ConcurrentQue_Client::Thread_End(unsigned char concurrent_CoreId)
+void Avril_FSD::ConcurrentQue_Client::Thread_End(Avril_FSD::ConcurrentQue_Client_Framework* obj, unsigned char concurrent_CoreId)
 {
-    Get_ConcurrentQue_Client_Framework()->Thread_End(concurrent_CoreId);
+    obj->Thread_End(concurrent_CoreId);
 }
 
-__int8 Avril_FSD::ConcurrentQue_Client::Get_coreId_To_Launch()
+__int8 Avril_FSD::ConcurrentQue_Client::Get_coreId_To_Launch(Avril_FSD::ConcurrentQue_Client_Framework* obj)
 {
-    return Get_ConcurrentQue_Client_Framework()->Get_coreId_To_Launch();
+    return obj->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_que_CoreToLaunch(0);
 }
 
-bool Avril_FSD::ConcurrentQue_Client::Get_Flag_Active()
+bool Avril_FSD::ConcurrentQue_Client::Get_Flag_Active(Avril_FSD::ConcurrentQue_Client_Framework* obj)
 {
-    return Get_ConcurrentQue_Client_Framework()->Get_Flag_Active();
+    return obj->Get_ConcurrentQue()->Get_LaunchConcurrency_Global()->Get_flag_core_ACTIVE();
 }
 
-bool Avril_FSD::ConcurrentQue_Client::Get_Flag_ConcurrentCoreState(unsigned char concurrent_CoreId)
+bool Avril_FSD::ConcurrentQue_Client::Get_Flag_ConcurrentCoreState(Avril_FSD::ConcurrentQue_Client_Framework* obj, unsigned char concurrent_CoreId)
 {
-    return Get_ConcurrentQue_Client_Framework()->Get_Flag_ConcurrentCoreState(concurrent_CoreId);
+    return obj->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_state_ConcurrentCore(concurrent_CoreId);
 }
 
-bool Avril_FSD::ConcurrentQue_Client::Get_Flag_Idle()
+bool Avril_FSD::ConcurrentQue_Client::Get_Flag_Idle(Avril_FSD::ConcurrentQue_Client_Framework* obj)
 {
-    return Get_ConcurrentQue_Client_Framework()->Get_Flag_Idle();
+    return obj->Get_ConcurrentQue()->Get_LaunchConcurrency_Global()->Get_flag_core_IDLE();
 }
 
-bool Avril_FSD::ConcurrentQue_Client::Get_State_LaunchBit()
+bool Avril_FSD::ConcurrentQue_Client::Get_State_LaunchBit(Avril_FSD::ConcurrentQue_Client_Framework* obj)
 {
-    return Get_ConcurrentQue_Client_Framework()->Get_State_LaunchBit();
+    return obj->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_state_ConcurrentCore(0);
 }
 
-void Avril_FSD::ConcurrentQue_Client::SetFlag_ConcurrentCoreState(unsigned char concurrent_CoreId, bool value)
+void Avril_FSD::ConcurrentQue_Client::Set_state_ConcurrentCore(Avril_FSD::ConcurrentQue_Client_Framework* obj, unsigned char concurrent_CoreId, bool value)
 {
-    Get_ConcurrentQue_Client_Framework()->SetFlag_ConcurrentCoreState(concurrent_CoreId, value);
+    obj->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Set_state_ConcurrentCore(concurrent_CoreId, value);
 }
 
 Avril_FSD::ConcurrentQue_Client_Framework* Avril_FSD::ConcurrentQue_Client::Get_ConcurrentQue_Client_Framework()

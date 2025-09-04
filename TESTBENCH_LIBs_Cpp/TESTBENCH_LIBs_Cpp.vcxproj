@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3ace7fe0-6dac-45ca-a76c-d8d910d0c04b}</ProjectGuid>
+    <ProjectGuid>{1f2f6b16-0c23-4109-be55-a6b737e00a6e}</ProjectGuid>
     <RootNamespace>TESTBENCHLIBsCpp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -46,7 +46,6 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -54,7 +53,6 @@
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -92,14 +90,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>\include\ConcurrentQue_END;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>\include\ConcurrentQue_Client;\include\ConcurrentQue_Server;\include\Server_Assembly;\include\WriteEnable_Stack_Server_OutputRecieve;\include\WriteEnable_Stack_Server_InputAction;\include\WriteEnable_Stack_Client_OutputRecieve;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LIBConcurrentQueClient.lib;LIBConcurrentQueServer.lib;LIBServerAssembly.lib;LIBWriteEnableStackClientOutputRecieve.lib;LIBWriteEnableStackServerInputAction.lib;LIBWriteEnableStackServerOutputRecieve.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -110,8 +108,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>\include\ConcurrentQue_END;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>\include\ConcurrentQue_Client;\include\ConcurrentQue_Server;\include\Server_Assembly;\include\WriteEnable_Stack_Server_OutputRecieve;\include\WriteEnable_Stack_Server_InputAction;\include\WriteEnable_Stack_Client_OutputRecieve;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,7 +117,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LIBConcurrentQueClient.lib;LIBConcurrentQueServer.lib;LIBServerAssembly.lib;LIBWriteEnableStackClientOutputRecieve.lib;LIBWriteEnableStackServerInputAction.lib;LIBWriteEnableStackServerOutputRecieve.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -128,7 +126,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,7 +140,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,104 +149,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SIMULATION.cpp" />
     <ClCompile Include="TESTBENCH_LIBs_Cpp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\ConcurrentQue_Client\ConcurrentQue_Client_Framework.h" />
-    <ClInclude Include="include\ConcurrentQue_Client\ConcurrentQue_Client_Global.h" />
-    <ClInclude Include="include\ConcurrentQue_Client\ConcurrentQue_Client_LaunchConcurrency.h" />
-    <ClInclude Include="include\ConcurrentQue_Client\ConcurrentQue_Client_LaunchConcurrency_Control.h" />
-    <ClInclude Include="include\ConcurrentQue_Client\LIB_ConcurrentQue_Client.h" />
-    <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_Framework.h" />
-    <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_Global.h" />
-    <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_LaunchConcurrency.h" />
-    <ClInclude Include="include\ConcurrentQue_Server\ConcurrentQue_Server_LaunchConcurrency_Control.h" />
-    <ClInclude Include="include\ConcurrentQue_Server\LIB_ConcurrentQue_Server.h" />
-    <ClInclude Include="include\Server_Assembly\Algorithms.h" />
-    <ClInclude Include="include\Server_Assembly\Concurrent.h" />
-    <ClInclude Include="include\Server_Assembly\Concurrent_Control.h" />
-    <ClInclude Include="include\Server_Assembly\Data.h" />
-    <ClInclude Include="include\Server_Assembly\Data_Control.h" />
-    <ClInclude Include="include\Server_Assembly\Execute.h" />
-    <ClInclude Include="include\Server_Assembly\Execute_Control.h" />
-    <ClInclude Include="include\Server_Assembly\framework.h" />
-    <ClInclude Include="include\Server_Assembly\Framework_Server.h" />
-    <ClInclude Include="include\Server_Assembly\GameInstance.h" />
-    <ClInclude Include="include\Server_Assembly\Global.h" />
-    <ClInclude Include="include\Server_Assembly\Input.h" />
-    <ClInclude Include="include\Server_Assembly\Input_Control.h" />
-    <ClInclude Include="include\Server_Assembly\LIB_Server_Assembly.h" />
-    <ClInclude Include="include\Server_Assembly\Output.h" />
-    <ClInclude Include="include\Server_Assembly\Output_Control.h" />
-    <ClInclude Include="include\Server_Assembly\pch.h" />
-    <ClInclude Include="include\Server_Assembly\Player.h" />
-    <ClInclude Include="include\Server_Assembly\Praise0_Algorithm.h" />
-    <ClInclude Include="include\Server_Assembly\Praise0_Input.h" />
-    <ClInclude Include="include\Server_Assembly\Praise0_Output.h" />
-    <ClInclude Include="include\Server_Assembly\Praise1_Algorithm.h" />
-    <ClInclude Include="include\Server_Assembly\Praise1_Input.h" />
-    <ClInclude Include="include\Server_Assembly\Praise1_Output.h" />
-    <ClInclude Include="include\Server_Assembly\Praise2_Algorithm.h" />
-    <ClInclude Include="include\Server_Assembly\Praise2_Input.h" />
-    <ClInclude Include="include\Server_Assembly\Praise2_Output.h" />
-    <ClInclude Include="include\Server_Assembly\Server.h" />
-    <ClInclude Include="include\Server_Assembly\User_Alg.h" />
-    <ClInclude Include="include\Server_Assembly\User_I.h" />
-    <ClInclude Include="include\Server_Assembly\User_O.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Client_OutputRecieve\LIB_WriteEnable_Stack_Client_OutputRecieve.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Client_OutputRecieve\WriteEnable_Stack_Client_OutputRecieve.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Client_OutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Control.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Client_OutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Framework.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Client_OutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Global.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\LIB_WriteEnable_Stack_Server_InputAction.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\WriteEnable_Stack_Server_InputAction.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\WriteEnable_Stack_Server_InputAction_Control.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\WriteEnable_Stack_Server_InputAction_Framework.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_InputAction\WriteEnable_Stack_Server_InputAction_Global.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\LIB_WriteEnable_Stack_Server_OutputRecieve.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Control.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Framework.h" />
-    <ClInclude Include="include\WriteEnable_Stack_Server_OutputRecieve\WriteEnable_Stack_Server_OutputRecieve_Global.h" />
-    <ClInclude Include="SIMULATION.h" />
+    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_Framework.h" />
+    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_Global.h" />
+    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_LaunchConcurrency.h" />
+    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_LaunchConcurrency_Control.h" />
+    <ClInclude Include="include\ConcurrentQue_END\LIB_LaunchEnableForConcurrentThreadsAt_END.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\Server_Assembly\cpp.hint" />
-    <None Include="LIBConcurrentQueClient.dll" />
-    <None Include="LIBConcurrentQueServer.dll" />
-    <None Include="LIBServerAssembly.dll" />
-    <None Include="LIBWriteEnableStackClientOutputRecieve.dll" />
-    <None Include="LIBWriteEnableStackServerInputAction.dll" />
-    <None Include="LIBWriteEnableStackServerOutputRecieve.dll" />
+    <ProjectReference Include="..\LIB_LaunchEnableForConcurrentThreadsAt_END\LIB_LaunchEnableForConcurrentThreadsAt_END.vcxproj">
+      <Project>{ed9ee625-dce2-4a0c-b379-8bf5c055ca2c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="LIBConcurrentQueClient.lib" />
-    <Library Include="LIBConcurrentQueServer.lib" />
-    <Library Include="LIBServerAssembly.lib" />
-    <Library Include="LIBWriteEnableStackClientOutputRecieve.lib" />
-    <Library Include="LIBWriteEnableStackServerInputAction.lib" />
-    <Library Include="LIBWriteEnableStackServerOutputRecieve.lib" />
+    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LIB_ConcurrentQue_Client\LIB_ConcurrentQue_Client.vcxproj">
-      <Project>{88389858-fc2b-485e-a4c0-03e8c5a30a9d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\LIB_ConcurrentQue_Server\LIB_ConcurrentQue_Server.vcxproj">
-      <Project>{e240374e-087e-4680-8e9f-c5db2ce105cc}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\LIB_Server_Assembly\LIB_Server_Assembly.vcxproj">
-      <Project>{d9346816-6a60-45d5-8fee-63cff6cff83d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\LIB_WriteEnable_Stack_Client_OutputRecieve\LIB_WriteEnable_Stack_Client_OutputRecieve.vcxproj">
-      <Project>{ed90e0b5-31b6-43f0-b3ca-989f21050a2d}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\LIB_WriteEnable_Stack_Server_InputAction\LIB_WriteEnable_Stack_Server_InputAction.vcxproj">
-      <Project>{2fab19fc-6f41-497d-b898-2fb41c875859}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\LIB_WriteEnable_Stack_Server_OutputRecieve\LIB_WriteEnable_Stack_Server_OutputRecieve.vcxproj">
-      <Project>{3025c87d-fc57-48d4-973e-9f13e290c8d1}</Project>
-    </ProjectReference>
+    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

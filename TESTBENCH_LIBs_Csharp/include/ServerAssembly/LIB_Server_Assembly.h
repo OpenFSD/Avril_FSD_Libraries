@@ -10,8 +10,8 @@ namespace Avril_FSD
 	class LIBSERVERASSEMBLY_API LIB_ServerLibrary {
 	public:
 		LIB_ServerLibrary();
-		static class Framework_Server* Initialise_Server_Assembly();
-		static bool Get_Flag_isNewInputDataReady();
+		void* Initialise_Server_Assembly();
+		static bool Get_Flag_isNewInputDataReady(class Framework_Server* obj);
 		static bool Get_flag_isNewOutputDataReady();
 		static bool Get_Flag_IsStackLoaded_Server_InputAction();
 		static bool Get_Flag_IsStackLoaded_Server_OutputRecieve();

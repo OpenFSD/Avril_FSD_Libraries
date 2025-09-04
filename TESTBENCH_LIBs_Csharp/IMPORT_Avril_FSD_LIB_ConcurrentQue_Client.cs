@@ -16,27 +16,27 @@ namespace Avril_FSD
         public static extern IntPtr Initialise_ConcurrentQue();
 
 		[DllImport("LIBConcurrentQueClient.dll", CallingConvention = CallingConvention.Cdecl)]
-		public static extern void Request_Wait_Launch(byte concurrent_CoreId);
+		public static extern void Request_Wait_Launch(IntPtr obj, byte concurrent_CoreId);
 
 		[DllImport("LIBConcurrentQueClient.dll", CallingConvention = CallingConvention.Cdecl)]
-		public static extern void Thread_End(byte concurrent_CoreId);
+		public static extern void Thread_End(IntPtr obj, byte concurrent_CoreId);
 
 		[DllImport("LIBConcurrentQueClient.dll", CallingConvention = CallingConvention.Cdecl)]
-		public static extern byte Get_coreId_To_Launch();
+		public static extern byte Get_coreId_To_Launch(IntPtr obj);
 
 		[DllImport("LIBConcurrentQueClient.dll", CallingConvention = CallingConvention.Cdecl)]
-		public static extern bool Get_Flag_Active();
+		public static extern bool Get_Flag_Active(IntPtr obj);
 
 		[DllImport("LIBConcurrentQueClient.dll", CallingConvention = CallingConvention.Cdecl)]
-		public static extern bool Get_Flag_ConcurrentCoreState(byte concurrent_CoreId);
+		public static extern bool Get_Flag_ConcurrentCoreState(IntPtr obj, byte concurrent_CoreId);
 
 		[DllImport("LIBConcurrentQueClient.dll", CallingConvention = CallingConvention.Cdecl)]
-		public static extern bool Get_Flag_Idle();
+		public static extern bool Get_Flag_Idle(IntPtr obj);
 
 		[DllImport("LIBConcurrentQueClient.dll", CallingConvention = CallingConvention.Cdecl)]
-		public static extern bool Get_State_LaunchBit();
+		public static extern bool Get_State_LaunchBit(IntPtr obj);
 
 		[DllImport("LIBConcurrentQueClient.dll", CallingConvention = CallingConvention.Cdecl)]
-		public static extern void SetFlag_ConcurrentCoreState(byte concurrent_CoreId, bool value);
+		public static extern void SetFlag_ConcurrentCoreState(IntPtr obj, byte concurrent_CoreId, bool value);
 	}
 }

@@ -17,17 +17,17 @@ namespace Avril_FSD
 	public:
 		ConcurrentQue_Client();
 		// TODO: add your methods here.
-		static class ConcurrentQue_Client_Framework* Initialise_ConcurrentQue();
+		void* Initialise_ConcurrentQue();
 
-		static void Request_Wait_Launch(unsigned char concurrent_CoreId);
-		static void Thread_End(unsigned char concurrent_CoreId);
+		void Request_Wait_Launch(class Avril_FSD::ConcurrentQue_Client_Framework* obj, unsigned char concurrent_CoreId);
+		void Thread_End(class Avril_FSD::ConcurrentQue_Client_Framework*, unsigned char concurrent_CoreId);
 
-		static __int8 Get_coreId_To_Launch();
-		static bool Get_Flag_Active();
-		static bool Get_Flag_ConcurrentCoreState(unsigned char concurrent_CoreId);
-		static bool Get_Flag_Idle();
-		static bool Get_State_LaunchBit();
-		static void SetFlag_ConcurrentCoreState(unsigned char concurrent_CoreId, bool value);
+		__int8 Get_coreId_To_Launch(class Avril_FSD::ConcurrentQue_Client_Framework* obj);
+		bool Get_Flag_Active(class Avril_FSD::ConcurrentQue_Client_Framework* obj);
+		bool Get_Flag_ConcurrentCoreState(class Avril_FSD::ConcurrentQue_Client_Framework* obj, unsigned char concurrent_CoreId);
+		bool Get_Flag_Idle(class Avril_FSD::ConcurrentQue_Client_Framework* obj);
+		bool Get_State_LaunchBit(class Avril_FSD::ConcurrentQue_Client_Framework* obj);
+		void Set_state_ConcurrentCore(class Avril_FSD::ConcurrentQue_Client_Framework* obj, unsigned char concurrent_CoreId, bool value);
 
 	private:
 		static class ConcurrentQue_Client_Framework* Get_ConcurrentQue_Client_Framework();
