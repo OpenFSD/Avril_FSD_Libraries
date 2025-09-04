@@ -21,9 +21,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtSTACK.dll" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtSTACK.lib" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END.h">
@@ -39,6 +41,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\ConcurrentQue_END\LIB_LaunchEnableForConcurrentThreadsAt_END.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WriteEnable_STACK\LIB_WriteEnableForThreadsAt_STACK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WriteEnable_STACK\WriteEnable_STACK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WriteEnable_STACK\WriteEnable_STACK_Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WriteEnable_STACK\WriteEnable_STACK_Framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WriteEnable_STACK\WriteEnable_STACK_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

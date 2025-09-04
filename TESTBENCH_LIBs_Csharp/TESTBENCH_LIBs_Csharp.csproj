@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMPORT_Avril_FSD_LIB_ConcurrentQue_END.cs" />
     <Compile Include="IMPORT_Avril_FSD_LIB_ConcurrentQue_Client.cs" />
+    <Compile Include="IMPORT_Avril_FSD_LIB_WriteEnable_STACK.cs" />
     <Compile Include="IMPORT_Avril_FSD_LIB_WriteEnable_Stack_Client_OutputRecieve.cs" />
     <Compile Include="IMPORT_Avril_FSD_LIB_Server_Assembly.cs" />
     <Compile Include="Program.cs" />
@@ -51,23 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="LIBConcurrentQueClient.lib" />
-    <None Include="LIBConcurrentQueServer.lib" />
-    <None Include="LIBWriteEnableStackClientOutputRecieve.lib" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LIB_ConcurrentQue_Client\LIB_ConcurrentQue_Client.vcxproj">
-      <Project>{88389858-fc2b-485e-a4c0-03e8c5a30a9d}</Project>
-      <Name>LIB_ConcurrentQue_Client</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LIB_Server_Assembly\LIB_Server_Assembly.vcxproj">
-      <Project>{d9346816-6a60-45d5-8fee-63cff6cff83d}</Project>
-      <Name>LIB_Server_Assembly</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LIB_WriteEnable_Stack_Client_OutputRecieve\LIB_WriteEnable_Stack_Client_OutputRecieve.vcxproj">
-      <Project>{ed90e0b5-31b6-43f0-b3ca-989f21050a2d}</Project>
-      <Name>LIB_WriteEnable_Stack_Client_OutputRecieve</Name>
-    </ProjectReference>
+    <None Include="LIBLaunchEnableForConcurrentThreadsAtEND.lib" />
+    <None Include="LIBWriteEnableForThreadsAtSTACK.lib" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -76,11 +63,11 @@
     <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_LaunchConcurrency.h" />
     <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_LaunchConcurrency_Control.h" />
     <Content Include="include\ConcurrentQueClient\LIB_ConcurrentQue_Client.h" />
-    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\ConcurrentQue_END_Framework.h" />
-    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\ConcurrentQue_END_Global.h" />
-    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\ConcurrentQue_END_LaunchConcurrency.h" />
-    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\ConcurrentQue_END_LaunchConcurrency_Control.h" />
-    <Content Include="include\LaunchEnableForConcurrentThreadsAtENDS\LaunchEnableForConcurrentThreadsAt_ENDS.h" />
+    <Content Include="include\ConcurrentQue_END\ConcurrentQue_END.h" />
+    <Content Include="include\ConcurrentQue_END\ConcurrentQue_END_Control.h" />
+    <Content Include="include\ConcurrentQue_END\ConcurrentQue_END_Framework.h" />
+    <Content Include="include\ConcurrentQue_END\ConcurrentQue_END_Global.h" />
+    <Content Include="include\ConcurrentQue_END\LIB_LaunchEnableForConcurrentThreadsAt_END.h" />
     <Content Include="include\ServerAssembly\Algorithms.h" />
     <Content Include="include\ServerAssembly\Concurrent.h" />
     <Content Include="include\ServerAssembly\Concurrent_Control.h" />
@@ -116,15 +103,21 @@
     <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Control.h" />
     <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Framework.h" />
     <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Global.h" />
-    <Content Include="LIBConcurrentQueClient.dll">
+    <Content Include="include\WriteEnable_STACK\LIB_WriteEnableForThreadsAt_STACK.h" />
+    <Content Include="include\WriteEnable_STACK\WriteEnable_STACK.h" />
+    <Content Include="include\WriteEnable_STACK\WriteEnable_STACK_Control.h" />
+    <Content Include="include\WriteEnable_STACK\WriteEnable_STACK_Framework.h" />
+    <Content Include="include\WriteEnable_STACK\WriteEnable_STACK_Global.h" />
+    <Content Include="LIBLaunchEnableForConcurrentThreadsAtEND.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LIBConcurrentQueServer.dll">
+    <Content Include="LIBWriteEnableForThreadsAtSTACK.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LIBWriteEnableStackClientOutputRecieve.dll">
+    <Content Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="lib\LIBWriteEnableForThreadsAtSTACK.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
