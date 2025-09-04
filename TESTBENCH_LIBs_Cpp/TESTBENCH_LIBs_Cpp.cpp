@@ -1,13 +1,13 @@
 #include "include/ConcurrentQue_END/ConcurrentQue_END_Framework.h"
-#include "include/ConcurrentQue_END/LIB_LaunchEnableForConcurrentThreadsAt_END.h"
+#include "include/ConcurrentQue_END/ConcurrentQue_END_Global.h"
+#include "include/ConcurrentQue_END/ConcurrentQue_END.h"
+#include "include/ConcurrentQue_END/ConcurrentQue_END_Control.h"
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    void* framework_Server_Assembly = Avril_FSD::ConcurrentQue_END_Library::Initialise_ConcurrentQue();
-    class Avril_FSD::ConcurrentQue_END_Framework* obj = (Avril_FSD::ConcurrentQue_END_Framework*)framework_Server_Assembly;
-    bool launchState = false;
-    launchState = Avril_FSD::ConcurrentQue_END_Library::Get_State_LaunchBit(obj);
-    std::cout << "launchState = " << launchState << ".";
+    std::cout << "Starting TESTBENCH\n";
+    Avril_FSD::ConcurrentQue_END_Framework* concurrentQue_END_Framework = new class Avril_FSD::ConcurrentQue_END_Framework();
+    __int8 coreId_to_launch = concurrentQue_END_Framework->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_flag_CoreId_Of_CoreToLaunch();
+    std::cout << "coreId_to_launch = " << coreId_to_launch << ".\n";
 }

@@ -160,8 +160,8 @@
   <ItemGroup>
     <ClInclude Include="ConcurrentQue_END_Framework.h" />
     <ClInclude Include="ConcurrentQue_END_Global.h" />
-    <ClInclude Include="ConcurrentQue_END_LaunchConcurrency.h" />
-    <ClInclude Include="ConcurrentQue_END_LaunchConcurrency_Control.h" />
+    <ClInclude Include="ConcurrentQue_END.h" />
+    <ClInclude Include="ConcurrentQue_END_Control.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LIB_LaunchEnableForConcurrentThreadsAt_END.h" />
     <ClInclude Include="pch.h" />
@@ -169,7 +169,7 @@
   <ItemGroup>
     <ClCompile Include="ConcurrentQue_END_Framework.cpp" />
     <ClCompile Include="ConcurrentQue_END_Global.cpp" />
-    <ClCompile Include="ConcurrentQue_END_LaunchConcurrency.cpp" />
+    <ClCompile Include="ConcurrentQue_END.cpp" />
     <ClCompile Include="ConcurrentQue_END_LaunchConcurrency_Control.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="LIB_LaunchEnableForConcurrentThreadsAt_END.cpp" />

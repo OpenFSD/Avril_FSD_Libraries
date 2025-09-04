@@ -152,13 +152,6 @@
     <ClCompile Include="TESTBENCH_LIBs_Cpp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_Framework.h" />
-    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_Global.h" />
-    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_LaunchConcurrency.h" />
-    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_LaunchConcurrency_Control.h" />
-    <ClInclude Include="include\ConcurrentQue_END\LIB_LaunchEnableForConcurrentThreadsAt_END.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\LIB_LaunchEnableForConcurrentThreadsAt_END\LIB_LaunchEnableForConcurrentThreadsAt_END.vcxproj">
       <Project>{ed9ee625-dce2-4a0c-b379-8bf5c055ca2c}</Project>
     </ProjectReference>
@@ -168,6 +161,13 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END.h" />
+    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_Control.h" />
+    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_Framework.h" />
+    <ClInclude Include="include\ConcurrentQue_END\ConcurrentQue_END_Global.h" />
+    <ClInclude Include="include\ConcurrentQue_END\LIB_LaunchEnableForConcurrentThreadsAt_END.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -33,10 +33,10 @@
     <ClInclude Include="ConcurrentQue_END_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConcurrentQue_END_LaunchConcurrency.h">
+    <ClInclude Include="ConcurrentQue_END.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConcurrentQue_END_LaunchConcurrency_Control.h">
+    <ClInclude Include="ConcurrentQue_END_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,7 +56,7 @@
     <ClCompile Include="ConcurrentQue_END_Global.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConcurrentQue_END_LaunchConcurrency.cpp">
+    <ClCompile Include="ConcurrentQue_END.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ConcurrentQue_END_LaunchConcurrency_Control.cpp">

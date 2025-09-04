@@ -4,11 +4,11 @@
 
 namespace Avril_FSD
 {
-    class ConcurrentQue_END_LaunchConcurrency_Control
+    class ConcurrentQue_END_Control
     {
     public:
-        ConcurrentQue_END_LaunchConcurrency_Control(class ConcurrentQue_END_Global* global, unsigned char number_Implemented_Cores);
-        virtual ~ConcurrentQue_END_LaunchConcurrency_Control();
+        ConcurrentQue_END_Control(class ConcurrentQue_END_Global* global, unsigned char number_Implemented_Cores);
+        virtual ~ConcurrentQue_END_Control();
 
         void LaunchEnable_Activate(class Avril_FSD::ConcurrentQue_END_Framework* obj);
         void LaunchEnable_Request(class Avril_FSD::ConcurrentQue_END_Framework* obj, unsigned char concurrent_CoreId);

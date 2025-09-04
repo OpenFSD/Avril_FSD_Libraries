@@ -3,7 +3,7 @@
 
 #include <cstddef>
 
-class Avril_FSD::ConcurrentQue_END_LaunchConcurrency* ptr_LaunchConcurrency = NULL;
+class Avril_FSD::ConcurrentQue_END* ptr_LaunchConcurrency = NULL;
 
 Avril_FSD::ConcurrentQue_END_Framework::ConcurrentQue_END_Framework()
 {
@@ -14,21 +14,21 @@ Avril_FSD::ConcurrentQue_END_Framework::~ConcurrentQue_END_Framework()
 {
 
 }
-Avril_FSD::ConcurrentQue_END_LaunchConcurrency* Avril_FSD::ConcurrentQue_END_Framework::Get_ConcurrentQue()
+Avril_FSD::ConcurrentQue_END* Avril_FSD::ConcurrentQue_END_Framework::Get_ConcurrentQue()
 {
 	return ptr_LaunchConcurrency;
 }
 void Avril_FSD::ConcurrentQue_END_Framework::Create_ConcurrentQue()
 {
-	Set_ConcurrentQue(new class Avril_FSD::ConcurrentQue_END_LaunchConcurrency());
-	while (Get__ConcurrentQue() == NULL) { /* wait untill created */ }
-	Get__ConcurrentQue()->Initialise_Control();
+	Set_ConcurrentQue(new class Avril_FSD::ConcurrentQue_END());
+	while (Get_ConcurrentQue() == NULL) { /* wait untill created */ }
+	Get_ConcurrentQue()->Initialise_Control();
 }
-Avril_FSD::ConcurrentQue_END_LaunchConcurrency* Avril_FSD::ConcurrentQue_END_Framework::Get__ConcurrentQue()
-{
-	return ptr_LaunchConcurrency;
-}
-void Avril_FSD::ConcurrentQue_END_Framework::Set_ConcurrentQue(Avril_FSD::ConcurrentQue_END_LaunchConcurrency* concurrentQue)
+//Avril_FSD::ConcurrentQue_END* Avril_FSD::ConcurrentQue_END_Framework::Get__ConcurrentQue()
+//{
+//	return ptr_LaunchConcurrency;
+//}
+void Avril_FSD::ConcurrentQue_END_Framework::Set_ConcurrentQue(Avril_FSD::ConcurrentQue_END* concurrentQue)
 {
 	ptr_LaunchConcurrency = concurrentQue;
 }
