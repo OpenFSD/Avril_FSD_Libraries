@@ -59,7 +59,7 @@
     <ClCompile Include="ConcurrentQue_END.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConcurrentQue_END_LaunchConcurrency_Control.cpp">
+    <ClCompile Include="ConcurrentQue_END_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

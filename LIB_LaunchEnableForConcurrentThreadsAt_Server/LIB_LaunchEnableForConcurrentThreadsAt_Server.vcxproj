@@ -158,11 +158,19 @@
     <None Include="cpp.hint" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConcurrentQue_Server.h" />
+    <ClInclude Include="ConcurrentQue_Server_Control.h" />
+    <ClInclude Include="ConcurrentQue_Server_Framework.h" />
+    <ClInclude Include="ConcurrentQue_Server_Global.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="LIB_LaunchEnableForConcurrentThreadsAt_Server.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ConcurrentQue_Server.cpp" />
+    <ClCompile Include="ConcurrentQue_Server_Control.cpp" />
+    <ClCompile Include="ConcurrentQue_Server_Framework.cpp" />
+    <ClCompile Include="ConcurrentQue_Server_Global.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="LIB_LaunchEnableForConcurrentThreadsAt_Server.cpp" />
     <ClCompile Include="pch.cpp">

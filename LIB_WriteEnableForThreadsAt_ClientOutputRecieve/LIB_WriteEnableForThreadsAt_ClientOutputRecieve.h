@@ -1,22 +1,20 @@
-// The following ifdef block is the standard way of creating macros which make exporting
-// from a DLL simpler. All files within this DLL are compiled with the LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_EXPORTS
-// symbol defined on the command line. This symbol should not be defined on any project
-// that uses this DLL. This way any other project whose source files include this file see
-// LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_API functions as being imported from a DLL, whereas this DLL sees symbols
-// defined with this macro as being exported.
-#ifdef LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_EXPORTS
-#define LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_API __declspec(dllexport)
+#ifdef LIBWRITEENABLESTACK_EXPORTS
+#define LIBWRITEENABLEATSTACK_API __declspec(dllexport)
 #else
-#define LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_API __declspec(dllimport)
+#define LIBWRITEENABLEATSTACK_API __declspec(dllimport)
 #endif
 
-// This class is exported from the dll
-class LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_API CLIBWriteEnableForThreadsAtClientOutputRecieve {
-public:
-	CLIBWriteEnableForThreadsAtClientOutputRecieve(void);
-	// TODO: add your methods here.
-};
+namespace Avril_FSD
+{
+	class LIBWRITEENABLEATSTACK_API WriteEnableForThreadsAt_STACK_Library {
+	public:
+		WriteEnableForThreadsAt_STACK_Library();
+		static void* Initialise_WriteEnable();
+		void Write_End(class WriteEnable_STACK_Framework* obj, unsigned char coreId);
+		void Write_Start(class WriteEnable_STACK_Framework* obj, unsigned char coreId);
 
-extern LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_API int nLIBWriteEnableForThreadsAtClientOutputRecieve;
-
-LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_API int fnLIBWriteEnableForThreadsAtClientOutputRecieve(void);
+	private:
+		static class WriteEnable_STACK_Framework* Get_Framework_WriteEnable();
+		static void Set_writeEnable(class Avril_FSD::WriteEnable_STACK_Framework* writeEnable);
+	};
+}

@@ -161,6 +161,10 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="LIB_WriteEnableForThreadsAt_ServerInputAction.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="WriteEnable_ServerInputAction.h" />
+    <ClInclude Include="WriteEnable_ServerInputAction_Control.h" />
+    <ClInclude Include="WriteEnable_ServerInputAction_Framework.h" />
+    <ClInclude Include="WriteEnable_ServerInputAction_Global.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -171,6 +175,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="WriteEnable_ServerInputAction.cpp" />
+    <ClCompile Include="WriteEnable_ServerInputAction_Control.cpp" />
+    <ClCompile Include="WriteEnable_ServerInputAction_Framework.cpp" />
+    <ClCompile Include="WriteEnable_ServerInputAction_Global.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
