@@ -2,28 +2,28 @@
 
 #include <cstddef>
 
-class Avril_FSD::WriteEnable_STACK_Global* ptr_global = NULL;
-class Avril_FSD::WriteEnable_STACK_Control* ptr_WriteEnable_Control = NULL;
+class Avril_FSD::WriteEnable_ServerOutputRecieve_Global* ptr_global = NULL;
+class Avril_FSD::WriteEnable_ServerOutputRecieve_Control* ptr_WriteEnable_Control = NULL;
 
-Avril_FSD::WriteEnable_STACK::WriteEnable_STACK()
+Avril_FSD::WriteEnable_ServerOutputRecieve::WriteEnable_ServerOutputRecieve()
 {
-    Set_global(new class Avril_FSD::WriteEnable_STACK_Global());
+    Set_global(new class Avril_FSD::WriteEnable_ServerOutputRecieve_Global());
     while (Get_global() == NULL) {}
 }
 
-Avril_FSD::WriteEnable_STACK::~WriteEnable_STACK()
+Avril_FSD::WriteEnable_ServerOutputRecieve::~WriteEnable_ServerOutputRecieve()
 {
     delete ptr_global;
     delete ptr_WriteEnable_Control;
 }
 
-void Avril_FSD::WriteEnable_STACK::Initialise_Control()
+void Avril_FSD::WriteEnable_ServerOutputRecieve::Initialise_Control()
 {
-    Set_writeEnable_Control(new class Avril_FSD::WriteEnable_STACK_Control(ptr_global));
+    Set_writeEnable_Control(new class Avril_FSD::WriteEnable_ServerOutputRecieve_Control(ptr_global));
     while (Get_writeEnable_Control() == NULL) {}
 }
 
-void Avril_FSD::WriteEnable_STACK::Write_End(class WriteEnable_STACK_Framework* obj, unsigned char coreId)
+void Avril_FSD::WriteEnable_ServerOutputRecieve::Write_End(class WriteEnable_ServerOutputRecieve_Framework* obj, unsigned char coreId)
 {
     obj->Get_writeEnable()->Get_writeEnable_Control()->Set_flag_WriteState(coreId, obj->Get_writeEnable()->Get_global()->Get_flag_write_IDLE());
     obj->Get_writeEnable()->Get_writeEnable_Control()->Set_new_writeCycle_Try_CoreId_Index(obj->Get_writeEnable()->Get_writeEnable_Control()->Get_count_CoreId_WriteActive(coreId) + 1);
@@ -35,26 +35,26 @@ void Avril_FSD::WriteEnable_STACK::Write_End(class WriteEnable_STACK_Framework* 
     obj->Get_writeEnable()->Get_writeEnable_Control()->WriteEnable_SortQue(obj);
     obj->Get_writeEnable()->Get_writeEnable_Control()->Set_flag_praisingWrite(false);
 }
-void Avril_FSD::WriteEnable_STACK::Write_Start(class WriteEnable_STACK_Framework* obj, unsigned char coreId)
+void Avril_FSD::WriteEnable_ServerOutputRecieve::Write_Start(class WriteEnable_ServerOutputRecieve_Framework* obj, unsigned char coreId)
 {
     obj->Get_writeEnable()->Get_writeEnable_Control()->WriteEnable_Request(obj, coreId);
     obj->Get_writeEnable()->Get_writeEnable_Control()->WriteQue_Update(obj);
     obj->Get_writeEnable()->Get_writeEnable_Control()->WriteEnable_SortQue(obj);
     obj->Get_writeEnable()->Get_writeEnable_Control()->WriteEnable_Activate(obj, coreId);
 }
-Avril_FSD::WriteEnable_STACK_Global* Avril_FSD::WriteEnable_STACK::Get_global()
+Avril_FSD::WriteEnable_ServerOutputRecieve_Global* Avril_FSD::WriteEnable_ServerOutputRecieve::Get_global()
 {
     return ptr_global;
 }
-Avril_FSD::WriteEnable_STACK_Control* Avril_FSD::WriteEnable_STACK::Get_writeEnable_Control()
+Avril_FSD::WriteEnable_ServerOutputRecieve_Control* Avril_FSD::WriteEnable_ServerOutputRecieve::Get_writeEnable_Control()
 {
     return ptr_WriteEnable_Control;
 }
-void Avril_FSD::WriteEnable_STACK::Set_global(Avril_FSD::WriteEnable_STACK_Global* global)
+void Avril_FSD::WriteEnable_ServerOutputRecieve::Set_global(Avril_FSD::WriteEnable_ServerOutputRecieve_Global* global)
 {
     ptr_global = global;
 }
-void Avril_FSD::WriteEnable_STACK::Set_writeEnable_Control(Avril_FSD::WriteEnable_STACK_Control* writeEnableControl)
+void Avril_FSD::WriteEnable_ServerOutputRecieve::Set_writeEnable_Control(Avril_FSD::WriteEnable_ServerOutputRecieve_Control* writeEnableControl)
 {
     ptr_WriteEnable_Control = writeEnableControl;
 }

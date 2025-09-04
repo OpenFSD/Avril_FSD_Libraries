@@ -2,15 +2,15 @@
 
 namespace Avril_FSD
 {
-    class WriteEnable_STACK_Control
+    class WriteEnable_ClientOutputRecieve_Control
     {
     public:
-        WriteEnable_STACK_Control(class Avril_FSD::WriteEnable_STACK_Global* global);
-        ~WriteEnable_STACK_Control();
-        void WriteEnable_Activate(class WriteEnable_STACK_Framework* obj, unsigned char coreId);
-        void WriteEnable_SortQue(class WriteEnable_STACK_Framework* obj);
-        void WriteEnable_Request(class WriteEnable_STACK_Framework* obj, unsigned char coreId);
-        void WriteQue_Update(class WriteEnable_STACK_Framework* obj);
+        WriteEnable_ClientOutputRecieve_Control(class Avril_FSD::WriteEnable_ClientOutputRecieve_Global* global);
+        ~WriteEnable_ClientOutputRecieve_Control();
+        void WriteEnable_Activate(class WriteEnable_ClientOutputRecieve_Framework* obj, unsigned char coreId);
+        void WriteEnable_SortQue(class WriteEnable_ClientOutputRecieve_Framework* obj);
+        void WriteEnable_Request(class WriteEnable_ClientOutputRecieve_Framework* obj, unsigned char coreId);
+        void WriteQue_Update(class WriteEnable_ClientOutputRecieve_Framework* obj);
         
         int Get_count_CoreId_WriteActive(unsigned char coreId);
         std::vector<bool> Get_flag_WriteState(unsigned char coreId);
@@ -23,8 +23,8 @@ namespace Avril_FSD
     protected:
 
     private:
-        void DynamicStagger(class WriteEnable_STACK_Framework* obj, unsigned char coreId);
-        void WriteEnable_ShiftQueValues(class WriteEnable_STACK_Framework* obj, unsigned char concurrent_CoreId_A, unsigned char concurrent_CoreId_B);
+        void DynamicStagger(class WriteEnable_ClientOutputRecieve_Framework* obj, unsigned char coreId);
+        void WriteEnable_ShiftQueValues(class WriteEnable_ClientOutputRecieve_Framework* obj, unsigned char concurrent_CoreId_A, unsigned char concurrent_CoreId_B);
 
         unsigned char Get_writeCycle_Try_CoreId_Index();
         

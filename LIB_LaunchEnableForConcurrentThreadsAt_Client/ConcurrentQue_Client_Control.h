@@ -4,16 +4,16 @@
 
 namespace Avril_FSD
 {
-    class ConcurrentQue_END_Control
+    class ConcurrentQue_CLIENT_Control
     {
     public:
-        ConcurrentQue_END_Control(class ConcurrentQue_END_Global* global, unsigned char number_Implemented_Cores);
-        virtual ~ConcurrentQue_END_Control();
+        ConcurrentQue_CLIENT_Control(class ConcurrentQue_CLIENT_Global* global, unsigned char number_Implemented_Cores);
+        virtual ~ConcurrentQue_CLIENT_Control();
 
-        void LaunchEnable_Activate(class Avril_FSD::ConcurrentQue_END_Framework* obj);
-        void LaunchEnable_Request(class Avril_FSD::ConcurrentQue_END_Framework* obj, unsigned char concurrent_CoreId);
-        void LaunchEnable_SortQue(class Avril_FSD::ConcurrentQue_END_Framework* obj, unsigned char number_Implemented_Cores);
-        void LaunchQue_Update(class Avril_FSD::ConcurrentQue_END_Framework* obj, unsigned char number_Implemented_Cores);
+        void LaunchEnable_Activate(class Avril_FSD::ConcurrentQue_CLIENT_Framework* obj);
+        void LaunchEnable_Request(class Avril_FSD::ConcurrentQue_CLIENT_Framework* obj, unsigned char concurrent_CoreId);
+        void LaunchEnable_SortQue(class Avril_FSD::ConcurrentQue_CLIENT_Framework* obj, unsigned char number_Implemented_Cores);
+        void LaunchQue_Update(class Avril_FSD::ConcurrentQue_CLIENT_Framework* obj, unsigned char number_Implemented_Cores);
 
         unsigned char Get_concurrentCycle_Try_CoreId_Index();
         unsigned char Get_flag_CoreId_Of_CoreToLaunch();
@@ -30,8 +30,8 @@ namespace Avril_FSD
     protected:
 
     private:
-        void DynamicStagger(Avril_FSD::ConcurrentQue_END_Framework* obj, unsigned char coreId);
-        void LaunchEnable_ShiftQueValues(Avril_FSD::ConcurrentQue_END_Framework* obj, unsigned char concurrent_CoreId_A, unsigned char concurrent_CoreId_B);
+        void DynamicStagger(Avril_FSD::ConcurrentQue_CLIENT_Framework* obj, unsigned char coreId);
+        void LaunchEnable_ShiftQueValues(Avril_FSD::ConcurrentQue_CLIENT_Framework* obj, unsigned char concurrent_CoreId_A, unsigned char concurrent_CoreId_B);
         
         int Get_count_LaunchActive_For(unsigned char concurrent_CoreId);
         int Get_count_LaunchIdle_For(unsigned char concurrent_CoreId);

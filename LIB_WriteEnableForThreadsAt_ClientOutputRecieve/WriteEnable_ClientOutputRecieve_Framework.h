@@ -4,14 +4,14 @@
 
 namespace Avril_FSD
 {
-    class WriteEnable_STACK_Framework
+    class WriteEnable_ClientOutputRecieve_Framework
     {
     public:
-        WriteEnable_STACK_Framework();
-        virtual ~WriteEnable_STACK_Framework();
-        class WriteEnable_STACK* Get_writeEnable();
+        WriteEnable_ClientOutputRecieve_Framework();
+        virtual ~WriteEnable_ClientOutputRecieve_Framework();
+        class WriteEnable_ClientOutputRecieve* Get_writeEnable();
 
     private:
-        static void Set_writeEnable(class WriteEnable_STACK* writeEnable);
+        static void Set_writeEnable(class WriteEnable_ClientOutputRecieve* writeEnable);
     };
 }

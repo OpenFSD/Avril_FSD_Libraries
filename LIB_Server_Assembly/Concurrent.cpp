@@ -3,9 +3,9 @@
 #include <cstddef>
 #include <iostream>
 
-#include "include/ConcurrentQue_Server/LIB_ConcurrentQue_Server.h"
-#include "include/WriteEnable_Stack_Server_InputAction/LIB_WriteEnable_Stack_Server_InputAction.h"
-#include "include/WriteEnable_Stack_Server_OutputRecieve/LIB_WriteEnable_Stack_Server_OutputRecieve.h"
+#include "include/LaunchEnableForConcurrentThreadsAt_Server/LIB_LaunchEnableForConcurrentThreadsAt_Server.h"
+#include "include/WriteEnableForThreadsAt_ServerInputAction/LIB_WriteEnableForThreadsAt_ServerInputAction.h"
+#include "include/WriteEnableForThreadsAt_ServerOutputRecieve/LIB_WriteEnableForThreadsAt_ServerOutputRecieve.h"
 
 class Avril_FSD::Concurrent_Control* ptr_Concurrent_Control = NULL;
 class Avril_FSD::Object* ptr_Algorithms_Subset = NULL;
@@ -32,7 +32,7 @@ Avril_FSD::Concurrent_Control* Avril_FSD::Concurrent::Get_Concurrent_Control()
     return ptr_Concurrent_Control;
 }
 
-void Avril_FSD::Concurrent::Thread_Concurrency(__int8 concurrent_coreId, __int8 number_Implemented_Cores)
+void Avril_FSD::Concurrent::Thread_Concurrency(class Avril_FSD::Framework_Server* obj, __int8 concurrent_coreId, __int8 number_Implemented_Cores)
 {
     bool doneOnce = true;
     while (Avril_FSD::Framework_Server::Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_ThreadInitialised(concurrent_coreId) == true)
@@ -92,6 +92,7 @@ void Avril_FSD::Concurrent::Thread_Concurrency(__int8 concurrent_coreId, __int8 
 }
 
 void Avril_FSD::Concurrent::Do_Concurrent_Algorithm_For_PraiseEventId(
+    class Avril_FSD::Framework_Server* obj,
     __int8 ptr_praiseEventId,
     Object* ptr_Algorithm_Subset,
     Object* ptr_Input_Subset,

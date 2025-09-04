@@ -9,9 +9,9 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "WriteEnable_STACK_Framework.h"
-#include "WriteEnable_STACK_Global.h"
-#include "WriteEnable_STACK.h"
-#include "WriteEnable_STACK_Control.h"
+#include "WriteEnable_ServerOutputRecieve_Framework.h"
+#include "WriteEnable_ServerOutputRecieve_Global.h"
+#include "WriteEnable_ServerOutputRecieve.h"
+#include "WriteEnable_ServerOutputRecieve_Control.h"
 
 #endif //PCH_H

@@ -7,9 +7,9 @@
 #include <array>
 namespace Avril_FSD
 {
-	class LIBSERVERASSEMBLY_API LIB_ServerLibrary {
+	class LIBSERVERASSEMBLY_API Server_Library {
 	public:
-		LIB_ServerLibrary();
+		Server_Library();
 		static void* Initialise_Server_Assembly();
 		static bool Get_Flag_isNewInputDataReady(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_isNewOutputDataReady(class Avril_FSD::Framework_Server* obj);

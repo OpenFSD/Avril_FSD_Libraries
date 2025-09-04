@@ -3,11 +3,11 @@
 
 namespace Avril_FSD
 {
-    class ConcurrentQue_END_Global
+    class ConcurrentQue_CLIENT_Global
     {
     public:
-        ConcurrentQue_END_Global();
-        ~ConcurrentQue_END_Global();
+        ConcurrentQue_CLIENT_Global();
+        ~ConcurrentQue_CLIENT_Global();
         bool Get_flag_core_ACTIVE();
         bool Get_flag_core_IDLE();
         unsigned char Get_number_Implemented_Cores();
