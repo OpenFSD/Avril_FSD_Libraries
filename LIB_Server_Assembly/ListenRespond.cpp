@@ -1,9 +1,9 @@
 #include "pch.h"
 #include "ListenRespond.h"
 #include <iostream>
-#include "include/ConcurrentQue_Server/LIB_ConcurrentQue_Server.h"
-#include "include/WriteEnable_Stack_Server_InputAction/LIB_WriteEnable_Stack_Server_InputAction.h"
-#include "include/WriteEnable_Stack_Server_OutputRecieve/LIB_WriteEnable_Stack_Server_OutputRecieve.h"
+#include "include/LaunchEnableForConcurrentThreadsAt_Server/LIB_LaunchEnableForConcurrentThreadsAt_Server.h"
+#include "include/WriteEnableForThreadsAt_ServerInputAction/LIB_WriteEnableForThreadsAt_ServerInputAction.h"
+#include "include/WriteEnableForThreadsAt_ServerOutputRecieve/LIB_WriteEnableForThreadsAt_ServerOutputRecieve.h"
 
 __int8 _thisThreadCoreId;
 
@@ -15,63 +15,62 @@ Avril_FSD::ListenRespond::ListenRespond()
 Avril_FSD::ListenRespond::~ListenRespond()
 {
 }
-void Avril_FSD::ListenRespond::IO_ListenRespond()
+void Avril_FSD::ListenRespond::IO_ListenRespond(class Avril_FSD::Framework_Server* obj)
 {
-    Avril_FSD::Server* serverAssembly = Avril_FSD::Framework_Server::Get_Server_Assembly();
     bool doneOnce = true;
-    while (serverAssembly->Get_Execute()->Get_Control_Of_Execute()->GetFlag_ThreadInitialised(Get_thisThreadCoreId()) == true)
+    while (obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_ThreadInitialised(Get_thisThreadCoreId()) == true)
     {
         if (doneOnce == true)
         {
-            serverAssembly->Get_Execute()->Get_Control_Of_Execute()->SetConditionCodeOfThisThreadedCore(Get_thisThreadCoreId());
+            obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->SetConditionCodeOfThisThreadedCore(Get_thisThreadCoreId());
             doneOnce = false;
         }
     }
     std::cout << "Thread Initialised => IO_ListenRespond()" << std::endl;//TestBench
-    while (Avril_FSD::Framework_Server::Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised() == true)
+    while (obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj) == true)
     {
 
     }
     std::cout << "Thread Starting => IO_ListenRespond()" << std::endl;//TestBench
-    while (serverAssembly->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised() == false)
+    while (obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj) == false)
     {
-        ThreadForListen(serverAssembly);
-        ThreadForRespond(serverAssembly);
+        ThreadForListen(obj);
+        ThreadForRespond(obj);
     }
 }
-void Avril_FSD::ListenRespond::ThreadForListen(Avril_FSD::Server* serverAssembly)
+void Avril_FSD::ListenRespond::ThreadForListen(class Avril_FSD::Framework_Server* obj)
 {
-    if (serverAssembly->Get_Data()->Get_Data_Control()->GetFlag_isNewInputDataReady())
+    if (obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->GetFlag_isNewInputDataReady())
     {
-        Avril_FSD::WriteEnableStackServerInputAction::Write_Start(Get_thisThreadCoreId());
-        serverAssembly->Get_Data()->Get_Data_Control()->Push_Stack_InputPraises();
-        serverAssembly->Get_Data()->Get_Data_Control()->SetFlag_isNewInputDataReady(false);
-        switch (Avril_FSD::ConcurrentQue_Server::Get_State_LaunchBit())
+        obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction()->Get_writeEnable()->Write_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction(), Get_thisThreadCoreId());
+        obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Push_Stack_InputPraises(obj);
+        obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->SetFlag_isNewInputDataReady(false);
+        switch (obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_state_ConcurrentCore(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_que_CoreToLaunch(0)))
         {
         case true:
             //do nothing and try again next cycle.
             break;
 
         case false:
-            Avril_FSD::ConcurrentQue_Server::Request_Wait_Launch(Get_thisThreadCoreId());
+            obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Thread_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), Get_thisThreadCoreId());
             break;
         }
-        Avril_FSD::WriteEnableStackServerInputAction::Write_End(Get_thisThreadCoreId());
+        obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction()->Get_writeEnable()->Write_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction(), Get_thisThreadCoreId());
     }
 }
-void Avril_FSD::ListenRespond::ThreadForRespond(Avril_FSD::Server* serverAssembly)
+void Avril_FSD::ListenRespond::ThreadForRespond(class Avril_FSD::Framework_Server* obj)
 {
-    if (serverAssembly->Get_Data()->Get_Data_Control()->GetFlag_isNewOutputDataReady())
+    if (obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->GetFlag_isNewOutputDataReady())
     {
-        Avril_FSD::WriteEnableStackServerOutputRecieve::Write_Start(Get_thisThreadCoreId());
-        while (serverAssembly->Get_Data()->Get_Data_Control()->GetFlag_OutputStackLoaded())
+        obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve()->Get_writeEnable()->Write_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), Get_thisThreadCoreId());
+        while (obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->GetFlag_OutputStackLoaded())
         {
-            serverAssembly->Get_Data()->Get_Data_Control()->Pop_Stack_Output();
-            serverAssembly->Get_Data()->Flip_Output_DoubleBuffer();
-            serverAssembly->Get_Data()->Get_Data_Control()->SetFlag_isNewOutputDataReady(true);
+            obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Pop_Stack_Output(obj);
+            obj->Get_Server_Assembly()->Get_Data()->Flip_Output_DoubleBuffer();
+            obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->SetFlag_isNewOutputDataReady(true);
             //SIMULATION: gether output receieve
         }
-        Avril_FSD::WriteEnableStackServerOutputRecieve::Write_End(Get_thisThreadCoreId());
+        obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve()->Get_writeEnable()->Write_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), Get_thisThreadCoreId());
     }
 }
 __int8 Avril_FSD::ListenRespond::Get_thisThreadCoreId()

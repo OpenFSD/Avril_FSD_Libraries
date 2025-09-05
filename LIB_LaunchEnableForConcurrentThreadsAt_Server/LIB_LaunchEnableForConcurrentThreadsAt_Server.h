@@ -12,7 +12,7 @@ namespace Avril_FSD
 		static void* Initialise_ConcurrentQue();
 
 		static void Request_Wait_Launch(class Avril_FSD::ConcurrentQue_Server_Framework* obj, unsigned char concurrent_CoreId);
-		static void Thread_End(class Avril_FSD::ConcurrentQue_Server_Framework*, unsigned char concurrent_CoreId);
+		static void Thread_End(class Avril_FSD::ConcurrentQue_Server_Framework* obj, unsigned char concurrent_CoreId);
 
 		static __int8 Get_coreId_To_Launch(class Avril_FSD::ConcurrentQue_Server_Framework* obj);
 		static bool Get_Flag_Active(class Avril_FSD::ConcurrentQue_Server_Framework* obj);

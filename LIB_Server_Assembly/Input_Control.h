@@ -8,7 +8,7 @@ namespace Avril_FSD
         Input_Control();
         virtual ~Input_Control();
         
-        void SelectSet_Input_Subset(__int8 ptr_praiseEventId);
+        void SelectSet_Input_Subset(class Avril_FSD::Framework_Server* obj, __int8 ptr_praiseEventId);
 
     protected:
 

@@ -8,14 +8,14 @@ class Avril_FSD::Praise2_Algorithm* ptr_Praise2_Algorithm = NULL;
 
 Avril_FSD::User_Alg::User_Alg()
 {
-	//Set_Praise0_Algorithm(new class Avril_FSD::Praise0_Algorithm());
-	//while (Get_Praise0_Algorithm() == NULL) {  }
+	Set_Praise0_Algorithm(new class Avril_FSD::Praise0_Algorithm());
+	while (Get_Praise0_Algorithm() == NULL) {  }
 
-	//Set_Praise1_Algorithm(new class Avril_FSD::Praise1_Algorithm());
-	//while (Get_Praise1_Algorithm() == NULL) {  }
+	Set_Praise1_Algorithm(new class Avril_FSD::Praise1_Algorithm());
+	while (Get_Praise1_Algorithm() == NULL) {  }
 
-	//Set_Praise2_Algorithm(new class Avril_FSD::Praise2_Algorithm());
-	//while (Get_Praise2_Algorithm() == NULL) {  }
+	Set_Praise2_Algorithm(new class Avril_FSD::Praise2_Algorithm());
+	while (Get_Praise2_Algorithm() == NULL) {  }
 }
 Avril_FSD::User_Alg::~User_Alg()
 {

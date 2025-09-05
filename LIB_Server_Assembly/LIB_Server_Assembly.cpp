@@ -39,6 +39,7 @@ void * Avril_FSD::Server_Library::Initialise_Server_Assembly()
 {
     _Server_Assembly = new class Avril_FSD::Framework_Server();
     while (_Server_Assembly == NULL) {}
+    _Server_Assembly->Initialise_Program(_Server_Assembly);
     return (void*)_Server_Assembly;
 }
 bool Avril_FSD::Server_Library::Get_Flag_isNewInputDataReady(class Avril_FSD::Framework_Server* obj)
@@ -63,16 +64,16 @@ bool Avril_FSD::Server_Library::Get_Flag_IsStackLoaded_Server_OutputRecieve(clas
 }
 bool Avril_FSD::Server_Library::Get_Flag_IsInitialised_Avril_FSD_ServerAssembly(class Avril_FSD::Framework_Server* obj)
 {
-    _Flag_IsInitialised_Avril_FSD_ServerAssembly = obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised();
+    _Flag_IsInitialised_Avril_FSD_ServerAssembly = obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj);
     return _Flag_IsInitialised_Avril_FSD_ServerAssembly;
 }
 void Avril_FSD::Server_Library::Pop_Stack_Output(class Avril_FSD::Framework_Server* obj)
 {
-    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Pop_Stack_Output();
+    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Pop_Stack_Output(obj);
 }
 void Avril_FSD::Server_Library::Push_Stack_InputPraises(class Avril_FSD::Framework_Server* obj)
 {
-    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Push_Stack_InputPraises();
+    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Push_Stack_InputPraises(obj);
 }
 
 __int8 Avril_FSD::Server_Library::Get_PraiseEventId(class Avril_FSD::Framework_Server* obj)

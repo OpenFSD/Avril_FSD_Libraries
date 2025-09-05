@@ -22,10 +22,10 @@ Avril_FSD::Execute_Control::~Execute_Control()
 
 }
 
-bool Avril_FSD::Execute_Control::GetFlag_SystemInitialised()
+bool Avril_FSD::Execute_Control::GetFlag_SystemInitialised(class Avril_FSD::Framework_Server* obj)
 {
 	flag_SystemInitialised = false;
-	for (int index = 0; index < Avril_FSD::Framework_Server::Get_Server_Assembly()->Get_Global()->Get_NumCores(); index++)
+	for (int index = 0; index < obj->Get_Server_Assembly()->Get_Global()->Get_NumCores(); index++)
 	{
 		if (flag_ThreadInitialised[index] == true)
 		{

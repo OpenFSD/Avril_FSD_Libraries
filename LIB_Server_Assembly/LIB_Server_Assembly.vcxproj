@@ -168,6 +168,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtServer.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtServerInputAction.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtServerOutputRecieve.dll" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms.h" />
@@ -181,6 +184,21 @@
     <ClInclude Include="Framework_Server.h" />
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="include\LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server.h" />
+    <ClInclude Include="include\LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Control.h" />
+    <ClInclude Include="include\LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Framework.h" />
+    <ClInclude Include="include\LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Global.h" />
+    <ClInclude Include="include\LaunchEnableForConcurrentThreadsAt_Server\LIB_LaunchEnableForConcurrentThreadsAt_Server.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerInputAction\LIB_WriteEnableForThreadsAt_ServerInputAction.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Control.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Framework.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Global.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerOutputRecieve\LIB_WriteEnableForThreadsAt_ServerOutputRecieve.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Control.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Framework.h" />
+    <ClInclude Include="include\WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Global.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Input_Control.h" />
     <ClInclude Include="LIB_Server_Assembly.h" />
@@ -241,6 +259,22 @@
     <ClCompile Include="User_Alg.cpp" />
     <ClCompile Include="User_I.cpp" />
     <ClCompile Include="User_O.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LIB_LaunchEnableForConcurrentThreadsAt_Server\LIB_LaunchEnableForConcurrentThreadsAt_Server.vcxproj">
+      <Project>{1d38d9c6-ce4b-4cda-ad2e-65ce39a6822b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LIB_WriteEnableForThreadsAt_ServerInputAction\LIB_WriteEnableForThreadsAt_ServerInputAction.vcxproj">
+      <Project>{ec82447d-b9f6-4bcd-a4b9-a43635da2f38}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\LIB_WriteEnableForThreadsAt_ServerOutputRecieve.vcxproj">
+      <Project>{cd36f2a0-1989-4cdb-ba6d-5844fd6390b1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtServer.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtServerInputAction.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtServerOutputRecieve.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

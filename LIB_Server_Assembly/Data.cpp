@@ -42,12 +42,12 @@ Avril_FSD::Data::Data(__int8 number_Implemented_Cores)
     while (GetBuffer_OutputFrontDouble() == NULL) {}
     while (GetBuffer_OutputBackDouble() == NULL) {}
     
-    for (__int8 index = 0; index < Avril_FSD::Framework_Server::Get_Server_Assembly()->Get_Global()->Get_NumCores(); index++)//Number Of Cores
+    for (__int8 index = 0; index < number_Implemented_Cores; index++)//Number Of Cores
     {
         Set_Buffer_InputReference_ForCore(index, Get_New_InputBuffer());
         while (Get_InputRefferenceOfCore(index) == NULL) { }
     }
-    for (__int8 index = 0; index < Avril_FSD::Framework_Server::Get_Server_Assembly()->Get_Global()->Get_NumCores(); index++)
+    for (__int8 index = 0; index < number_Implemented_Cores; index++)
     {
         Set_Buffer_OutputReference_ForCore(index, Get_New_OutputBuffer());
         while (Get_OutputRefferenceOfCore(index) == NULL) {}

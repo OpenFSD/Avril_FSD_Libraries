@@ -7,7 +7,8 @@ namespace Avril_FSD
     public:
         Framework_Server();
         virtual ~Framework_Server();
-        static class Server* Get_Server_Assembly();
+        void Initialise_Program(class Avril_FSD::Framework_Server* obj);
+        class Server* Get_Server_Assembly();
 
     private:
         static void Set_Server_Assembly(class Server* server);

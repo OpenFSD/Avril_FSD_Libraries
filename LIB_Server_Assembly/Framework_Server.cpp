@@ -15,21 +15,26 @@ Avril_FSD::Framework_Server::Framework_Server()
 
 	Get_Server_Assembly()->Get_Execute()->Initialise_Libraries();
 	std::cout << "Created => INIT Libraries" << std::endl;
-
-	Get_Server_Assembly()->Get_Execute()->Initialise();
-	std::cout << "Created => INIT Server" << std::endl;
-
-	Get_Server_Assembly()->Get_Data()->Initialise_GameInstance();
-	std::cout << "Created => Game Instance" << std::endl;
-
-	Get_Server_Assembly()->Get_Execute()->Initialise_Threads();
-	std::cout << "Created => Thread(s)" << std::endl;
 }
 
 
 Avril_FSD::Framework_Server::~Framework_Server()
 {
 	delete ptr_HostServer;
+}
+
+void Avril_FSD::Framework_Server::Initialise_Program(class Avril_FSD::Framework_Server* obj)
+{
+
+	Get_Server_Assembly()->Get_Execute()->Initialise(obj);
+	std::cout << "Created => INIT Server" << std::endl;
+	
+
+	Get_Server_Assembly()->Get_Data()->Initialise_GameInstance();
+	std::cout << "Created => Game Instance" << std::endl;
+
+	Get_Server_Assembly()->Get_Execute()->Initialise_Threads(obj);
+	std::cout << "Created => Thread(s)" << std::endl;
 }
 
 class Avril_FSD::Server* Avril_FSD::Framework_Server::Get_Server_Assembly()

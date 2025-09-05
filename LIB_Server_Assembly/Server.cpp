@@ -23,9 +23,9 @@ Avril_FSD::Server::Server()
     ptr_Data->Initialise_Control();
     std::cout << "Created => Avril_FSD::Data()" << std::endl;
 
-    Set_Execute(new class Avril_FSD::Execute(Get_Global(), Get_Global()->Get_NumCores()));
+    Set_Execute(new class Avril_FSD::Execute());
     while (Get_Execute() == NULL) { }
-    Get_Execute()->Initialise_Control(Get_Global()->Get_NumCores(), Get_Global());
+    Get_Execute()->Initialise_Control(Get_Global()->Get_NumCores());
     std::cout << "Created => Avril_FSD::Execute" << std::endl;
 }
 
