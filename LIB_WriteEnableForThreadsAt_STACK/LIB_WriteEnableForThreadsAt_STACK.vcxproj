@@ -165,10 +165,10 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="LIB_WriteEnableForThreadsAt_STACK.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="WriteEnable_STACK.h" />
-    <ClInclude Include="WriteEnable_STACK_Control.h" />
-    <ClInclude Include="WriteEnable_STACK_Framework.h" />
-    <ClInclude Include="WriteEnable_STACK_Global.h" />
+    <ClInclude Include="WriteEnableForThreadsAt_STACK.h" />
+    <ClInclude Include="WriteEnableForThreadsAt_STACK_Control.h" />
+    <ClInclude Include="WriteEnableForThreadsAt_STACK_Framework.h" />
+    <ClInclude Include="WriteEnableForThreadsAt_STACK_Global.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -179,10 +179,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="WriteEnable_STACK.cpp" />
-    <ClCompile Include="WriteEnable_STACK_Control.cpp" />
-    <ClCompile Include="WriteEnable_STACK_Framework.cpp" />
-    <ClCompile Include="WriteEnable_STACK_Global.cpp" />
+    <ClCompile Include="WriteEnableForThreadsAt_STACK.cpp" />
+    <ClCompile Include="WriteEnableForThreadsAt_STACK_Control.cpp" />
+    <ClCompile Include="WriteEnableForThreadsAt_STACK_Framework.cpp" />
+    <ClCompile Include="WriteEnableForThreadsAt_STACK_Global.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

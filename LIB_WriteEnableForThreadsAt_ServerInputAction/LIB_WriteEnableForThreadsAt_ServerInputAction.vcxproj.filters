@@ -21,45 +21,21 @@
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LIB_WriteEnableForThreadsAt_ServerInputAction.h">
+    <ClInclude Include="LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WriteEnable_ServerInputAction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WriteEnable_ServerInputAction_Control.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WriteEnable_ServerInputAction_Framework.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WriteEnable_ServerInputAction_Global.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LIB_WriteEnableForThreadsAt_ServerInputAction.cpp">
+    <ClCompile Include="LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WriteEnable_ServerInputAction.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WriteEnable_ServerInputAction_Control.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WriteEnable_ServerInputAction_Framework.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="WriteEnable_ServerInputAction_Global.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

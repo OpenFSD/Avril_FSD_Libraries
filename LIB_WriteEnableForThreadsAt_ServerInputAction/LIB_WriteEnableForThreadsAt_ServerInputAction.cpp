@@ -1,32 +1,22 @@
+// LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.cpp : Defines the exported functions for the DLL.
+//
+
 #include "pch.h"
 #include "framework.h"
-#include "LIB_WriteEnableForThreadsAt_ServerInputAction.h"
+#include "LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.h"
 
-class Avril_FSD::WriteEnable_ServerInputAction_Framework* ptr_WriteEnable_ServerInputAction_Framework = NULL;
 
-Avril_FSD::WriteEnableForThreadsAt_ServerInputAction_Library::WriteEnableForThreadsAt_ServerInputAction_Library()
-{
+// This is an example of an exported variable
+LIBWRITEENABLEFORTHREADSATSERVERINPUTACTION_API int nLIBWriteEnableForThreadsAtSERVERINPUTACTION=0;
 
-}
-void* Avril_FSD::WriteEnableForThreadsAt_ServerInputAction_Library::Initialise_WriteEnable()
+// This is an example of an exported function.
+LIBWRITEENABLEFORTHREADSATSERVERINPUTACTION_API int fnLIBWriteEnableForThreadsAtSERVERINPUTACTION(void)
 {
-    Set_writeEnable(new class Avril_FSD::WriteEnable_ServerInputAction_Framework());
-    while (Get_Framework_WriteEnable() == NULL) {}
-    return (void*)Get_Framework_WriteEnable();
+    return 0;
 }
-void Avril_FSD::WriteEnableForThreadsAt_ServerInputAction_Library::Write_End(class WriteEnable_ServerInputAction_Framework* obj, unsigned char coreId)
+
+// This is the constructor of a class that has been exported.
+CLIBWriteEnableForThreadsAtSERVERINPUTACTION::CLIBWriteEnableForThreadsAtSERVERINPUTACTION()
 {
-    obj->Get_writeEnable()->Write_End(obj, coreId);
-}
-void Avril_FSD::WriteEnableForThreadsAt_ServerInputAction_Library::Write_Start(class WriteEnable_ServerInputAction_Framework* obj, unsigned char coreId)
-{
-    obj->Get_writeEnable()->Write_Start(obj, coreId);
-}
-Avril_FSD::WriteEnable_ServerInputAction_Framework* Avril_FSD::WriteEnableForThreadsAt_ServerInputAction_Library::Get_Framework_WriteEnable()
-{
-    return ptr_WriteEnable_ServerInputAction_Framework;
-}
-void Avril_FSD::WriteEnableForThreadsAt_ServerInputAction_Library::Set_writeEnable(Avril_FSD::WriteEnable_ServerInputAction_Framework* writeEnable)
-{
-    ptr_WriteEnable_ServerInputAction_Framework = writeEnable;
+    return;
 }

@@ -1,9 +1,9 @@
 #include "pch.h"
 #include <cstddef>
 #include <thread>
-#include "include/LaunchEnableForConcurrentThreadsAt_Server/LIB_LaunchEnableForConcurrentThreadsAt_Server.h"
-#include "include/WriteEnableForThreadsAt_ServerInputAction/LIB_WriteEnableForThreadsAt_ServerInputAction.h"
-#include "include/WriteEnableForThreadsAt_ServerOutputRecieve/LIB_WriteEnableForThreadsAt_ServerOutputRecieve.h"
+#include "include/LIB_LaunchEnableForConcurrentThreadsAt_Server/ConcurrentQue_Server_Framework.h"
+#include "include/LIB_WriteEnableForThreadsAt_ServerInputAction/WriteEnable_ServerInputAction_Framework.h"
+#include "include/LIB_WriteEnableForThreadsAt_ServerOutputRecieve/WriteEnable_ServerOutputRecieve_Framework.h"
 
 class Avril_FSD::Execute_Control* ptr_Execute_Control = NULL;
 std::thread* ptr_Thread_WithCoreId[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CORES

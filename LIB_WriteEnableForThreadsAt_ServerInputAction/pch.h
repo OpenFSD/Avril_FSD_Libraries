@@ -9,9 +9,5 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "WriteEnable_ServerInputAction_Framework.h"
-#include "WriteEnable_ServerInputAction_Global.h"
-#include "WriteEnable_ServerInputAction.h"
-#include "WriteEnable_ServerInputAction_Control.h"
 
 #endif //PCH_H

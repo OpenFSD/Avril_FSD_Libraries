@@ -27,16 +27,16 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConcurrentQue_END_Framework.h">
+    <ClInclude Include="LaunchEnableForConcurrentThreadsAt_END_Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConcurrentQue_END_Global.h">
+    <ClInclude Include="LaunchEnableForConcurrentThreadsAt_END_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConcurrentQue_END.h">
+    <ClInclude Include="LaunchEnableForConcurrentThreadsAt_END.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ConcurrentQue_END_Control.h">
+    <ClInclude Include="LaunchEnableForConcurrentThreadsAt_END_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,16 +50,16 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConcurrentQue_END_Framework.cpp">
+    <ClCompile Include="LaunchEnableForConcurrentThreadsAt_END_Framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConcurrentQue_END_Global.cpp">
+    <ClCompile Include="LaunchEnableForConcurrentThreadsAt_END_Global.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConcurrentQue_END.cpp">
+    <ClCompile Include="LaunchEnableForConcurrentThreadsAt_END.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ConcurrentQue_END_Control.cpp">
+    <ClCompile Include="LaunchEnableForConcurrentThreadsAt_END_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

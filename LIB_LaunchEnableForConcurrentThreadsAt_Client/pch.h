@@ -9,9 +9,9 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "ConcurrentQue_CLIENT_Framework.h"
-#include "ConcurrentQue_CLIENT_Global.h"
-#include "ConcurrentQue_CLIENT.h"
-#include "ConcurrentQue_CLIENT_Control.h"
+#include "LaunchEnableForConcurrentThreadsAt_CLIENT_Framework.h"
+#include "LaunchEnableForConcurrentThreadsAt_CLIENT_Global.h"
+#include "LaunchEnableForConcurrentThreadsAt_CLIENT.h"
+#include "LaunchEnableForConcurrentThreadsAt_CLIENT_Control.h"
 
 #endif //PCH_H

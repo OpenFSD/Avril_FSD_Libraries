@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -32,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TESTBENCH_LIBs_Csharp.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,81 +61,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMPORT_Avril_FSD_LIB_ConcurrentQue_END.cs" />
-    <Compile Include="IMPORT_Avril_FSD_LIB_ConcurrentQue_Client.cs" />
-    <Compile Include="IMPORT_Avril_FSD_LIB_WriteEnable_STACK.cs" />
-    <Compile Include="IMPORT_Avril_FSD_LIB_WriteEnable_Stack_Client_OutputRecieve.cs" />
+    <Compile Include="IMPORT_LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.cs" />
+    <Compile Include="IMPORT_LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.cs" />
     <Compile Include="IMPORT_Avril_FSD_LIB_Server_Assembly.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="LIBLaunchEnableForConcurrentThreadsAtEND.lib" />
-    <None Include="LIBWriteEnableForThreadsAtSTACK.lib" />
+    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtCLIENT.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_Framework.h" />
-    <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_Global.h" />
-    <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_LaunchConcurrency.h" />
-    <Content Include="include\ConcurrentQueClient\ConcurrentQue_Client_LaunchConcurrency_Control.h" />
-    <Content Include="include\ConcurrentQueClient\LIB_ConcurrentQue_Client.h" />
-    <Content Include="include\ConcurrentQue_END\ConcurrentQue_END.h" />
-    <Content Include="include\ConcurrentQue_END\ConcurrentQue_END_Control.h" />
-    <Content Include="include\ConcurrentQue_END\ConcurrentQue_END_Framework.h" />
-    <Content Include="include\ConcurrentQue_END\ConcurrentQue_END_Global.h" />
-    <Content Include="include\ConcurrentQue_END\LIB_LaunchEnableForConcurrentThreadsAt_END.h" />
-    <Content Include="include\ServerAssembly\Algorithms.h" />
-    <Content Include="include\ServerAssembly\Concurrent.h" />
-    <Content Include="include\ServerAssembly\Concurrent_Control.h" />
-    <Content Include="include\ServerAssembly\Data.h" />
-    <Content Include="include\ServerAssembly\Data_Control.h" />
-    <Content Include="include\ServerAssembly\Execute.h" />
-    <Content Include="include\ServerAssembly\Execute_Control.h" />
-    <Content Include="include\ServerAssembly\Framework_Server.h" />
-    <Content Include="include\ServerAssembly\GameInstance.h" />
-    <Content Include="include\ServerAssembly\Global.h" />
-    <Content Include="include\ServerAssembly\Input.h" />
-    <Content Include="include\ServerAssembly\Input_Control.h" />
-    <Content Include="include\ServerAssembly\LIB_Server_Assembly.h" />
-    <Content Include="include\ServerAssembly\ListenRespond.h" />
-    <Content Include="include\ServerAssembly\Output.h" />
-    <Content Include="include\ServerAssembly\Output_Control.h" />
-    <Content Include="include\ServerAssembly\Player.h" />
-    <Content Include="include\ServerAssembly\Praise0_Algorithm.h" />
-    <Content Include="include\ServerAssembly\Praise0_Input.h" />
-    <Content Include="include\ServerAssembly\Praise0_Output.h" />
-    <Content Include="include\ServerAssembly\Praise1_Algorithm.h" />
-    <Content Include="include\ServerAssembly\Praise1_Input.h" />
-    <Content Include="include\ServerAssembly\Praise1_Output.h" />
-    <Content Include="include\ServerAssembly\Praise2_Algorithm.h" />
-    <Content Include="include\ServerAssembly\Praise2_Input.h" />
-    <Content Include="include\ServerAssembly\Praise2_Output.h" />
-    <Content Include="include\ServerAssembly\Server.h" />
-    <Content Include="include\ServerAssembly\User_Alg.h" />
-    <Content Include="include\ServerAssembly\User_I.h" />
-    <Content Include="include\ServerAssembly\User_O.h" />
-    <Content Include="include\WriteEnableStackClientOutputRecieve\LIB_WriteEnable_Stack_Client_OutputRecieve.h" />
-    <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve.h" />
-    <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Control.h" />
-    <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Framework.h" />
-    <Content Include="include\WriteEnableStackClientOutputRecieve\WriteEnable_Stack_Client_OutputRecieve_Global.h" />
-    <Content Include="include\WriteEnable_STACK\LIB_WriteEnableForThreadsAt_STACK.h" />
-    <Content Include="include\WriteEnable_STACK\WriteEnable_STACK.h" />
-    <Content Include="include\WriteEnable_STACK\WriteEnable_STACK_Control.h" />
-    <Content Include="include\WriteEnable_STACK\WriteEnable_STACK_Framework.h" />
-    <Content Include="include\WriteEnable_STACK\WriteEnable_STACK_Global.h" />
-    <Content Include="LIBLaunchEnableForConcurrentThreadsAtEND.dll">
+    <Folder Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\" />
+    <Folder Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\LIBLaunchEnableForConcurrentThreadsAtClient.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="LIBWriteEnableForThreadsAtSTACK.dll">
+    <Content Include="lib\LIBWriteEnableForThreadsAtClientOutputRecieve.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\LIBWriteEnableForThreadsAtSTACK.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

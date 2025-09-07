@@ -9,9 +9,9 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "WriteEnable_STACK_Framework.h"
-#include "WriteEnable_STACK_Global.h"
-#include "WriteEnable_STACK.h"
-#include "WriteEnable_STACK_Control.h"
+#include "WriteEnableForThreadsAt_STACK_Framework.h"
+#include "WriteEnableForThreadsAt_STACK_Global.h"
+#include "WriteEnableForThreadsAt_STACK.h"
+#include "WriteEnableForThreadsAt_STACK_Control.h"
 
 #endif //PCH_H

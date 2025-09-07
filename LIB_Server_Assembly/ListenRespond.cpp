@@ -1,9 +1,6 @@
 #include "pch.h"
 #include "ListenRespond.h"
 #include <iostream>
-#include "include/LaunchEnableForConcurrentThreadsAt_Server/LIB_LaunchEnableForConcurrentThreadsAt_Server.h"
-#include "include/WriteEnableForThreadsAt_ServerInputAction/LIB_WriteEnableForThreadsAt_ServerInputAction.h"
-#include "include/WriteEnableForThreadsAt_ServerOutputRecieve/LIB_WriteEnableForThreadsAt_ServerOutputRecieve.h"
 
 __int8 _thisThreadCoreId;
 

@@ -1,32 +1,44 @@
+// LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.cpp : Defines the exported functions for the DLL.
+//
+
 #include "pch.h"
 #include "framework.h"
-#include "LIB_WriteEnableForThreadsAt_ClientOutputRecieve.h"
+#include "LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.h"
 
-class Avril_FSD::WriteEnable_ClientOutputRecieve_Framework* ptr_WriteEnable_ClientOutputRecieve_Framework = NULL;
+Avril_FSD::WriteEnableForThreadsAt_STACK_Framework* ptr_WriteEnableForThreadsAt_STACK_Framework = NULL;
 
-Avril_FSD::WriteEnableForThreadsAt_ClientOutputRecieve_Library::WriteEnableForThreadsAt_ClientOutputRecieve_Library()
+// This is an example of an exported variable
+LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_API int nLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE=0;
+
+// This is an example of an exported function.
+LIBWRITEENABLEFORTHREADSATCLIENTOUTPUTRECIEVE_API int fnLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE(void)
 {
-
+    return 0;
 }
-void* Avril_FSD::WriteEnableForThreadsAt_ClientOutputRecieve_Library::Initialise_WriteEnable()
+void* Avril_FSD::CLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE::Initialise_WriteEnable()
 {
-    Set_writeEnable(new class Avril_FSD::WriteEnable_ClientOutputRecieve_Framework());
+    Set_writeEnable(new class Avril_FSD::WriteEnableForThreadsAt_STACK_Framework());
     while (Get_Framework_WriteEnable() == NULL) {}
     return (void*)Get_Framework_WriteEnable();
 }
-void Avril_FSD::WriteEnableForThreadsAt_ClientOutputRecieve_Library::Write_End(class WriteEnable_ClientOutputRecieve_Framework* obj, unsigned char coreId)
+void Avril_FSD::CLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE::Write_End(Avril_FSD::WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId)
 {
     obj->Get_writeEnable()->Write_End(obj, coreId);
 }
-void Avril_FSD::WriteEnableForThreadsAt_ClientOutputRecieve_Library::Write_Start(class WriteEnable_ClientOutputRecieve_Framework* obj, unsigned char coreId)
+void Avril_FSD::CLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE::Write_Start(Avril_FSD::WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId)
 {
     obj->Get_writeEnable()->Write_Start(obj, coreId);
 }
-Avril_FSD::WriteEnable_ClientOutputRecieve_Framework* Avril_FSD::WriteEnableForThreadsAt_ClientOutputRecieve_Library::Get_Framework_WriteEnable()
+Avril_FSD::WriteEnableForThreadsAt_STACK_Framework* Avril_FSD::CLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE::Get_Framework_WriteEnable()
 {
-    return ptr_WriteEnable_ClientOutputRecieve_Framework;
+    return ptr_WriteEnableForThreadsAt_STACK_Framework;
 }
-void Avril_FSD::WriteEnableForThreadsAt_ClientOutputRecieve_Library::Set_writeEnable(Avril_FSD::WriteEnable_ClientOutputRecieve_Framework* writeEnable)
+void Avril_FSD::CLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE::Set_writeEnable(Avril_FSD::WriteEnableForThreadsAt_STACK_Framework* writeEnable)
 {
-    ptr_WriteEnable_ClientOutputRecieve_Framework = writeEnable;
+    ptr_WriteEnableForThreadsAt_STACK_Framework = writeEnable;
+}
+// This is the constructor of a class that has been exported.
+Avril_FSD::CLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE::CLIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE()
+{
+    return;
 }

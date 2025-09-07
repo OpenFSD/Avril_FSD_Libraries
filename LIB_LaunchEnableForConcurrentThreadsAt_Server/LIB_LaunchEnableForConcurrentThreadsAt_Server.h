@@ -1,28 +1,22 @@
-#ifdef LAUNCHENABLEFORCONCURRENTTHREADSATServer_EXPORTS
-#define LAUNCHENABLEFORCONCURRENTTHREADSATServer_API __declspec(dllexport)
+// The following ifdef block is the standard way of creating macros which make exporting
+// from a DLL simpler. All files within this DLL are compiled with the LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_EXPORTS
+// symbol defined on the command line. This symbol should not be defined on any project
+// that uses this DLL. This way any other project whose source files include this file see
+// LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API functions as being imported from a DLL, whereas this DLL sees symbols
+// defined with this macro as being exported.
+#ifdef LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_EXPORTS
+#define LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API __declspec(dllexport)
 #else
-#define LAUNCHENABLEFORCONCURRENTTHREADSATServer_API __declspec(dllimport)
+#define LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API __declspec(dllimport)
 #endif
 
-namespace Avril_FSD
-{
-	class LAUNCHENABLEFORCONCURRENTTHREADSATServer_API ConcurrentQue_Server_Library {
-	public:
-		ConcurrentQue_Server_Library();
-		static void* Initialise_ConcurrentQue();
+// This class is exported from the dll
+class LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API CLIBLaunchEnableForConcurrentThreadsAtSERVER {
+public:
+	CLIBLaunchEnableForConcurrentThreadsAtSERVER(void);
+	// TODO: add your methods here.
+};
 
-		static void Request_Wait_Launch(class Avril_FSD::ConcurrentQue_Server_Framework* obj, unsigned char concurrent_CoreId);
-		static void Thread_End(class Avril_FSD::ConcurrentQue_Server_Framework* obj, unsigned char concurrent_CoreId);
+extern LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API int nLIBLaunchEnableForConcurrentThreadsAtSERVER;
 
-		static __int8 Get_coreId_To_Launch(class Avril_FSD::ConcurrentQue_Server_Framework* obj);
-		static bool Get_Flag_Active(class Avril_FSD::ConcurrentQue_Server_Framework* obj);
-		static bool Get_Flag_ConcurrentCoreState(class Avril_FSD::ConcurrentQue_Server_Framework* obj, unsigned char concurrent_CoreId);
-		static bool Get_Flag_Idle(class Avril_FSD::ConcurrentQue_Server_Framework* obj);
-		static bool Get_State_LaunchBit(class Avril_FSD::ConcurrentQue_Server_Framework* obj);
-		static void Set_state_ConcurrentCore(class Avril_FSD::ConcurrentQue_Server_Framework* obj, unsigned char concurrent_CoreId, bool value);
-
-	private:
-		static class ConcurrentQue_Server_Framework* Get_ConcurrentQue_Server_Framework();
-		static void Set_ConcurrentQue_Server_Framework(class ConcurrentQue_Server_Framework* framework);
-	};
-}
+LIBLAUNCHENABLEFORCONCURRENTTHREADSATSERVER_API int fnLIBLaunchEnableForConcurrentThreadsAtSERVER(void);

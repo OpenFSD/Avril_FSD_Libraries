@@ -9,9 +9,9 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
-#include "WriteEnable_ClientOutputRecieve_Framework.h"
-#include "WriteEnable_ClientOutputRecieve_Global.h"
-#include "WriteEnable_ClientOutputRecieve.h"
-#include "WriteEnable_ClientOutputRecieve_Control.h"
+#include "WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework.h"
+#include "WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Global.h"
+#include "WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.h"
+#include "WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Control.h"
 
 #endif //PCH_H

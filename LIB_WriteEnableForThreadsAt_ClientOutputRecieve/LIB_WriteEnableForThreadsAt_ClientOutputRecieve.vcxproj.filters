@@ -21,27 +21,27 @@
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LIB_WriteEnableForThreadsAt_ClientOutputRecieve.h">
+    <ClInclude Include="LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WriteEnable_ClientOutputRecieve.h">
+    <ClInclude Include="WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WriteEnable_ClientOutputRecieve_Control.h">
+    <ClInclude Include="WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WriteEnable_ClientOutputRecieve_Framework.h">
+    <ClInclude Include="WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WriteEnable_ClientOutputRecieve_Global.h">
+    <ClInclude Include="WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LIB_WriteEnableForThreadsAt_ClientOutputRecieve.cpp">
+    <ClCompile Include="LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
@@ -50,16 +50,16 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WriteEnable_ClientOutputRecieve.cpp">
+    <ClCompile Include="WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Global.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WriteEnable_ClientOutputRecieve_Control.cpp">
+    <ClCompile Include="WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WriteEnable_ClientOutputRecieve_Framework.cpp">
+    <ClCompile Include="WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WriteEnable_ClientOutputRecieve_Global.cpp">
+    <ClCompile Include="WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
