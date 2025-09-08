@@ -8,7 +8,7 @@ namespace Avril_FSD
         Output_Control();
         virtual ~Output_Control();
 
-        void SelectSet_Output_Subset(class Avril_FSD::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId);
+        void SelectSet_Output_Subset(class Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId);
 
     protected:
 

@@ -8,10 +8,10 @@ namespace Avril_FSD
     public:
         Data_Control();
         virtual ~Data_Control();
-        void Pop_Stack_InputPraises(class Avril_FSD::Framework_Server* obj, __int8 concurrentCoreId);
-        void Pop_Stack_Output(class Avril_FSD::Framework_Server* obj);
-        void Push_Stack_InputPraises(class Avril_FSD::Framework_Server* obj);
-        void Push_Stack_Output(class Avril_FSD::Framework_Server* obj, __int8 concurrentCoreId);
+        void Pop_Stack_InputPraises(class Framework_Server* obj, __int8 concurrentCoreId);
+        void Pop_Stack_Output(class Framework_Server* obj);
+        void Push_Stack_InputPraises(class Framework_Server* obj);
+        void Push_Stack_Output(class Framework_Server* obj, __int8 concurrentCoreId);
         
         bool GetFlag_InputStackLoaded();
         bool GetFlag_OutputStackLoaded();

@@ -8,7 +8,7 @@ namespace Avril_FSD
     public:
         Execute_Control(__int8 number_Implemented_Cores);
         virtual ~Execute_Control();
-        bool GetFlag_SystemInitialised(class Avril_FSD::Framework_Server* obj);
+        bool GetFlag_SystemInitialised(class Framework_Server* obj);
         bool GetFlag_ThreadInitialised(__int8 coreId);
         void SetConditionCodeOfThisThreadedCore(__int8 coreId);
 
