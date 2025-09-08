@@ -25,15 +25,14 @@ Avril_FSD::Framework_Server::~Framework_Server()
 
 void Avril_FSD::Framework_Server::Initialise_Program(class Avril_FSD::Framework_Server* obj)
 {
-
-	Get_Server_Assembly()->Get_Execute()->Initialise(obj);
+	obj->Get_Server_Assembly()->Get_Execute()->Initialise(obj);
 	std::cout << "Created => INIT Server" << std::endl;
 	
 
-	Get_Server_Assembly()->Get_Data()->Initialise_GameInstance();
+	obj->Get_Server_Assembly()->Get_Data()->Initialise_GameInstance();
 	std::cout << "Created => Game Instance" << std::endl;
 
-	Get_Server_Assembly()->Get_Execute()->Initialise_Threads(obj);
+	obj->Get_Server_Assembly()->Get_Execute()->Initialise_Threads(obj);
 	std::cout << "Created => Thread(s)" << std::endl;
 }
 

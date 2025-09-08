@@ -1,15 +1,15 @@
 #include "pch.h"
 #include <cstddef>
 #include <thread>
-#include "include/LIB_LaunchEnableForConcurrentThreadsAt_Server/ConcurrentQue_Server_Framework.h"
-#include "include/LIB_WriteEnableForThreadsAt_ServerInputAction/WriteEnable_ServerInputAction_Framework.h"
-#include "include/LIB_WriteEnableForThreadsAt_ServerOutputRecieve/WriteEnable_ServerOutputRecieve_Framework.h"
+#include "include/LIB_LaunchEnableForConcurrentThreadsAt_SERVER/LaunchEnableForConcurrentThreadsAt_SERVER_Framework.h"
+#include "include/LIB_WriteEnableForThreadsAt_SERVERINPUTACTION/WriteEnableForThreadsAt_SERVERINPUTACTION_Framework.h"
+#include "include/LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE/WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework.h"
 
-class Avril_FSD::Execute_Control* ptr_Execute_Control = NULL;
+Avril_FSD::Execute_Control* ptr_Execute_Control = NULL;
 std::thread* ptr_Thread_WithCoreId[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CORES
-class Avril_FSD::ConcurrentQue_Server_Framework* framework_ConcurrentQue_Server = NULL;
-class Avril_FSD::WriteEnable_ServerInputAction_Framework* framework_WriteEnableStack_ServerInputAction = NULL;
-class Avril_FSD::WriteEnable_ServerOutputRecieve_Framework* framework_WriteEnableStack_ServerOutputRecieve = NULL;
+Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* program_ConcurrentQue_Server = NULL;
+Avril_FSD::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* program_WriteEnableStack_ServerInputAction = NULL;
+Avril_FSD::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* program_WriteEnableStack_ServerOutputRecieve = NULL;
 
 Avril_FSD::Execute::Execute()
 {
@@ -37,9 +37,14 @@ void Avril_FSD::Execute::Initialise_Control(__int8 number_Implemented_Cores)
 }
 void Avril_FSD::Execute::Initialise_Libraries()
 {
-    framework_ConcurrentQue_Server = new class Avril_FSD::ConcurrentQue_Server_Framework::ConcurrentQue_Server_Framework();
-    framework_WriteEnableStack_ServerInputAction = new class Avril_FSD::WriteEnable_ServerInputAction_Framework::WriteEnable_ServerInputAction_Framework();
-    framework_WriteEnableStack_ServerOutputRecieve = new class Avril_FSD::WriteEnable_ServerOutputRecieve_Framework::WriteEnable_ServerOutputRecieve_Framework();
+    program_ConcurrentQue_Server = (Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework*)Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Initialise_LaunchEnableForConcurrentThreadsAt();
+    while (program_ConcurrentQue_Server == NULL) {}
+
+    program_WriteEnableStack_ServerInputAction = (Avril_FSD::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework*)Avril_FSD::Library_WriteEnableForThreadsAt_SERVERINPUTACTION::Initialise_WriteEnable();
+    while (program_WriteEnableStack_ServerInputAction == NULL) {}
+
+    program_WriteEnableStack_ServerOutputRecieve = (Avril_FSD::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework*)Avril_FSD::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Initialise_WriteEnable();
+    while (program_WriteEnableStack_ServerOutputRecieve == NULL) {}
 }
 void Avril_FSD::Execute::Initialise_Threads(class Avril_FSD::Framework_Server* obj)
 {
@@ -55,19 +60,19 @@ Avril_FSD::Execute_Control* Avril_FSD::Execute::Get_Control_Of_Execute()
     return ptr_Execute_Control;
 }
 
-Avril_FSD::ConcurrentQue_Server_Framework* Avril_FSD::Execute::Get_Program_ConcurrentQue_Server()
+Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* Avril_FSD::Execute::Get_Program_ConcurrentQue_Server()
 {
-    return framework_ConcurrentQue_Server;
+    return program_ConcurrentQue_Server;
 }
 
-Avril_FSD::WriteEnable_ServerInputAction_Framework* Avril_FSD::Execute::Get_Program_WriteEnable_ServerInputAction()
+Avril_FSD::WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* Avril_FSD::Execute::Get_Program_WriteEnable_ServerInputAction()
 {
-    return framework_WriteEnableStack_ServerInputAction;
+    return program_WriteEnableStack_ServerInputAction;
 }
 
-Avril_FSD::WriteEnable_ServerOutputRecieve_Framework* Avril_FSD::Execute::Get_Program_WriteEnable_ServerOutputRecieve()
+Avril_FSD::WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework* Avril_FSD::Execute::Get_Program_WriteEnable_ServerOutputRecieve()
 {
-    return framework_WriteEnableStack_ServerOutputRecieve;
+    return program_WriteEnableStack_ServerOutputRecieve;
 }
 
 void Avril_FSD::Execute::Set_Control_Of_Execute(Execute_Control* execute_Control)

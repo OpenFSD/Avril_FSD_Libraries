@@ -3,11 +3,11 @@
 
 namespace Avril_FSD
 {
-    class LaunchEnableForConcurrentThreadsAt_END_Global
+    class LaunchEnableForConcurrentThreadsAt_CLIENT_Global
     {
     public:
-        LaunchEnableForConcurrentThreadsAt_END_Global();
-        ~LaunchEnableForConcurrentThreadsAt_END_Global();
+        LaunchEnableForConcurrentThreadsAt_CLIENT_Global();
+        ~LaunchEnableForConcurrentThreadsAt_CLIENT_Global();
         bool Get_flag_core_ACTIVE();
         bool Get_flag_core_IDLE();
         unsigned char Get_number_Implemented_Cores();

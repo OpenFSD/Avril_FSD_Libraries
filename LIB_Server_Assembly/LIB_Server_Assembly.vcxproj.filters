@@ -117,49 +117,49 @@
     <ClInclude Include="ListenRespond.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Control.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Framework.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Global.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\LIB_LaunchEnableForConcurrentThreadsAt_Server.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LIB_LaunchEnableForConcurrentThreadsAt_SERVER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\LIB_WriteEnableForThreadsAt_ServerInputAction.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Control.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Framework.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Global.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\LIB_WriteEnableForThreadsAt_ServerOutputRecieve.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Control.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Framework.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Global.h">
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -262,8 +262,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtServer.lib" />
-    <Library Include="lib\LIBWriteEnableForThreadsAtServerInputAction.lib" />
-    <Library Include="lib\LIBWriteEnableForThreadsAtServerOutputRecieve.lib" />
+    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib" />
   </ItemGroup>
 </Project>

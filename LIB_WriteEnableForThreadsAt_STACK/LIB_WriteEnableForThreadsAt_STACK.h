@@ -15,6 +15,6 @@ namespace Avril_FSD
 
 	private:
 		static class WriteEnableForThreadsAt_STACK_Framework* Get_Framework_WriteEnable();
-		static void Set_writeEnable(class Avril_FSD::WriteEnableForThreadsAt_STACK_Framework* writeEnable);
+		static void Set_writeEnable(class WriteEnableForThreadsAt_STACK_Framework* writeEnable);
 	};
 }

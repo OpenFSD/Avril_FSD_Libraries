@@ -23,7 +23,7 @@ void Avril_FSD::WriteEnableForThreadsAt_STACK::Initialise_Control()
     while (Get_writeEnable_Control() == NULL) {}
 }
 
-void Avril_FSD::WriteEnableForThreadsAt_STACK::Write_End(class WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId)
+void Avril_FSD::WriteEnableForThreadsAt_STACK::Write_End(Avril_FSD::WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId)
 {
     obj->Get_writeEnable()->Get_writeEnable_Control()->Set_flag_WriteState(coreId, obj->Get_writeEnable()->Get_global()->Get_flag_write_IDLE());
     obj->Get_writeEnable()->Get_writeEnable_Control()->Set_new_writeCycle_Try_CoreId_Index(obj->Get_writeEnable()->Get_writeEnable_Control()->Get_count_CoreId_WriteActive(coreId) + 1);
@@ -35,7 +35,7 @@ void Avril_FSD::WriteEnableForThreadsAt_STACK::Write_End(class WriteEnableForThr
     obj->Get_writeEnable()->Get_writeEnable_Control()->WriteEnable_SortQue(obj);
     obj->Get_writeEnable()->Get_writeEnable_Control()->Set_flag_praisingWrite(false);
 }
-void Avril_FSD::WriteEnableForThreadsAt_STACK::Write_Start(class WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId)
+void Avril_FSD::WriteEnableForThreadsAt_STACK::Write_Start(Avril_FSD::WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId)
 {
     obj->Get_writeEnable()->Get_writeEnable_Control()->WriteEnable_Request(obj, coreId);
     obj->Get_writeEnable()->Get_writeEnable_Control()->WriteQue_Update(obj);

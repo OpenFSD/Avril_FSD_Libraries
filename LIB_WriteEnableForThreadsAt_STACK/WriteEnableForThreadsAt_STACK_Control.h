@@ -5,7 +5,7 @@ namespace Avril_FSD
     class WriteEnableForThreadsAt_STACK_Control
     {
     public:
-        WriteEnableForThreadsAt_STACK_Control(class Avril_FSD::WriteEnableForThreadsAt_STACK_Global* global);
+        WriteEnableForThreadsAt_STACK_Control(class WriteEnableForThreadsAt_STACK_Global* global);
         ~WriteEnableForThreadsAt_STACK_Control();
         void WriteEnable_Activate(class WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId);
         void WriteEnable_SortQue(class WriteEnableForThreadsAt_STACK_Framework* obj);

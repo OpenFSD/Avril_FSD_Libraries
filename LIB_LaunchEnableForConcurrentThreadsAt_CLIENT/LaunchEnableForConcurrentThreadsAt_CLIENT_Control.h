@@ -4,16 +4,16 @@
 
 namespace Avril_FSD
 {
-    class LaunchEnableForConcurrentThreadsAt_END_Control
+    class LaunchEnableForConcurrentThreadsAt_CLIENT_Control
     {
     public:
-        LaunchEnableForConcurrentThreadsAt_END_Control(class LaunchEnableForConcurrentThreadsAt_END_Global* global, unsigned char number_Implemented_Cores);
-        virtual ~LaunchEnableForConcurrentThreadsAt_END_Control();
+        LaunchEnableForConcurrentThreadsAt_CLIENT_Control(class LaunchEnableForConcurrentThreadsAt_CLIENT_Global* global, unsigned char number_Implemented_Cores);
+        virtual ~LaunchEnableForConcurrentThreadsAt_CLIENT_Control();
 
-        void LaunchEnable_Activate(class Avril_FSD::LaunchEnableForConcurrentThreadsAt_END_Framework* obj);
-        void LaunchEnable_Request(class Avril_FSD::LaunchEnableForConcurrentThreadsAt_END_Framework* obj, unsigned char concurrent_CoreId);
-        void LaunchEnable_SortQue(class Avril_FSD::LaunchEnableForConcurrentThreadsAt_END_Framework* obj, unsigned char number_Implemented_Cores);
-        void LaunchQue_Update(class Avril_FSD::LaunchEnableForConcurrentThreadsAt_END_Framework* obj, unsigned char number_Implemented_Cores);
+        void LaunchEnable_Activate(class LaunchEnableForConcurrentThreadsAt_CLIENT_Framework* obj);
+        void LaunchEnable_Request(class LaunchEnableForConcurrentThreadsAt_CLIENT_Framework* obj, unsigned char concurrent_CoreId);
+        void LaunchEnable_SortQue(class LaunchEnableForConcurrentThreadsAt_CLIENT_Framework* obj, unsigned char number_Implemented_Cores);
+        void LaunchQue_Update(class LaunchEnableForConcurrentThreadsAt_CLIENT_Framework* obj, unsigned char number_Implemented_Cores);
 
         unsigned char Get_concurrentCycle_Try_CoreId_Index();
         unsigned char Get_flag_CoreId_Of_CoreToLaunch();
@@ -30,8 +30,8 @@ namespace Avril_FSD
     protected:
 
     private:
-        void DynamicStagger(Avril_FSD::LaunchEnableForConcurrentThreadsAt_END_Framework* obj, unsigned char coreId);
-        void LaunchEnable_ShiftQueValues(Avril_FSD::LaunchEnableForConcurrentThreadsAt_END_Framework* obj, unsigned char concurrent_CoreId_A, unsigned char concurrent_CoreId_B);
+        void DynamicStagger(class LaunchEnableForConcurrentThreadsAt_CLIENT_Framework* obj, unsigned char coreId);
+        void LaunchEnable_ShiftQueValues(class LaunchEnableForConcurrentThreadsAt_CLIENT_Framework* obj, unsigned char concurrent_CoreId_A, unsigned char concurrent_CoreId_B);
         
         int Get_count_LaunchActive_For(unsigned char concurrent_CoreId);
         int Get_count_LaunchIdle_For(unsigned char concurrent_CoreId);

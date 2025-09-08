@@ -20,25 +20,59 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.dll" />
+    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtServer.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtServerInputAction.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtServerOutputRecieve.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtEND.lib" />
+    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_END\LaunchEnableForConcurrentThreadsAt_END.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\LaunchEnableForConcurrentThreadsAt_SERVER.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_END\LaunchEnableForConcurrentThreadsAt_END_Control.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\LaunchEnableForConcurrentThreadsAt_SERVER_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_END\LaunchEnableForConcurrentThreadsAt_END_Framework.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\LaunchEnableForConcurrentThreadsAt_SERVER_Framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_END\LaunchEnableForConcurrentThreadsAt_END_Global.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\LaunchEnableForConcurrentThreadsAt_SERVER_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_END\LIB_LaunchEnableForConcurrentThreadsAt_END.h">
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\LIB_LaunchEnableForConcurrentThreadsAt_SERVER.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnableForThreadsAt_SERVERINPUTACTION.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnableForThreadsAt_SERVERINPUTACTION_Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnableForThreadsAt_SERVERINPUTACTION_Framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnableForThreadsAt_SERVERINPUTACTION_Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

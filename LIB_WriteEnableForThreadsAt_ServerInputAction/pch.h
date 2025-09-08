@@ -9,5 +9,9 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
+#include "WriteEnableForThreadsAt_SERVERINPUTACTION_Framework.h"
+#include "WriteEnableForThreadsAt_SERVERINPUTACTION_Global.h"
+#include "WriteEnableForThreadsAt_SERVERINPUTACTION.h"
+#include "WriteEnableForThreadsAt_SERVERINPUTACTION_Control.h"
 
 #endif //PCH_H

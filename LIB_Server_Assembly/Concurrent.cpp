@@ -2,10 +2,6 @@
 #include <cstddef>
 #include <iostream>
 
-#include "include/LIB_LaunchEnableForConcurrentThreadsAt_Server/LIB_LaunchEnableForConcurrentThreadsAt_Server.h"
-#include "include/LIB_WriteEnableForThreadsAt_ServerInputAction/LIB_WriteEnableForThreadsAt_ServerInputAction.h"
-#include "include/LIB_WriteEnableForThreadsAt_ServerOutputRecieve/LIB_WriteEnableForThreadsAt_ServerOutputRecieve.h"
-
 class Avril_FSD::Concurrent_Control* ptr_Concurrent_Control = NULL;
 class Avril_FSD::Object* ptr_Algorithms_Subset = NULL;
 
@@ -31,7 +27,7 @@ Avril_FSD::Concurrent_Control* Avril_FSD::Concurrent::Get_Concurrent_Control()
     return ptr_Concurrent_Control;
 }
 
-void Avril_FSD::Concurrent::Thread_Concurrency(class Avril_FSD::Framework_Server* obj, __int8 concurrent_coreId)
+void Avril_FSD::Concurrent::Thread_Concurrency(Avril_FSD::Framework_Server* obj, __int8 concurrent_coreId)
 {
     bool doneOnce = true;
     while (obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_ThreadInitialised(concurrent_coreId) == true)
@@ -51,17 +47,17 @@ void Avril_FSD::Concurrent::Thread_Concurrency(class Avril_FSD::Framework_Server
     std::cout << "Thread Starting " << (concurrent_coreId + 1) << " => Thread_Concurrency()" << std::endl;//TestBench
     while (obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj) == false)
     {
-        if (obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_state_ConcurrentCore(concurrent_coreId) == obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_LaunchConcurrency_Global()->Get_flag_core_IDLE())
+        if (Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_ConcurrentCoreState(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), concurrent_coreId) == Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_Idle(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()))
         {
-            obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Set_state_ConcurrentCore(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_LaunchConcurrency_Global()->Get_flag_core_ACTIVE(), concurrent_coreId);
+            Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Set_state_ConcurrentCore(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), concurrent_coreId, Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_Active(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()));
         }
         if (obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->GetFlag_InputStackLoaded() == true)
         {
-            obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction()->Get_writeEnable()->Write_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction(), concurrent_coreId + 1);
+            Avril_FSD::Library_WriteEnableForThreadsAt_SERVERINPUTACTION::Write_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction(), concurrent_coreId + 1);
             obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Pop_Stack_InputPraises(obj, concurrent_coreId);
             obj->Get_Server_Assembly()->Get_Algorithms()->Get_Concurrent(concurrent_coreId)->Get_Concurrent_Control()->SelectSet_Algorithm_Subset(obj, obj->Get_Server_Assembly()->Get_Data()->Get_InputRefferenceOfCore(concurrent_coreId)->GetPraiseEventId(), concurrent_coreId);
             obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->Get_Control_Of_Output()->SelectSet_Output_Subset(obj, obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->GetPraiseEventId(), concurrent_coreId);
-            obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction()->Get_writeEnable()->Write_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction(), concurrent_coreId + 1);
+            Avril_FSD::Library_WriteEnableForThreadsAt_SERVERINPUTACTION::Write_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerInputAction(), concurrent_coreId + 1);
             obj->Get_Server_Assembly()->Get_Algorithms()->Get_Concurrent(concurrent_coreId)->Do_Concurrent_Algorithm_For_PraiseEventId(
                 obj,
                 obj->Get_Server_Assembly()->Get_Data()->Get_InputRefferenceOfCore(concurrent_coreId)->GetPraiseEventId(),
@@ -69,17 +65,17 @@ void Avril_FSD::Concurrent::Thread_Concurrency(class Avril_FSD::Framework_Server
                 obj->Get_Server_Assembly()->Get_Data()->Get_InputRefferenceOfCore(concurrent_coreId)->Get_InputBuffer_Subset(),
                 obj->Get_Server_Assembly()->Get_Data()->Get_OutputRefferenceOfCore(concurrent_coreId)->Get_OutputBuffer_Subset()
             );
-            obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve()->Get_writeEnable()->Write_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), concurrent_coreId + 1);
+            Avril_FSD::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Write_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), concurrent_coreId + 1);
             obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Push_Stack_Output(obj, concurrent_coreId);
-            obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Thread_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), concurrent_coreId);
             if (obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->GetFlag_OutputStackLoaded() == true)
             {
-                if (obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_state_ConcurrentCore(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_que_CoreToLaunch(0)) == obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_LaunchConcurrency_Global()->Get_flag_core_IDLE())
+                if (Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_ConcurrentCoreState(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_coreId_To_Launch(0)) == Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_Flag_Idle(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()))
                 {
-                    obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Thread_Start(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server()->Get_ConcurrentQue()->Get_Control_Of_LaunchConcurrency()->Get_que_CoreToLaunch(0));
+                    Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Request_Wait_Launch(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Get_coreId_To_Launch(0));
                 }
             }
-            obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve()->Get_writeEnable()->Write_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), concurrent_coreId + 1);
+            Avril_FSD::Library_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE::Write_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_WriteEnable_ServerOutputRecieve(), concurrent_coreId + 1);
+            Avril_FSD::CLIBLaunchEnableForConcurrentThreadsAtSERVER::Thread_End(obj->Get_Server_Assembly()->Get_Execute()->Get_Program_ConcurrentQue_Server(), concurrent_coreId);
         }
     }
 }

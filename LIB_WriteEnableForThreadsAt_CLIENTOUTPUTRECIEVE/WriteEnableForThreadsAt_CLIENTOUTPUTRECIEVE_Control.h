@@ -2,15 +2,15 @@
 
 namespace Avril_FSD
 {
-    class WriteEnableForThreadsAt_STACK_Control
+    class WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Control
     {
     public:
-        WriteEnableForThreadsAt_STACK_Control(class Avril_FSD::WriteEnableForThreadsAt_STACK_Global* global);
-        ~WriteEnableForThreadsAt_STACK_Control();
-        void WriteEnable_Activate(class WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId);
-        void WriteEnable_SortQue(class WriteEnableForThreadsAt_STACK_Framework* obj);
-        void WriteEnable_Request(class WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId);
-        void WriteQue_Update(class WriteEnableForThreadsAt_STACK_Framework* obj);
+        WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Control(class WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Global* global);
+        ~WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Control();
+        void WriteEnable_Activate(class WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework* obj, unsigned char coreId);
+        void WriteEnable_SortQue(class WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework* obj);
+        void WriteEnable_Request(class WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework* obj, unsigned char coreId);
+        void WriteQue_Update(class WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework* obj);
         
         int Get_count_CoreId_WriteActive(unsigned char coreId);
         std::vector<bool> Get_flag_WriteState(unsigned char coreId);
@@ -23,8 +23,8 @@ namespace Avril_FSD
     protected:
 
     private:
-        void DynamicStagger(class WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char coreId);
-        void WriteEnable_ShiftQueValues(class WriteEnableForThreadsAt_STACK_Framework* obj, unsigned char concurrent_CoreId_A, unsigned char concurrent_CoreId_B);
+        void DynamicStagger(class WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework* obj, unsigned char coreId);
+        void WriteEnable_ShiftQueValues(class WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework* obj, unsigned char concurrent_CoreId_A, unsigned char concurrent_CoreId_B);
 
         unsigned char Get_writeCycle_Try_CoreId_Index();
         

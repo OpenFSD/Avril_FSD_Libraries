@@ -39,7 +39,7 @@
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <CLRSupport>true</CLRSupport>
+    <CLRSupport>false</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -99,14 +99,14 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve;\include\LIB_WriteEnableForThreadsAt_ServerInputAction;\include\LIB_LaunchEnableForConcurrentThreadsAt_Server</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE;\include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION;\include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LIBLaunchEnableForConcurrentThreadsAtServer.lib;LIBWriteEnableForThreadsAtServerInputAction.lib;LIBWriteEnableForThreadsAtServerOutputRecieve.lib</AdditionalDependencies>
+      <AdditionalDependencies>LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib;LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib;LIBLaunchEnableForConcurrentThreadsAtSERVER.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -120,7 +120,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve;\include\LIB_WriteEnableForThreadsAt_ServerInputAction;\include\LIB_LaunchEnableForConcurrentThreadsAt_Server</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE;\include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION;\include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -129,7 +129,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LIBLaunchEnableForConcurrentThreadsAtServer.lib;LIBWriteEnableForThreadsAtServerInputAction.lib;LIBWriteEnableForThreadsAtServerOutputRecieve.lib</AdditionalDependencies>
+      <AdditionalDependencies>LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib;LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib;LIBLaunchEnableForConcurrentThreadsAtSERVER.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -140,14 +140,14 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve;\include\LIB_WriteEnableForThreadsAt_ServerInputAction;\include\LIB_LaunchEnableForConcurrentThreadsAt_Server</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE;\include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION;\include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LIBLaunchEnableForConcurrentThreadsAtServer.lib;LIBWriteEnableForThreadsAtServerInputAction.lib;LIBWriteEnableForThreadsAtServerOutputRecieve.lib</AdditionalDependencies>
+      <AdditionalDependencies>LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib;LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib;LIBLaunchEnableForConcurrentThreadsAtSERVER.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -160,7 +160,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve;\include\LIB_WriteEnableForThreadsAt_ServerInputAction;\include\LIB_LaunchEnableForConcurrentThreadsAt_Server</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE;\include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION;\include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -169,7 +169,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>LIBLaunchEnableForConcurrentThreadsAtServer.lib;LIBWriteEnableForThreadsAtServerInputAction.lib;LIBWriteEnableForThreadsAtServerOutputRecieve.lib</AdditionalDependencies>
+      <AdditionalDependencies>LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib;LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib;LIBLaunchEnableForConcurrentThreadsAtSERVER.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -190,21 +190,21 @@
     <ClInclude Include="Framework_Server.h" />
     <ClInclude Include="GameInstance.h" />
     <ClInclude Include="Global.h" />
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server.h" />
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Control.h" />
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Framework.h" />
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\ConcurrentQue_Server_Global.h" />
-    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_Server\LIB_LaunchEnableForConcurrentThreadsAt_Server.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\LIB_WriteEnableForThreadsAt_ServerInputAction.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Control.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Framework.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerInputAction\WriteEnable_ServerInputAction_Global.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\LIB_WriteEnableForThreadsAt_ServerOutputRecieve.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Control.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Framework.h" />
-    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\WriteEnable_ServerOutputRecieve_Global.h" />
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER.h" />
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Control.h" />
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Framework.h" />
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Global.h" />
+    <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LIB_LaunchEnableForConcurrentThreadsAt_SERVER.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Control.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Framework.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Global.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework.h" />
+    <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Input_Control.h" />
     <ClInclude Include="LIB_Server_Assembly.h" />
@@ -267,11 +267,6 @@
     <ClCompile Include="User_O.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtServer.lib" />
-    <Library Include="lib\LIBWriteEnableForThreadsAtServerInputAction.lib" />
-    <Library Include="lib\LIBWriteEnableForThreadsAtServerOutputRecieve.lib" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\LIB_LaunchEnableForConcurrentThreadsAt_Server\LIB_LaunchEnableForConcurrentThreadsAt_Server.vcxproj">
       <Project>{1d38d9c6-ce4b-4cda-ad2e-65ce39a6822b}</Project>
     </ProjectReference>
@@ -281,6 +276,11 @@
     <ProjectReference Include="..\LIB_WriteEnableForThreadsAt_ServerOutputRecieve\LIB_WriteEnableForThreadsAt_ServerOutputRecieve.vcxproj">
       <Project>{cd36f2a0-1989-4cdb-ba6d-5844fd6390b1}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib" />
+    <Library Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

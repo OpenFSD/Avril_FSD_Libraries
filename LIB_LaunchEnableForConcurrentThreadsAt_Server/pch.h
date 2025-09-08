@@ -9,5 +9,9 @@
 
 // add headers that you want to pre-compile here
 #include "framework.h"
+#include "LaunchEnableForConcurrentThreadsAt_SERVER_Framework.h"
+#include "LaunchEnableForConcurrentThreadsAt_SERVER_Global.h"
+#include "LaunchEnableForConcurrentThreadsAt_SERVER.h"
+#include "LaunchEnableForConcurrentThreadsAt_SERVER_Control.h"
 
 #endif //PCH_H

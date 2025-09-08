@@ -27,6 +27,18 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.cpp">
@@ -36,6 +48,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

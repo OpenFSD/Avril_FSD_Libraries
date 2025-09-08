@@ -1,20 +1,20 @@
-#ifdef LIBWRITEENABLEServerInputAction_EXPORTS
-#define LIBWRITEENABLEATServerInputAction_API __declspec(dllexport)
+#ifdef LIBWRITEENABLEFORTHREADSATSERVERINPUTACTION_EXPORTS
+#define LIBWRITEENABLEFORTHREADSATSERVERINPUTACTION_API __declspec(dllexport)
 #else
-#define LIBWRITEENABLEATServerInputAction_API __declspec(dllimport)
+#define LIBWRITEENABLEFORTHREADSATSERVERINPUTACTION_API __declspec(dllimport)
 #endif
 
 namespace Avril_FSD
 {
-	class LIBWRITEENABLEATServerInputAction_API WriteEnableForThreadsAt_ServerInputAction_Library {
+	class LIBWRITEENABLEFORTHREADSATSERVERINPUTACTION_API Library_WriteEnableForThreadsAt_SERVERINPUTACTION {
 	public:
-		WriteEnableForThreadsAt_ServerInputAction_Library();
+		Library_WriteEnableForThreadsAt_SERVERINPUTACTION();
 		static void* Initialise_WriteEnable();
-		void Write_End(class WriteEnable_ServerInputAction_Framework* obj, unsigned char coreId);
-		void Write_Start(class WriteEnable_ServerInputAction_Framework* obj, unsigned char coreId);
+		static void Write_End(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, unsigned char coreId);
+		static void Write_Start(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* obj, unsigned char coreId);
 
 	private:
-		static class WriteEnable_ServerInputAction_Framework* Get_Framework_WriteEnable();
-		static void Set_writeEnable(class Avril_FSD::WriteEnable_ServerInputAction_Framework* writeEnable);
+		static class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* Get_Framework_WriteEnable();
+		static void Set_writeEnable(class WriteEnableForThreadsAt_SERVERINPUTACTION_Framework* writeEnable);
 	};
 }
