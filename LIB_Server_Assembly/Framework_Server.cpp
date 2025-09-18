@@ -1,8 +1,5 @@
 #include "pch.h"
 
-#include <cstddef>
-#include <iostream>
-
 class Avril_FSD::Server* ptr_HostServer = NULL;
 
 Avril_FSD::Framework_Server::Framework_Server()
@@ -23,7 +20,7 @@ Avril_FSD::Framework_Server::~Framework_Server()
 	delete ptr_HostServer;
 }
 
-void Avril_FSD::Framework_Server::Initialise_Program(class Avril_FSD::Framework_Server* obj)
+void Avril_FSD::Framework_Server::Initialise_Program(Avril_FSD::Framework_Server* obj)
 {
 	obj->Get_Server_Assembly()->Get_Execute()->Initialise(obj);
 	std::cout << "Created => INIT Server" << std::endl;

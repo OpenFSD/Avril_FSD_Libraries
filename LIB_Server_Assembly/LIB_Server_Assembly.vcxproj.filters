@@ -16,9 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
-    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtServer.dll" />
-    <None Include="lib\LIBWriteEnableForThreadsAtServerInputAction.dll" />
-    <None Include="lib\LIBWriteEnableForThreadsAtServerOutputRecieve.dll" />
+    <None Include="packages.config" />
+    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.dll" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -162,6 +163,12 @@
     <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FirstPersonCamera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LIB_Server_Assembly.cpp">
@@ -258,6 +265,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ListenRespond.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstPersonCamera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

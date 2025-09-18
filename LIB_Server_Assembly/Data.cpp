@@ -1,7 +1,5 @@
 #include "pch.h"
 
-#include <cstddef>
-#include <iostream>
 class Avril_FSD::Data_Control* ptr_Data_Control = NULL;
 class Avril_FSD::GameInstance* ptr_GameInstance = NULL;
 //buffers
@@ -194,62 +192,62 @@ Avril_FSD::User_O* Avril_FSD::Data::Get_User_O()
     return ptr_User_O;
 }
 
-void Avril_FSD::Data::Set_Data_Control(Data_Control* data_Control)
+void Avril_FSD::Data::Set_Data_Control(Avril_FSD::Data_Control* data_Control)
 {
     ptr_Data_Control = data_Control;
 }
-void Avril_FSD::Data::Set_GameInstance(GameInstance* gameInstance)
+void Avril_FSD::Data::Set_GameInstance(Avril_FSD::GameInstance* gameInstance)
 {
     ptr_GameInstance = gameInstance;
 }
-void Avril_FSD::Data::Set_EmptyBuffer_Input(Input* emptyBuffer_Input)
+void Avril_FSD::Data::Set_EmptyBuffer_Input(Avril_FSD::Input* emptyBuffer_Input)
 {
     ptr_EmptyBuffer_Input = emptyBuffer_Input;
 }
-void Avril_FSD::Data::Set_EmptyBuffer_Output(Output* emptyBuffer_Output)
+void Avril_FSD::Data::Set_EmptyBuffer_Output(Avril_FSD::Output* emptyBuffer_Output)
 {
     ptr_EmptyBuffer_Output = emptyBuffer_Output;
 }
-void Avril_FSD::Data::Set_Buffer_InputDouble(bool state, Input* buffer_InputDouble)
+void Avril_FSD::Data::Set_Buffer_InputDouble(bool state, Avril_FSD::Input* buffer_InputDouble)
 {
     ptr_Buffer_InputDouble[BoolToInt(state)] = buffer_InputDouble;
 }
-void Avril_FSD::Data::Set_Buffer_InputReference_ForCore(__int8 index, Input* buffer_InputReference_ForCore)
+void Avril_FSD::Data::Set_Buffer_InputReference_ForCore(__int8 index, Avril_FSD::Input* buffer_InputReference_ForCore)
 {
     ptr_Buffer_InputReference_ForCore[index] = buffer_InputReference_ForCore;
 }
-void Avril_FSD::Data::Set_Buffer_OututDouble(bool state, Output* buffer_OututDouble)
+void Avril_FSD::Data::Set_Buffer_OututDouble(bool state, Avril_FSD::Output* buffer_OututDouble)
 {
     ptr_Buffer_OutputDouble[BoolToInt(state)] = buffer_OututDouble;
 }
-void Avril_FSD::Data::Set_Buffer_OutputReference_ForCore(__int8 index, Output* buffer_OutputReference_ForCore)
+void Avril_FSD::Data::Set_Buffer_OutputReference_ForCore(__int8 index, Avril_FSD::Output* buffer_OutputReference_ForCore)
 {
     ptr_Buffer_OutputReference_ForCore[index] = buffer_OutputReference_ForCore;
 }
-void Avril_FSD::Data::Set_Stack_InputPraise(std::vector<class Input*>* stack_InputPraise)
+void Avril_FSD::Data::Set_Stack_InputPraise(std::vector<class Avril_FSD::Input*>* stack_InputPraise)
 {
     ptr_Stack_InputPraise = stack_InputPraise;
 }
-void Avril_FSD::Data::Set_Stack_OutputPraise(std::vector<class Output*>* stack_OutputPraise)
+void Avril_FSD::Data::Set_Stack_OutputPraise(std::vector<class Avril_FSD::Output*>* stack_OutputPraise)
 {
     ptr_Stack_OutputPraise = stack_OutputPraise;
 }
 
-void Avril_FSD::Data::Set_User_I(User_I* user_Input)
+void Avril_FSD::Data::Set_User_I(Avril_FSD::User_I* user_Input)
 {
     ptr_User_I = user_Input;
 }
-void Avril_FSD::Data::Set_User_O(User_O* user_Output)
+void Avril_FSD::Data::Set_User_O(Avril_FSD::User_O* user_Output)
 {
     ptr_User_O = user_Output;
 }
 
-void Avril_FSD::Data::Set_InputRefferenceOfCore(__int8 concurrent_coreId, Input* value_Input)
+void Avril_FSD::Data::Set_InputRefferenceOfCore(__int8 concurrent_coreId, Avril_FSD::Input* value_Input)
 {
     ptr_Buffer_InputReference_ForCore[concurrent_coreId] = value_Input;
 }
 
-void Avril_FSD::Data::Set_OutputRefferenceOfCore(__int8 concurrent_coreId, Output* value_Output)
+void Avril_FSD::Data::Set_OutputRefferenceOfCore(__int8 concurrent_coreId, Avril_FSD::Output* value_Output)
 {
     ptr_Buffer_OutputReference_ForCore[concurrent_coreId] = value_Output;
 }

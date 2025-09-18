@@ -13,8 +13,10 @@ namespace Avril_FSD
         class Object* Get_InputBuffer_Subset();
         
         __int8 GetPraiseEventId();
-        static void Set_in_praiseEventId(__int8 value);
+        __int8 Get_playerId();
 
+        void Set_in_praiseEventId(__int8 praiseEventId);
+        void Set_in_playerId(__int8 praiseEventId);
         void Set_Subset_InputBuffer(class Praise0_Input* value);
         void Set_Subset_InputBuffer(class Praise1_Input* value);
         void Set_Subset_InputBuffer(class Praise2_Input* value);

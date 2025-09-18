@@ -25,11 +25,11 @@ void Avril_FSD::Data_Control::Pop_Stack_InputPraises(class Avril_FSD::Framework_
     ptr_inputStack->erase(ptr_inputStack->begin()+1);
     if (sizeof(ptr_inputStack) < 2)
     {
-        SetFlag_InputStackLoaded(false);
+        Set_flag_IsStackLoaded_Server_InputAction(false);
     }
     else
     {
-        SetFlag_InputStackLoaded(true);
+        Set_flag_IsStackLoaded_Server_InputAction(true);
     }
 }
 
@@ -41,11 +41,11 @@ void Avril_FSD::Data_Control::Pop_Stack_Output(class Avril_FSD::Framework_Server
     ptr_outputStack->erase(ptr_outputStack->begin()+1);
     if (sizeof(ptr_outputStack) < 2)
     {
-        SetFlag_OutputStackLoaded(false);
+        Set_flag_IsStackLoaded_Server_OutputRecieve(false);
     }
     else
     {
-        SetFlag_OutputStackLoaded(true);
+        Set_flag_IsStackLoaded_Server_OutputRecieve(true);
     }
 }
 
@@ -57,11 +57,11 @@ void Avril_FSD::Data_Control::Push_Stack_InputPraises(class Avril_FSD::Framework
     ptr_InputStack->at(ptr_InputStack->size()) = ptr_Buffer_Praise;
     if (sizeof(ptr_InputStack) < 2)
     {
-        SetFlag_InputStackLoaded(false);
+        Set_flag_IsStackLoaded_Server_InputAction(false);
     }
     else
     {
-        SetFlag_InputStackLoaded(true);
+        Set_flag_IsStackLoaded_Server_InputAction(true);
     }
 }
 
@@ -73,49 +73,48 @@ void Avril_FSD::Data_Control::Push_Stack_Output(class Avril_FSD::Framework_Serve
     ptr_outputStack->at(ptr_outputStack->size()) = ptr_referenceForCore;
     if (sizeof(ptr_outputStack) < 2)
     {
-        SetFlag_OutputStackLoaded(false);
+        Set_flag_IsStackLoaded_Server_OutputRecieve(false);
     }
     else
     {
-        SetFlag_OutputStackLoaded(true);
+        Set_flag_IsStackLoaded_Server_OutputRecieve(true);
     }
 }
 
-bool Avril_FSD::Data_Control::GetFlag_InputStackLoaded()
+bool Avril_FSD::Data_Control::Get_flag_IsStackLoaded_Server_InputAction()
 {
     return flag_isLoaded_Stack_InputPraise;
 }
-bool Avril_FSD::Data_Control::GetFlag_OutputStackLoaded()
+bool Avril_FSD::Data_Control::Get_flag_IsStackLoaded_Server_OutputRecieve()
 {
     return flag_isLoaded_Stack_OutputPraise;
 }
 
-bool Avril_FSD::Data_Control::GetFlag_isNewInputDataReady()
+bool Avril_FSD::Data_Control::Get_flag_IsNewInputDataReady()
 {
     return flag_isNewInputDataReady;
 }
 
-bool Avril_FSD::Data_Control::GetFlag_isNewOutputDataReady()
+bool Avril_FSD::Data_Control::Get_flag_IsNewOutputDataReady()
 {
     return flag_isNewOutputDataReady;
 }
 
-void Avril_FSD::Data_Control::SetFlag_isNewInputDataReady(bool value)
+void Avril_FSD::Data_Control::Set_flag_IsStackLoaded_Server_InputAction(bool value)
+{
+    flag_isLoaded_Stack_InputPraise = value;
+}
+void Avril_FSD::Data_Control::Set_flag_IsStackLoaded_Server_OutputRecieve(bool value)
+{
+    flag_isLoaded_Stack_OutputPraise = value;
+}
+
+void Avril_FSD::Data_Control::Set_flag_IsNewInputDataReady(bool value)
 {
     flag_isNewInputDataReady = value;
 }
 
-void Avril_FSD::Data_Control::SetFlag_isNewOutputDataReady(bool value)
+void Avril_FSD::Data_Control::Set_flag_IsNewOutputDataReady(bool value)
 {
     flag_isNewOutputDataReady = value;
-}
-
-
-void Avril_FSD::Data_Control::SetFlag_InputStackLoaded(bool value)
-{
-    flag_isLoaded_Stack_InputPraise = value;
-}
-void Avril_FSD::Data_Control::SetFlag_OutputStackLoaded(bool value)
-{
-    flag_isLoaded_Stack_OutputPraise = value;
 }

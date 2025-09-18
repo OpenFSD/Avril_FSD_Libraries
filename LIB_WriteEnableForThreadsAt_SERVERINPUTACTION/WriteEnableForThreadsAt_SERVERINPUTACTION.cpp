@@ -1,7 +1,5 @@
 #include "pch.h"
 
-#include <cstddef>
-
 class Avril_FSD::WriteEnableForThreadsAt_SERVERINPUTACTION_Global* ptr_global = NULL;
 class Avril_FSD::WriteEnableForThreadsAt_SERVERINPUTACTION_Control* ptr_WriteEnable_Control = NULL;
 

@@ -1,10 +1,8 @@
 #include "pch.h"
 
-#include <cstddef>
-
-class Avril_FSD::Praise0_Algorithm* ptr_Praise0_Algorithm = NULL;
-class Avril_FSD::Praise1_Algorithm* ptr_Praise1_Algorithm = NULL;
-class Avril_FSD::Praise2_Algorithm* ptr_Praise2_Algorithm = NULL;
+Avril_FSD::Praise0_Algorithm* ptr_Praise0_Algorithm = NULL;
+Avril_FSD::Praise1_Algorithm* ptr_Praise1_Algorithm = NULL;
+Avril_FSD::Praise2_Algorithm* ptr_Praise2_Algorithm = NULL;
 
 Avril_FSD::User_Alg::User_Alg()
 {

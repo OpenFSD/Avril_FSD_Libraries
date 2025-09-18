@@ -1,6 +1,4 @@
 #include "pch.h"
-#include <vector>
-#include <cstddef>
 
     unsigned char _writeCycle_Try_CoreId_Index = NULL;
     int _count_CoreId_WriteActive[4] = { NULL, NULL, NULL, NULL };//NUMBER OF CORES

@@ -1,5 +1,4 @@
 #pragma once
-#include <vector>
 
 namespace Avril_FSD
 {
@@ -9,11 +8,13 @@ namespace Avril_FSD
         GameInstance();
         virtual ~GameInstance();
 
-        static class Player* GetPlayer(__int8 playerId);
+        class Player* Get_player(__int8 playerId);
+        class Settings* Get_settings();
 
     protected:
 
     private:
         static void Set_player(class Player* player);
+        static void Set_settings(class Settings* settings);
     };
 }

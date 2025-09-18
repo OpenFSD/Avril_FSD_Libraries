@@ -1,7 +1,6 @@
 #include "pch.h"
 
-#include <cstddef>
-#include <vector>
+
 
 unsigned char _concurrentCycle_Try_CoreId_Index = NULL;
 int _count_LaunchActive_For[3] = { NULL, NULL, NULL };//NUMBER OF CONCURNT CORES

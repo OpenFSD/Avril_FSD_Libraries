@@ -1,8 +1,5 @@
 #include "pch.h"
 
-#include <cstddef>
-#include <iostream>
-
 class Avril_FSD::Algorithms* ptr_Algorithms = NULL;
 class Avril_FSD::Data* ptr_Data = NULL;
 class Avril_FSD::Execute* ptr_Execute = NULL;

@@ -1,7 +1,5 @@
 #include "pch.h"
 
-#include <cstddef>
-
 Avril_FSD::Input_Control::Input_Control()
 {
 
@@ -11,7 +9,7 @@ Avril_FSD::Input_Control::~Input_Control()
 
 }
 
-void Avril_FSD::Input_Control::SelectSet_Input_Subset(class Avril_FSD::Framework_Server* obj, __int8 praiseEventId)
+void Avril_FSD::Input_Control::SelectSet_Input_Subset(Avril_FSD::Framework_Server* obj, __int8 praiseEventId)
 {
     switch (praiseEventId)
     {

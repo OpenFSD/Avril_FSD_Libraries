@@ -1,9 +1,7 @@
 #include "pch.h"
 
-#include <cstddef>
-
-class Avril_FSD::LaunchEnableForConcurrentThreadsAt_CLIENT_Global* ptr_Global = NULL;
-class Avril_FSD::LaunchEnableForConcurrentThreadsAt_CLIENT_Control* ptr_LaunchConcurrency_Control = NULL;
+Avril_FSD::LaunchEnableForConcurrentThreadsAt_CLIENT_Global* ptr_Global = NULL;
+Avril_FSD::LaunchEnableForConcurrentThreadsAt_CLIENT_Control* ptr_LaunchConcurrency_Control = NULL;
 
 Avril_FSD::LaunchEnableForConcurrentThreadsAt_CLIENT::LaunchEnableForConcurrentThreadsAt_CLIENT()
 {

@@ -1,21 +1,19 @@
 #include "pch.h"
 
-#include <cstddef>
-
-class Avril_FSD::Praise0_Input* ptr_Praise0_Input = NULL;
-class Avril_FSD::Praise1_Input* ptr_Praise1_Input = NULL;
-class Avril_FSD::Praise2_Input* ptr_Praise2_Input = NULL;
+Avril_FSD::Praise0_Input* ptr_Praise0_Input = NULL;
+Avril_FSD::Praise1_Input* ptr_Praise1_Input = NULL;
+Avril_FSD::Praise2_Input* ptr_Praise2_Input = NULL;
 
 Avril_FSD::User_I::User_I()
 {
-	//Set_Praise0_Input(new class Avril_FSD::Praise0_Input());
-	//while (Get_Praise0_Input() == NULL) { }
+	Set_Praise0_Input(new class Avril_FSD::Praise0_Input());
+	while (Get_Praise0_Input() == NULL) { }
 
-	//Set_Praise1_Input(new class Avril_FSD::Praise1_Input());
-	//while (Get_Praise1_Input() == NULL) { }
+	Set_Praise1_Input(new class Avril_FSD::Praise1_Input());
+	while (Get_Praise1_Input() == NULL) { }
 
-	//Set_Praise2_Input(new class Avril_FSD::Praise2_Input());
-	//while (Get_Praise2_Input() == NULL) { }
+	Set_Praise2_Input(new class Avril_FSD::Praise2_Input());
+	while (Get_Praise2_Input() == NULL) { }
 }
 Avril_FSD::User_I::~User_I()
 {

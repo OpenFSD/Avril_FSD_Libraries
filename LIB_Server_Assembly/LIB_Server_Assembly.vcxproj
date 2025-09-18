@@ -24,6 +24,7 @@
     <ProjectGuid>{d9346816-6a60-45d5-8fee-63cff6cff83d}</ProjectGuid>
     <RootNamespace>LIBServerAssembly</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LIB_Server_Concurrency</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -39,7 +40,7 @@
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <CLRSupport>false</CLRSupport>
+    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -141,6 +142,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE;\include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION;\include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -161,6 +163,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>\include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE;\include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION;\include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER</AdditionalIncludeDirectories>
+      <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -174,9 +177,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
-    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtServer.dll" />
-    <None Include="lib\LIBWriteEnableForThreadsAtServerInputAction.dll" />
-    <None Include="lib\LIBWriteEnableForThreadsAtServerOutputRecieve.dll" />
+    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.dll" />
+    <None Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.dll" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithms.h" />
@@ -186,6 +190,7 @@
     <ClInclude Include="Data_Control.h" />
     <ClInclude Include="Execute.h" />
     <ClInclude Include="Execute_Control.h" />
+    <ClInclude Include="FirstPersonCamera.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Framework_Server.h" />
     <ClInclude Include="GameInstance.h" />
@@ -223,6 +228,7 @@
     <ClInclude Include="Praise2_Input.h" />
     <ClInclude Include="Praise2_Output.h" />
     <ClInclude Include="Server.h" />
+    <ClInclude Include="Settings.h" />
     <ClInclude Include="User_Alg.h" />
     <ClInclude Include="User_I.h" />
     <ClInclude Include="User_O.h" />
@@ -236,6 +242,7 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Execute.cpp" />
     <ClCompile Include="Execute_Control.cpp" />
+    <ClCompile Include="FirstPersonCamera.cpp" />
     <ClCompile Include="Framework_Server.cpp" />
     <ClCompile Include="GameInstance.cpp" />
     <ClCompile Include="Global.cpp" />
@@ -262,6 +269,7 @@
     <ClCompile Include="Praise2_Input.cpp" />
     <ClCompile Include="Praise2_Output.cpp" />
     <ClCompile Include="Server.cpp" />
+    <ClCompile Include="Settings.cpp" />
     <ClCompile Include="User_Alg.cpp" />
     <ClCompile Include="User_I.cpp" />
     <ClCompile Include="User_O.cpp" />
@@ -284,5 +292,12 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Eigen3.3.3.9\build\native\Eigen3.targets" Condition="Exists('..\packages\Eigen3.3.3.9\build\native\Eigen3.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Eigen3.3.3.9\build\native\Eigen3.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Eigen3.3.3.9\build\native\Eigen3.targets'))" />
+  </Target>
 </Project>

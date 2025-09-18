@@ -1,5 +1,4 @@
-#include <array>
-#include <vector>
+#pragma once
 
 namespace Avril_FSD
 {
@@ -11,8 +10,8 @@ namespace Avril_FSD
         void Initialise_Control();
         class Data_Control* Get_Data_Control();
 
-        static void Initialise_GameInstance();
-        static class GameInstance* Get_GameInstance();
+        void Initialise_GameInstance();
+        class GameInstance* Get_GameInstance();
         static __int8 BoolToInt(bool bufferSide);
         
         void Flip_Input_DoubleBuffer();

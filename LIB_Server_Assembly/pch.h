@@ -8,6 +8,16 @@
 #define PCH_H
 
 // add headers that you want to pre-compile here
+#include <array>
+#include <cstddef>
+#include <iostream>
+#include <math.h>
+#include <thread>
+#include <vector>
+#include "include/LIB_LaunchEnableForConcurrentThreadsAt_SERVER/LaunchEnableForConcurrentThreadsAt_SERVER_Framework.h"
+#include "include/LIB_WriteEnableForThreadsAt_SERVERINPUTACTION/WriteEnableForThreadsAt_SERVERINPUTACTION_Framework.h"
+#include "include/LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE/WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework.h"
+#include <Eigen/Dense>
 #include "framework.h"
 #include "Framework_Server.h"
 #include "Server.h"
@@ -19,6 +29,7 @@
 #include "Data_Control.h"
 #include "Input.h"
 #include "Input_Control.h"
+#include "ListenRespond.h"
 #include "User_I.h"
 #include "Praise0_Input.h"
 #include "Praise1_Input.h"
@@ -34,10 +45,13 @@
 #include "Praise1_Algorithm.h"
 #include "Praise2_Algorithm.h"
 #include "Execute.h"
-#include "Execute_Control.h"
-#include "GameInstance.h"
-#include "Player.h"
 #include "include/LIB_LaunchEnableForConcurrentThreadsAt_SERVER/LIB_LaunchEnableForConcurrentThreadsAt_SERVER.h"
 #include "include/LIB_WriteEnableForThreadsAt_SERVERINPUTACTION/LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.h"
 #include "include/LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE/LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h"
+#include "Execute_Control.h"
+#include "GameInstance.h"
+#include "Player.h"
+#include "FirstPersonCamera.h"
+#include "Settings.h"
+
 #endif //PCH_H

@@ -1,9 +1,7 @@
 #include "pch.h"
 
-#include <cstddef>
-
-class Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Global* ptr_Global = NULL;
-class Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Control* ptr_LaunchConcurrency_Control = NULL;
+Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Global* ptr_Global = NULL;
+Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Control* ptr_LaunchConcurrency_Control = NULL;
 
 Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER::LaunchEnableForConcurrentThreadsAt_SERVER()
 {
@@ -20,7 +18,7 @@ void Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER::Initialise_Control()
     Create_Control_Of_LaunchConcurrency();
 }
 
-void Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER::Thread_Start(class Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId)
+void Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER::Thread_Start(Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId)
 {
     obj->Get_LaunchEnableForConcurrentThread()->Get_Control_Of_LaunchConcurrency()->LaunchEnable_Request(obj, concurrent_CoreId);
     obj->Get_LaunchEnableForConcurrentThread()->Get_Control_Of_LaunchConcurrency()->LaunchQue_Update(obj, obj->Get_LaunchEnableForConcurrentThread()->Get_LaunchConcurrency_Global()->Get_number_Implemented_Cores());
@@ -31,7 +29,7 @@ void Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER::Thread_Start(class Av
     obj->Get_LaunchEnableForConcurrentThread()->Get_Control_Of_LaunchConcurrency()->Set_flag_praisingLaunch(false);
 }
 
-void Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER::Thread_End(class Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId)
+void Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER::Thread_End(Avril_FSD::LaunchEnableForConcurrentThreadsAt_SERVER_Framework* obj, unsigned char concurrent_CoreId)
 {
     while (obj->Get_LaunchEnableForConcurrentThread()->Get_Control_Of_LaunchConcurrency()->Get_flag_praisingLaunch() == true)
     {

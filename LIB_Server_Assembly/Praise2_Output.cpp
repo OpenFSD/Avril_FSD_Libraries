@@ -1,7 +1,5 @@
 #include "pch.h"
 
-#include <cstddef>
-
 std::vector<float> _out2_position;
 std::vector<float> _out2_fowards;
 std::vector<float> _out2_right;

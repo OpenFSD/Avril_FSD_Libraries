@@ -9,7 +9,7 @@ Avril_FSD::Output_Control::~Output_Control()
 
 }
 
-void Avril_FSD::Output_Control::SelectSet_Output_Subset(class Avril_FSD::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId)
+void Avril_FSD::Output_Control::SelectSet_Output_Subset(Avril_FSD::Framework_Server* obj, __int8 ptr_praiseEventId, __int8 concurrent_coreId)
 {
 	switch (ptr_praiseEventId)
 	{

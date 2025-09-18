@@ -1,6 +1,4 @@
 #pragma once
-#include <array>
-#include <thread>
 
 namespace Avril_FSD
 {

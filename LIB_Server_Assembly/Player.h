@@ -1,5 +1,4 @@
 #pragma once
-#include <vector>
 
 namespace Avril_FSD
 {
@@ -8,20 +7,27 @@ namespace Avril_FSD
     public:
         Player();
         virtual ~Player();
+		class FirstPersonCamera* Get_camera_FP();
+		bool Get_isFirstMove();
+		bool Get_isFirstMouseMove();
+		bool Get_cameraSelector();
+		float Get_cameraSpeed();
+		float Get_sensitivity();
+		std::vector<float> Get_player_Position();
+		std::vector<float> Get_Front();
+		std::vector<float> Get_Right();
+		std::vector<float> Get_Up();
+		std::vector<float> Get_mouse_Position();
 
-        static bool Get_isMouseChanged();
-        static bool Get_isFirstMove();
-        static std::vector<float> Get_Front();
-        static std::vector<float> Get_Right();
-        static std::vector<float> Get_Up();
-        static std::vector<float> Get_MousePos();
-        static std::vector<float> Get_PlayerPosition();
-
-        static float Get_CameraSpeed();
-        static float Get_Sensativity();
-
-        static void Set_isFirstMove(bool value);
-        static void Set_MousePos(std::vector<float> value);
-        static void Set_PlayerPosition(std::vector<float> value);
+		void Set_camera_FP(FirstPersonCamera* camera);
+		void Set_isFirstMove(bool value);
+		void Set_isFirstMouseMove(bool value);
+		void Set_cameraSpeed(float cameraSpeed);
+		void Set_sensitivity(float sensitivity);
+		void Set_player_Position(std::vector<float> position);
+		void Set_front(std::vector<float> front);
+		void Set_right(std::vector<float> right);
+		void Set_up(std::vector<float> up);
+		void Set_mouse_Position(std::vector<float> mousePosition);
     };
 }

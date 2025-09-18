@@ -1,21 +1,19 @@
 #include "pch.h"
 
-#include <cstddef>
-
 class Avril_FSD::Praise0_Output* ptr_Praise0_Output = NULL;
 class Avril_FSD::Praise1_Output* ptr_Praise1_Output = NULL;
 class Avril_FSD::Praise2_Output* ptr_Praise2_Output = NULL;
 
 Avril_FSD::User_O::User_O()
 {
-	//Set_Praise0_Output(new class Avril_FSD::Praise0_Output());
-	//while (Get_Praise0_Output() == NULL) { }
+	Set_Praise0_Output(new class Avril_FSD::Praise0_Output());
+	while (Get_Praise0_Output() == NULL) { }
 
-	//Set_Praise1_Output(new class Avril_FSD::Praise1_Output());
-	//while (Get_Praise1_Output() == NULL) { }
+	Set_Praise1_Output(new class Avril_FSD::Praise1_Output());
+	while (Get_Praise1_Output() == NULL) { }
 
-	//Set_Praise2_Output(new class Avril_FSD::Praise2_Output());
-	//while (Get_Praise2_Output() == NULL) { }
+	Set_Praise2_Output(new class Avril_FSD::Praise2_Output());
+	while (Get_Praise2_Output() == NULL) { }
 }
 Avril_FSD::User_O::~User_O()
 {

@@ -1,5 +1,4 @@
 #include "pch.h"
-#include <cstddef>
 
 bool _flag_core_ACTIVE = NULL;
 bool _flag_core_IDLE = NULL;
