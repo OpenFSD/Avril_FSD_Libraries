@@ -1,0 +1,101 @@
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Security;
+
+namespace Avril_FSD
+{
+    [SuppressUnmanagedCodeSecurity]
+    public static class Library_For_Server_Concurrency
+    {
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Initialise_Server_Concurrency@CLIBServerIOConcurrnecy@Avril_FSD@@SAPAXXZ")]
+        public static extern IntPtr Initialise_Server_Concurrency();
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_flag_isNewInputDataReady@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
+        public static extern bool Get_flag_isNewInputDataReady(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_flag_isNewOutputDataReady@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
+        public static extern bool Get_flag_isNewOutputDataReady(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_flag_IsStackLoaded_Server_InputAction@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
+        public static extern bool Get_flag_IsStackLoaded_Server_InputAction(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_flag_IsStackLoaded_Server_OutputRecieve@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
+        public static extern bool Get_flag_IsStackLoaded_Server_OutputRecieve(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_flag_IsInitialised_Avril_FSD_ServerConcurrency@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
+        public static extern bool Get_flag_Avril_FSD_ServerConcurrency_Initialised(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Pop_Stack_Output@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@@Z")]
+        public static extern void Pop_Stack_Output(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Push_Stack_InputPraises@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@@Z")]
+        public static extern void Push_Stack_InputPraises(IntPtr obj);
+
+// Praise Event Id
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_PraiseEventId@CLIBServerIOConcurrnecy@Avril_FSD@@SADPAVFramework_Server@2@@Z")]
+        public static extern byte Get_PraiseEventId(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_PraiseEventId@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@D@Z")]
+        public static extern void Set_PraiseEventId(IntPtr obj, sbyte value);
+    }
+
+// Praise 0 Data
+    [SuppressUnmanagedCodeSecurity]
+    internal static class Library_For_Praise_0_Events
+    {
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise0_Input_IsPingActive@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
+        public static extern bool Get_Praise0_Input_IsPingActive(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise0_Input_IsPingActive@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@_N@Z")]
+        public static extern void Set_Praise0_Input_IsPingActive(IntPtr obj, bool value);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise0_Output_IsPingActive@CLIBServerIOConcurrnecy@Avril_FSD@@SA_NPAVFramework_Server@2@@Z")]
+        public static extern void Get_Praise0_Output_IsPingActive(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise0_Output_IsPingActive@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@_N@Z")]
+        public static extern void Set_Praise0_Output_IsPingActive(IntPtr obj, bool value);
+    }
+// Praise 1 Data
+    [SuppressUnmanagedCodeSecurity]
+    internal static class Library_For_Praise_1_Events
+    {
+        // Praise 1 Data
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise1_Input_mouseDelta_X@CLIBServerIOConcurrnecy@Avril_FSD@@SAMPAVFramework_Server@2@@Z")]
+        public static extern float Get_Praise1_Input_mouseDelta_X(IntPtr obj);
+        
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise1_Input_mouseDelta_Y@CLIBServerIOConcurrnecy@Avril_FSD@@SAMPAVFramework_Server@2@@Z")]
+        public static extern float Get_Praise1_Input_mouseDelta_Y(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise1_Input_mouseDelta_X@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@M@Z")]
+        public static extern void Set_Praise1_Input_mouseDelta_X(IntPtr obj, float value);
+        
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise1_Input_mouseDelta_Y@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@M@Z")]
+        public static extern void Set_Praise1_Input_mouseDelta_Y(IntPtr obj, float value);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise1_Output_Player_Fowards@CLIBServerIOConcurrnecy@Avril_FSD@@SA?AV?$Matrix@N$02$00$0A@$02$00@Eigen@@PAVFramework_Server@2@@Z")]
+        public static extern float[] Get_Praise1_Output_Player_Fowards(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise1_Output_Player_Up@CLIBServerIOConcurrnecy@Avril_FSD@@SA?AV?$Matrix@N$02$00$0A@$02$00@Eigen@@PAVFramework_Server@2@@Z")]
+        public static extern float[] Get_Praise1_Output_Player_Up(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Get_Praise1_Output_Player_Right@CLIBServerIOConcurrnecy@Avril_FSD@@SA?AV?$Matrix@N$02$00$0A@$02$00@Eigen@@PAVFramework_Server@2@@Z")]
+        public static extern float[] Get_Praise1_Output_Player_Right(IntPtr obj);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise1_Output_Player_Fowards@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@V?$Matrix@N$02$00$0A@$02$00@Eigen@@@Z")]
+        public static extern void Set_Praise1_Output_Player_Fowards(IntPtr obj, float[] value);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise1_Output_Player_Up@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@V?$Matrix@N$02$00$0A@$02$00@Eigen@@@Z")]
+        public static extern void Set_Praise1_Output_Player_Up(IntPtr obj, float[] value);
+
+        [DllImport("LIBServerIOConcurrnecy.dll", EntryPoint = "?Set_Praise1_Output_Player_Right@CLIBServerIOConcurrnecy@Avril_FSD@@SAXPAVFramework_Server@2@V?$Matrix@N$02$00$0A@$02$00@Eigen@@@Z")]
+        public static extern void Set_Praise1_Output_Player_Right(IntPtr obj, float[] value);
+
+    }
+    // Praise 2 Data
+    [SuppressUnmanagedCodeSecurity]
+    internal static class Library_For_Praise_2_Events
+    {
+
+    }
+
+}

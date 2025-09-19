@@ -16,22 +16,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
-    <None Include="packages.config" />
     <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.dll" />
     <None Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.dll" />
     <None Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.dll" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LIB_Server_Assembly.h">
+    <ClInclude Include="LIB_Server_IO_Concurrnecy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Execute.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Algorithms.h">
@@ -49,7 +46,13 @@
     <ClInclude Include="Data_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Execute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Execute_Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstPersonCamera.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Framework_Server.h">
@@ -67,6 +70,9 @@
     <ClInclude Include="Input_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ListenRespond.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Output.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -74,18 +80,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="User_Alg.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="User_I.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="User_O.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Praise0_Algorithm.h">
@@ -115,7 +109,19 @@
     <ClInclude Include="Praise2_Output.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ListenRespond.h">
+    <ClInclude Include="Server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="User_Alg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="User_I.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="User_O.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER.h">
@@ -163,24 +169,15 @@
     <ClInclude Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FirstPersonCamera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Settings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LIB_Server_Assembly.cpp">
+    <ClCompile Include="LIB_Server_IO_Concurrnecy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Execute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Algorithms.cpp">
@@ -198,7 +195,13 @@
     <ClCompile Include="Data_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Execute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Execute_Control.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstPersonCamera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Framework_Server.cpp">
@@ -216,6 +219,9 @@
     <ClCompile Include="Input_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ListenRespond.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Output.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -223,18 +229,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Server.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="User_Alg.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="User_I.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="User_O.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Praise0_Algorithm.cpp">
@@ -264,13 +258,19 @@
     <ClCompile Include="Praise2_Output.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ListenRespond.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FirstPersonCamera.cpp">
+    <ClCompile Include="Server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="User_Alg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="User_I.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="User_O.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

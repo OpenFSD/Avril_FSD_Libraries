@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,12 +25,11 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -37,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -64,13 +65,19 @@
   <ItemGroup>
     <Compile Include="IMPORT_LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.cs" />
     <Compile Include="IMPORT_LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.cs" />
-    <Compile Include="IMPORT_Avril_FSD_LIB_Server_Assembly.cs" />
+    <Compile Include="IMPORT_LIB_Server_IO_Concurrnecy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="LIBLaunchEnableForConcurrentThreadsAtCLIENT.lib" />
+    <None Include="LIBServerIOConcurrnecy.lib" />
+    <None Include="LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.lib" />
     <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtCLIENT.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="lib\LIBServerIOConcurrnecy.lib">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="lib\LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.lib">
@@ -78,16 +85,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\" />
-    <Folder Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="lib\LIBLaunchEnableForConcurrentThreadsAtClient.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="lib\LIBWriteEnableForThreadsAtClientOutputRecieve.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <ProjectReference Include="..\LIB_Server_IO_Concurrnecy\LIB_Server_IO_Concurrnecy.vcxproj">
+      <Project>{f322d43a-e841-4a03-90ac-9f60bfd1dcb3}</Project>
+      <Name>LIB_Server_IO_Concurrnecy</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -100,6 +101,69 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LaunchEnableForConcurrentThreadsAt_CLIENT.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LaunchEnableForConcurrentThreadsAt_CLIENT_Control.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LaunchEnableForConcurrentThreadsAt_CLIENT_Framework.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LaunchEnableForConcurrentThreadsAt_CLIENT_Global.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Algorithms.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Concurrent.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Concurrent_Control.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Data.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Data_Control.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Execute.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Execute_Control.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\FirstPersonCamera.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Framework_Server.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\GameInstance.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Global.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Input.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Input_Control.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\LIB_Server_Assembly.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\LIB_Server_IO_Concurrnecy.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\ListenRespond.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Output.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Output_Control.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Player.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise0_Algorithm.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise0_Input.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise0_Output.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise1_Algorithm.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise1_Input.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise1_Output.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise2_Algorithm.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise2_Input.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Praise2_Output.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Server.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\Settings.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\User_Alg.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\User_I.h" />
+    <Content Include="include\LIB_Server_IO_Concurrnecy\User_O.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Control.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Global.h" />
+    <Content Include="LIBLaunchEnableForConcurrentThreadsAtCLIENT.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIBServerIOConcurrnecy.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\LIBLaunchEnableForConcurrentThreadsAtCLIENT.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\LIBServerIOConcurrnecy.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lib\LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
