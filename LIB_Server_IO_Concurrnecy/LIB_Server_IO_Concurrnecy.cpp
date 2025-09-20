@@ -6,6 +6,8 @@
 #include "LIB_Server_IO_Concurrnecy.h"
 
 class Avril_FSD::Framework_Server* _Server_Assembly;
+void* programHandleId_WriteEnalbe_ServerInputAction;
+void* programHandleId_WriteEnalbe_ServerOutputRecieve;
 
 bool _flag_isNewInputDataReady;
 bool _flag_isNewOutputDataReady;
@@ -43,6 +45,16 @@ void* Avril_FSD::CLIBServerIOConcurrnecy::Initialise_Server_Concurrency()
     return (void*)_Server_Assembly;
 }
 
+void Avril_FSD::CLIBServerIOConcurrnecy::Flip_InBufferToWrite(Avril_FSD::Framework_Server* obj)
+{
+    obj->Get_Server_Assembly()->Get_Data()->Flip_Input_DoubleBuffer();
+}
+
+void Avril_FSD::CLIBServerIOConcurrnecy::Flip_OutBufferToWrite(Avril_FSD::Framework_Server* obj)
+{
+    obj->Get_Server_Assembly()->Get_Data()->Flip_Output_DoubleBuffer();
+}
+
 bool Avril_FSD::CLIBServerIOConcurrnecy::Get_flag_isNewInputDataReady(Avril_FSD::Framework_Server* obj)
 {
     _flag_isNewInputDataReady = obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Get_flag_IsNewInputDataReady();
@@ -70,6 +82,14 @@ bool Avril_FSD::CLIBServerIOConcurrnecy::Get_flag_IsInitialised_Avril_FSD_Server
     _flag_IsInitialised_Avril_FSD_ServerAssembly = obj->Get_Server_Assembly()->Get_Execute()->Get_Control_Of_Execute()->GetFlag_SystemInitialised(obj);
     return _flag_IsInitialised_Avril_FSD_ServerAssembly;
 }
+void* Avril_FSD::CLIBServerIOConcurrnecy::Get_program_WriteEnableStack_ServerInputAction()
+{
+    return (void*)programHandleId_WriteEnalbe_ServerInputAction;
+}
+void* Avril_FSD::CLIBServerIOConcurrnecy::Get_program_WriteEnableStack_ServerOutputRecieve()
+{
+    return (void*)programHandleId_WriteEnalbe_ServerOutputRecieve;
+}
 void Avril_FSD::CLIBServerIOConcurrnecy::Pop_Stack_Output(class Avril_FSD::Framework_Server* obj)
 {
     obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Pop_Stack_Output(obj);
@@ -77,6 +97,11 @@ void Avril_FSD::CLIBServerIOConcurrnecy::Pop_Stack_Output(class Avril_FSD::Frame
 void Avril_FSD::CLIBServerIOConcurrnecy::Push_Stack_InputPraises(class Avril_FSD::Framework_Server* obj)
 {
     obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Push_Stack_InputPraises(obj);
+}
+
+void Avril_FSD::CLIBServerIOConcurrnecy::Select_Set_Intput_Subset(class Avril_FSD::Framework_Server* obj, __int8 praiseEventId)
+{
+    obj->Get_Server_Assembly()->Get_Data()->GetBuffer_InputFrontDouble()->Get_Input_Control()->SelectSet_Input_Subset(obj, praiseEventId);
 }
 
 __int8 Avril_FSD::CLIBServerIOConcurrnecy::Get_PraiseEventId(class Avril_FSD::Framework_Server* obj)

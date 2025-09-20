@@ -18,13 +18,18 @@ namespace Avril_FSD
 		CLIBServerIOConcurrnecy(void);
 		// TODO: add your methods here.
 		static void* Initialise_Server_Concurrency();
+		static void Flip_InBufferToWrite(class Avril_FSD::Framework_Server* obj);
+		static void Flip_OutBufferToWrite(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_isNewInputDataReady(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_isNewOutputDataReady(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_IsStackLoaded_Server_InputAction(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_IsStackLoaded_Server_OutputRecieve(class Avril_FSD::Framework_Server* obj);
 		static bool Get_flag_IsInitialised_Avril_FSD_ServerConcurrency(class Avril_FSD::Framework_Server* obj);
+		static void* Get_program_WriteEnableStack_ServerInputAction();
+		static void* Get_program_WriteEnableStack_ServerOutputRecieve();
 		static void Pop_Stack_Output(class Avril_FSD::Framework_Server* obj);
 		static void Push_Stack_InputPraises(class Avril_FSD::Framework_Server* obj);
+		static void Select_Set_Intput_Subset(class Avril_FSD::Framework_Server* obj, __int8 praiseEventId);
 
 		// Praise Event Id
 		static __int8 Get_PraiseEventId(class Avril_FSD::Framework_Server* obj);
