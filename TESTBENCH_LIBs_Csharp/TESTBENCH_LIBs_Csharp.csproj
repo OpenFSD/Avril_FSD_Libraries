@@ -71,20 +71,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="LIBLaunchEnableForConcurrentThreadsAtCLIENT.lib" />
-    <None Include="LIBServerIOConcurrnecy.lib" />
-    <None Include="LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.lib" />
+    <None Include="LIBLaunchEnableForConcurrentThreadsAtCLIENT.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LIBLaunchEnableForConcurrentThreadsAtSERVER.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LIBServerIOConcurrnecy.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtCLIENT.lib">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.lib" />
     <None Include="lib\LIBServerIOConcurrnecy.lib">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="lib\LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.lib">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.lib" />
+    <None Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.lib" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.vcxproj">
+      <Project>{979e4062-f56b-4871-8828-de39a4a81e1a}</Project>
+      <Name>LIB_LaunchEnableForConcurrentThreadsAt_CLIENT</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LIB_Server_IO_Concurrnecy\LIB_Server_IO_Concurrnecy.vcxproj">
       <Project>{f322d43a-e841-4a03-90ac-9f60bfd1dcb3}</Project>
       <Name>LIB_Server_IO_Concurrnecy</Name>
@@ -108,6 +130,11 @@
     <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LaunchEnableForConcurrentThreadsAt_CLIENT_Framework.h" />
     <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LaunchEnableForConcurrentThreadsAt_CLIENT_Global.h" />
     <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT\LIB_LaunchEnableForConcurrentThreadsAt_CLIENT.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Control.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Framework.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LaunchEnableForConcurrentThreadsAt_SERVER_Global.h" />
+    <Content Include="include\LIB_LaunchEnableForConcurrentThreadsAt_SERVER\LIB_LaunchEnableForConcurrentThreadsAt_SERVER.h" />
     <Content Include="include\LIB_Server_IO_Concurrnecy\Algorithms.h" />
     <Content Include="include\LIB_Server_IO_Concurrnecy\Concurrent.h" />
     <Content Include="include\LIB_Server_IO_Concurrnecy\Concurrent_Control.h" />
@@ -146,7 +173,20 @@
     <Content Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Control.h" />
     <Content Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Framework.h" />
     <Content Include="include\LIB_WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE\WriteEnableForThreadsAt_CLIENTOUTPUTRECIEVE_Global.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Control.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Framework.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVERINPUTACTION\WriteEnableForThreadsAt_SERVERINPUTACTION_Global.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Control.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Framework.h" />
+    <Content Include="include\LIB_WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE\WriteEnableForThreadsAt_SERVEROUTPUTRECIEVE_Global.h" />
     <Content Include="LIBLaunchEnableForConcurrentThreadsAtCLIENT.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIBLaunchEnableForConcurrentThreadsAtSERVER.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="LIBServerIOConcurrnecy.dll">
@@ -155,15 +195,24 @@
     <Content Include="LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="LIBWriteEnableForThreadsAtSERVERINPUTACTION.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="lib\LIBLaunchEnableForConcurrentThreadsAtCLIENT.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="lib\LIBLaunchEnableForConcurrentThreadsAtSERVER.dll" />
     <Content Include="lib\LIBServerIOConcurrnecy.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="lib\LIBWriteEnableForThreadsAtCLIENTOUTPUTRECIEVE.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="lib\LIBWriteEnableForThreadsAtSERVERINPUTACTION.dll" />
+    <Content Include="lib\LIBWriteEnableForThreadsAtSERVEROUTPUTRECIEVE.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
