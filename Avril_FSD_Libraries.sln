@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LIB_WriteEnableForThreadsAt
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LIB_Server_IO_Concurrnecy", "LIB_Server_IO_Concurrnecy\LIB_Server_IO_Concurrnecy.vcxproj", "{F322D43A-E841-4A03-90AC-9F60BFD1DCB3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LIB_WriteEnableForThreadsAt_CLIENTINPUTACTION", "LIB_WriteEnableForThreadsAt_CLIENTINPUTACTION\LIB_WriteEnableForThreadsAt_CLIENTINPUTACTION.vcxproj", "{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,16 @@ Global
 		{F322D43A-E841-4A03-90AC-9F60BFD1DCB3}.Release|x64.Build.0 = Release|x64
 		{F322D43A-E841-4A03-90AC-9F60BFD1DCB3}.Release|x86.ActiveCfg = Release|Win32
 		{F322D43A-E841-4A03-90AC-9F60BFD1DCB3}.Release|x86.Build.0 = Release|Win32
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Debug|x64.ActiveCfg = Debug|x64
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Debug|x64.Build.0 = Debug|x64
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Debug|x86.ActiveCfg = Debug|Win32
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Debug|x86.Build.0 = Debug|Win32
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Release|x64.ActiveCfg = Release|x64
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Release|x64.Build.0 = Release|x64
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Release|x86.ActiveCfg = Release|Win32
+		{C521F6D3-E140-4FD4-A8BD-EDE701056C4E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
