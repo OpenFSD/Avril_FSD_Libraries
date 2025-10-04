@@ -30,6 +30,8 @@ namespace Avril_FSD
 		static void Pop_Stack_Output(class Avril_FSD::Framework_Server* obj);
 		static void Push_Stack_InputPraises(class Avril_FSD::Framework_Server* obj);
 		static void Select_Set_Intput_Subset(class Avril_FSD::Framework_Server* obj, __int8 praiseEventId);
+		static void Set_flag_IsNewInputDataReady(class Avril_FSD::Framework_Server* obj, bool value);
+		static void Set_flag_IsNewOutputDataReady(class Avril_FSD::Framework_Server* obj, bool value);
 
 		// Praise Event Id
 		static __int8 Get_PraiseEventId(class Avril_FSD::Framework_Server* obj);

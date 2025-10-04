@@ -104,6 +104,16 @@ void Avril_FSD::CLIBServerIOConcurrnecy::Select_Set_Intput_Subset(class Avril_FS
     obj->Get_Server_Assembly()->Get_Data()->GetBuffer_InputFrontDouble()->Get_Input_Control()->SelectSet_Input_Subset(obj, praiseEventId);
 }
 
+void Avril_FSD::CLIBServerIOConcurrnecy::Set_flag_IsNewInputDataReady(Avril_FSD::Framework_Server* obj, bool value)
+{
+    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Set_flag_IsNewInputDataReady(value);
+}
+
+void Avril_FSD::CLIBServerIOConcurrnecy::Set_flag_IsNewOutputDataReady(Avril_FSD::Framework_Server* obj, bool value)
+{
+    obj->Get_Server_Assembly()->Get_Data()->Get_Data_Control()->Set_flag_IsNewOutputDataReady(value);
+}
+
 __int8 Avril_FSD::CLIBServerIOConcurrnecy::Get_PraiseEventId(class Avril_FSD::Framework_Server* obj)
 {
     _PraiseEventId = obj->Get_Server_Assembly()->Get_Data()->GetBuffer_OutputBackDouble()->Get_out_praiseEventId();

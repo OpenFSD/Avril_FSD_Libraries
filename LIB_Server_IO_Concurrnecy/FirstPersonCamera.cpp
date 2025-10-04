@@ -5,9 +5,9 @@ const double PI = 3.14159265358979323846;
 Eigen::Vector3d _offset = {0, 1, 0};
 float _pitch;
 float _yaw;
-Eigen::Vector3d _fowards = { 1, 0, 0 };
-Eigen::Vector3d _up = { 0, 1, 0 };
-Eigen::Vector3d _right = { 0, 0, 1 };
+Eigen::Vector3d _camera_fowards = { 1, 0, 0 };
+Eigen::Vector3d _camera_up = { 0, 1, 0 };
+Eigen::Vector3d _camera_right = { 0, 0, 1 };
 
 Avril_FSD::FirstPersonCamera::FirstPersonCamera()
 {
@@ -45,11 +45,11 @@ void Avril_FSD::FirstPersonCamera::Update_Yaw(float deltaDegX)
 }
 void Avril_FSD::FirstPersonCamera::UpdateVectors(float pitch, float yaw)
 {
-    _fowards = { (float)(cos(pitch) * cos(yaw)), (float)(sin(pitch)), (float)(cos(pitch) * sin(yaw)) };
+    _camera_fowards = { (float)(cos(pitch) * cos(yaw)), (float)(sin(pitch)), (float)(cos(pitch) * sin(yaw)) };
 
-    _up = {0, 1, 0};
+    _camera_up = {0, 1, 0};
 
-    _right = _fowards.cross(_up);
+    _camera_right = _camera_fowards.cross(_camera_up);
 }
 
 Eigen::Vector3d Avril_FSD::FirstPersonCamera::Get_offset()
@@ -66,15 +66,15 @@ float Avril_FSD::FirstPersonCamera::Get_yaw()
 }
 Eigen::Vector3d Avril_FSD::FirstPersonCamera::Get_fowards()
 {
-	return _fowards;
+	return _camera_fowards;
 }
 Eigen::Vector3d Avril_FSD::FirstPersonCamera::Get_up()
 {
-	return _up;
+	return _camera_up;
 }
 Eigen::Vector3d Avril_FSD::FirstPersonCamera::Get_right()
 {
-	return _right;
+	return _camera_right;
 }
 
 void Avril_FSD::FirstPersonCamera::Set_offset(Eigen::Vector3d offset)
@@ -91,13 +91,13 @@ void Avril_FSD::FirstPersonCamera::Set_yaw(float yaw)
 }
 void Avril_FSD::FirstPersonCamera::Set_fowards(Eigen::Vector3d fowards)
 {
-	_fowards = fowards;
+	_camera_fowards = fowards;
 }
 void Avril_FSD::FirstPersonCamera::Set_up(Eigen::Vector3d up)
 {
-	_up = up;
+	_camera_up = up;
 }
 void Avril_FSD::FirstPersonCamera::Set_right(Eigen::Vector3d right)
 {
-	_right = right;
+	_camera_right = right;
 }

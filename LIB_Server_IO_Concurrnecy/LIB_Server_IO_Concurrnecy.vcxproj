@@ -212,7 +212,6 @@
     <ClInclude Include="Input.h" />
     <ClInclude Include="Input_Control.h" />
     <ClInclude Include="LIB_Server_IO_Concurrnecy.h" />
-    <ClInclude Include="ListenRespond.h" />
     <ClInclude Include="Output.h" />
     <ClInclude Include="Output_Control.h" />
     <ClInclude Include="pch.h" />
@@ -248,7 +247,6 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Input_Control.cpp" />
     <ClCompile Include="LIB_Server_IO_Concurrnecy.cpp" />
-    <ClCompile Include="ListenRespond.cpp" />
     <ClCompile Include="Output.cpp" />
     <ClCompile Include="Output_Control.cpp" />
     <ClCompile Include="pch.cpp">

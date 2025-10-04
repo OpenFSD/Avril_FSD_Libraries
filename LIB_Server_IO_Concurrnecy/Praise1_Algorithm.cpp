@@ -14,7 +14,8 @@ void Avril_FSD::Praise1_Algorithm::Do_Praise(Avril_FSD::Framework_Server* obj, c
     if (selectedPlayer->Get_isFirstMouseMove())
     {
         std::vector<float> mousePosition = {in_SubSet->Get_mouse_X(), in_SubSet->Get_mouse_Y()};
-        selectedPlayer->Set_mouse_Position(mousePosition);
+        selectedPlayer->Set_mouse_Position_X(mousePosition.at(0));
+        selectedPlayer->Set_mouse_Position_Y(mousePosition.at(1));
         selectedPlayer->Set_isFirstMouseMove(false);
     }
     else
@@ -32,7 +33,9 @@ void Avril_FSD::Praise1_Algorithm::Do_Praise(Avril_FSD::Framework_Server* obj, c
                 selectedPlayer->Get_camera_FP()->Update_Yaw(deltaX);
                 selectedPlayer->Get_camera_FP()->Update_Pitch(deltaY);
                 selectedPlayer->Get_camera_FP()->UpdateVectors(selectedPlayer->Get_camera_FP()->Get_pitch(), selectedPlayer->Get_camera_FP()->Get_yaw());
-                //OpenTK.Input.Mouse.SetPosition((double)(obj.Get_server().Get_data().Get_settings().Get_ScreenSize_X() / 2), (double)(obj.Get_server().Get_data().Get_settings().Get_ScreenSize_Y() / 2));
+
+                selectedPlayer->Set_mouse_Position_X((obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_X() / 2));
+                selectedPlayer->Set_mouse_Position_Y((obj->Get_Server_Assembly()->Get_Data()->Get_GameInstance()->Get_settings()->Get_screenSize_Y() / 2));
             }
             break;
 

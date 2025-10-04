@@ -70,9 +70,6 @@
     <ClInclude Include="Input_Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ListenRespond.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Output.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -217,9 +214,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Input_Control.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ListenRespond.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Output.cpp">
