@@ -25,7 +25,7 @@ void Avril_FSD::Algorithms::Initialise(__int8 number_Implemented_Cores)
     while(Get_New_Concurrent() == NULL) { /* wait untill created */ }
     Get_New_Concurrent()->Initialise_Control();
 
-    for (__int8 index = 0; index < (number_Implemented_Cores - 1); index++)
+    for (__int8 index = 0; index < (number_Implemented_Cores); index++)
     {
         Set_Concurrent(Get_New_Concurrent(), index);
     }
